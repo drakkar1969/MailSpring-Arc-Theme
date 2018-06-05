@@ -1,0 +1,185 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Toolbar
+//------------------------------------------------------------
+body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
+		background: @prefs;
+}
+
+//------------------------------------------------------------
+// Back button
+//------------------------------------------------------------
+.sheet-toolbar .item-back {
+	height: 26px;
+	background: transparent;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	margin-left: 10px;
+	margin-top: 9px;
+	padding: 0;
+	padding: 1px 13px 0px 5px;
+
+	img.content-mask {
+		zoom: 0.3 !important;
+	}
+
+	.item-back-title {
+		margin: 1px 2px 0 3px;
+		font-size: 14px;
+	}
+
+	&:hover {
+		background-color: @btn-bg-hover;
+		border-color: @btn-border-hover;
+	}
+
+	&:active {
+		background-color: @btn-bg-active;
+		border-color: @btn-border-active;
+
+		img.content-mask {
+			background-color: @btn-icon-active;
+		}
+
+		.item-back-title {
+			color: @btn-icon-active;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Tab control
+//------------------------------------------------------------
+.preferences-wrap .container-preference-tabs {
+	border-color: @border-medium;
+
+	.preferences-tabs {
+		background-color: @prefs-tabs;
+		padding-top: 10px;
+
+		.item {
+			box-shadow: none;
+			border: 1px solid transparent;
+			border-radius: 0px;
+			margin: 0px -1px -1px 0px;
+			padding-top: 0px;
+
+			.tab-icon {
+				display: none;
+			}
+
+			.name {
+				padding: 10px 11px 8px;
+				font-size: 14px;
+				font-weight: 500;
+				color: fade(@base-text, 50%);
+			}
+
+			&:hover {
+				background: @prefs-tabs-hover;
+				border-color: @border-medium;
+
+				.name {
+					color: fade(@base-text, 65%);
+				}
+			}
+
+			&.active {
+				box-shadow: none;
+				background: @prefs-tabs-active;
+				border-color: @border-medium;
+				border-bottom-color: @prefs-tabs-active;
+				border-radius: 0px;
+
+				.name {
+					color: @base-text;
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences body common settings
+//------------------------------------------------------------
+.preferences-wrap .preferences-content {
+	background-color: @prefs-body;
+}
+
+//---------------------------------
+// Warning bar
+//---------------------------------
+.preferences-wrap .platform-note {
+	background-color: darken(@prefs, 5%);
+	border-color: @accent;
+
+	&::before {
+		color: @accent;
+	}
+}
+
+//---------------------------------
+// Section headers
+//---------------------------------
+.preferences-wrap h6 {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: fade(@base-text, 40%);
+	border-bottom: 1px solid @border-medium;
+	padding-bottom: 3px;
+}
+
+.preferences-wrap .container-keymaps .shortcut-section-title,
+.account-section-title {
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: fade(@base-text, 40%);
+	border-bottom: 1px solid @border-medium;
+	margin: 20px 0px 10px;
+	padding-bottom: 3px;
+}
+
+//---------------------------------
+// Checkboxes
+//---------------------------------
+.preferences-wrap input[type='checkbox'] {
+	-webkit-appearance: none;
+	width: 13px;
+	height: 13px;
+	top: 1px;
+	background: @prefs-body;
+	border: 1px solid @check-border;
+	border-radius: 2px;
+
+	&:checked {
+		background-image: url(images/thread-list/checkbox-checkmark@2x.png);
+		background-repeat: no-repeat;
+		background-size: 11px 8px;
+		background-position: center;
+		background-color: @accent;
+		border-color: @accent;
+	}
+}
+
+//---------------------------------
+// Gray text
+//---------------------------------
+.preferences-wrap p {
+	font-size: 13px;
+}
+
+//------------------------------------------------------------
+// Scrollbar
+//------------------------------------------------------------
+.column-Preferences .scrollbar-track {
+	background: @prefs-body;
+	border-left: none;
+	width: 12px;
+
+	.scrollbar-handle {
+		background: fade(darken(@prefs-body, 45%), 40%);
+		border: none;
+	}
+}

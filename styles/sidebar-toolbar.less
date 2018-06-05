@@ -1,0 +1,128 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Main toolbar
+//------------------------------------------------------------
+.sheet-toolbar {
+	border: none;
+}
+
+//------------------------------------------------------------
+// Sidebar toolbar
+//------------------------------------------------------------
+.toolbar-RootSidebar {
+	height: 100%;
+	background-color: @sidebar;
+
+	//---------------------------------
+	// New email button
+	//---------------------------------
+	.item-compose {
+		background: none;
+		box-shadow: none;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		height: 26px;
+		padding-bottom: 10px;
+
+		img.content-mask {
+			background-color: fade(@sidebar-text, 65%);
+		}
+
+		&:hover {
+			background-color: lighten(@sidebar, 15%);
+			border-color: darken(@sidebar, 1%);
+
+			img.content-mask {
+				background-color: @sidebar-text;
+			}
+		}
+
+		&:active {
+			background-color: @btn-bg-active;
+			border-color: @btn-border-active;
+
+			img.content-mask{
+				background-color: @btn-icon-active;
+			}
+		}
+
+		//---------------------------------
+		// New email button - inactive window
+		//---------------------------------
+		body.is-blurred & {
+			box-shadow: none !important;
+
+			img.content-mask {
+				opacity: 1.0;
+			}
+
+			&:hover {
+				background-color: lighten(@sidebar, 15%);
+				border-color: darken(@sidebar, 1%);
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Activity toolbar
+//------------------------------------------------------------
+.toolbar-activity {
+	margin-top: 2px;
+
+	//---------------------------------
+	// Activity icon
+	//---------------------------------
+	.activity-toolbar-icon {
+		background-color: fade(@sidebar-text, 65%);
+
+		&:hover {
+			background-color: @sidebar-text;
+			cursor: pointer;
+		}
+
+		&.unread {
+			background-color: @accent;
+
+			&:hover {
+				background-color: @accent;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Activity unread count
+	//---------------------------------
+	.unread-count.active {
+		background: @accent;
+		font-weight: 600;
+		padding-top: 1px;
+	}
+}
+
+//------------------------------------------------------------
+// Activity dropdown menu
+//------------------------------------------------------------
+.activity-list-container {
+	background-color: @threadlist;
+
+	.activity-list-item {
+		border-bottom: 1px solid @border-medium;
+		color: @base-text;
+
+		&:hover {
+			background-color: @threadlist-hover;
+		}
+
+		&.unread,
+		&.unread:hover {
+			background-color: @accent;
+			color: @threadlist-text-active;
+
+			.timestamp {
+				color: fade(@threadlist-text-active, 50%);
+			}
+		}
+	}
+}

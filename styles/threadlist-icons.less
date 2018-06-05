@@ -1,0 +1,98 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Thread list icons
+//------------------------------------------------------------
+.thread-list .list-container .list-item {
+	//---------------------------------
+	// LESS mixin
+	//---------------------------------
+	.arc-threadlist-icon(@image, @color) {
+		background-image: none;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-image: @image;
+		-webkit-mask-size: 14px;
+		-webkit-mask-position: 6px 4px;
+		-webkit-filter: none;
+		background-color: @color;
+	}
+
+	//---------------------------------
+	// Unread icon
+	//---------------------------------
+	.thread-icon-unread {
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), @accent);
+	}
+
+	&.focused,
+	&.selected {
+		.thread-icon-unread {
+			background-color: @threadlist-text-active;
+		}
+	}
+
+	//---------------------------------
+	// Star icon
+	//---------------------------------
+	.thread-icon-star {
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@base-text, 70%));
+
+		&:hover {
+			background-color: fade(@base-text, 45%);
+		}
+	}
+
+	&.focused,
+	&.selected {
+		.thread-icon-star {
+			background-color: fade(@threadlist-text-active, 100%);
+
+			&:hover {
+				background-color: fade(@threadlist-text-active, 75%);
+			}
+		}
+	}
+
+	//---------------------------------
+	// None icon
+	//---------------------------------
+	&:hover:not(.unread) {
+		.thread-icon-none {
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@base-text, 15%));
+		}
+	}
+
+	&.focused:hover,
+	&.selected:hover {
+		.thread-icon-none {
+			background-color: fade(@threadlist-text-active, 40%);
+		}
+	}
+
+	//---------------------------------
+	// Star hover icon
+	//---------------------------------
+	&:hover {
+		.thread-icon-star-on-hover:hover {
+			background-color: fade(@base-text, 30%);
+		}
+	}
+
+	&.focused .thread-icon-star-on-hover:hover,
+	&.selected .thread-icon-star-on-hover:hover {
+		background-color: fade(@threadlist-text-active, 65%);
+	}
+}
+
+//------------------------------------------------------------
+// Link tracking icons
+//------------------------------------------------------------
+.open-tracking-icon img.content-mask {
+	&.unopened {
+		background-color: fade(@base-text, 30%);
+	}
+
+	&.opened {
+		background-color: @accent;
+	}
+}

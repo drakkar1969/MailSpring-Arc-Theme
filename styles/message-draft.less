@@ -1,0 +1,269 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Draft message (edit mode) header recipient tokens
+//------------------------------------------------------------
+#message-list	.tokenizing-field-input,
+.composer-full-window	.tokenizing-field-input {
+	.token {
+		//---------------------------------
+		// Normal token
+		//---------------------------------
+		box-shadow: none;
+		background: darken(@messagearea, 7%);
+		border: 1px solid @border-medium;
+		border-radius: 3px;
+		margin: -2px 5px 4px 1px;
+
+		&:hover {
+			background: darken(@messagearea, 10%);
+		}
+
+		&.selected {
+			background: fade(@accent, 80%);
+			border-color: @accent;
+			margin: -2px 5px 4px 1px;
+		}
+
+		&.selected:hover {
+			background: @accent;
+		}
+
+		//---------------------------------
+		// Invalid recipient token
+		//---------------------------------
+		&.invalid {
+			color: @warning-red;
+
+			img.content-mask {
+				background-color: @warning-red;
+			}
+
+			&.selected {
+				background-color: fade(@warning-red, 80%);
+				border-color: @warning-red;
+				color: white;
+
+				img.content-mask {
+					background-color: white;
+				}
+			}
+
+			&.selected:hover {
+				background: @warning-red;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Edit box
+	//---------------------------------
+	input {
+		margin-top: -2px;
+	}
+}
+
+
+//------------------------------------------------------------
+// Draft message header actions
+//------------------------------------------------------------
+.composer-inner-wrap	.composer-header-actions {
+	.action {
+		&:hover {
+			color: @accent;
+			cursor: pointer;
+
+			&.show-popout img.content-mask {
+				background-color: @accent;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message To/Cc/Bcc/Subject horizontal lines
+//------------------------------------------------------------
+.composer-participant-field:after {
+	background: @border-medium;
+}
+
+//------------------------------------------------------------
+// Draft message signature button
+//------------------------------------------------------------
+#message-list .signature-button-dropdown,
+.composer-full-window .signature-button-dropdown {
+	.button-dropdown {
+		.only-item:hover {
+			cursor: pointer;
+
+			img.content-mask {
+				background-color: @accent;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message rich edit toolbar
+//------------------------------------------------------------
+.RichEditor-toolbar .inner {
+	background: @messagearea !important;
+	padding-top: 1px;
+}
+
+.RichEditor-toolbar {
+	//---------------------------------
+	// Buttons
+	//---------------------------------
+	button.undefined:not(.with-select) {
+		&.active {
+			color: @accent;
+		}
+	}
+
+	//---------------------------------
+	// Dividers
+	//---------------------------------
+	.divider {
+		height: 13px;
+	}
+}
+
+//------------------------------------------------------------
+// Draft message quoted text control (3 dots)
+//------------------------------------------------------------
+.quoted-text-control,
+.composer-inner-wrap .compose-body .quoted-text-control {
+	background-color: transparent;
+	border-color: transparent;
+	margin: 0 14px 14px 16px;
+
+	&:hover {
+		border-color: transparent;
+	}
+}
+
+//------------------------------------------------------------
+// Draft message footer bar
+//------------------------------------------------------------
+#message-list .message-item-wrap.draft .message-item-white-wrap {
+	background-color: @messagearea;
+
+	.composer-action-bar-wrap {
+		background-color: lighten(@messagelist, 1%);
+		box-shadow: none;
+		border-top: 1px solid @border-medium;
+		border-radius: 0 0 3px 3px;
+	}
+
+	&.focused {
+		border: 1px solid @accent;
+
+		.composer-action-bar-wrap {
+			background-color: lighten(@messagelist, 1%);
+			box-shadow: none;
+			border-top: 1px solid @border-medium;
+			border-radius: 0 0 3px 3px;
+		}
+	}
+}
+
+.composer-full-window .composer-inner-wrap .composer-action-bar-wrap {
+	box-shadow: none;
+	background: lighten(@messagelist, 1%);
+	border-top-color: @border-medium;
+}
+
+//------------------------------------------------------------
+// Draft message footer buttons
+//------------------------------------------------------------
+#message-list .message-item-wrap.draft,
+.composer-full-window .composer-inner-wrap {
+	.composer-action-bar-content {
+		button.btn-toolbar {
+			box-shadow: none;
+			background: transparent;
+			border: 1px solid transparent;
+			border-radius: 3px;
+			height: 26px;
+			padding: 0px 13px 1px !important;
+
+			img.content-mask {
+				background-color: fade(@base-text, 95%) !important;
+			}
+
+			&:hover {
+				background: @btn-bg-hover;
+				border-color: @btn-border-hover;
+			}
+
+			&:active,
+			&.btn-enabled {
+				background: @btn-bg-active;
+				border-color: @btn-border-active;
+
+				img.content-mask {
+					background-color: @btn-icon-active !important;
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message footer send button
+//------------------------------------------------------------
+#message-list .message-item-wrap.draft,
+.composer-full-window .composer-inner-wrap {
+	.composer-action-bar-content {
+		.btn-send {
+			background: none;
+			border: none;
+
+			.primary-item {
+				background: @default-btn-bg;
+				box-shadow: none;
+				border: 1px solid @default-btn-bg;
+				border-radius: 3px 0px 0px 3px;
+				height: 26px;
+				// margin-top: 3px;
+				// padding-top: 1px;
+				color: @default-btn-text;
+
+				img.content-mask {
+					background-color: @default-btn-text;
+				}
+			}
+
+			.secondary-picker {
+				background: @default-btn-bg;
+				box-shadow: none;
+				border: 1px solid @default-btn-bg;
+				border-radius: 0px 3px 3px 0px;
+				height: 26px;
+				// margin-top: 1px;
+				// padding-top: 1px;
+
+				img.content-mask {
+					background-color: @default-btn-text;
+				}
+			}
+
+			&:hover {
+				.primary-item,
+				.secondary-picker {
+					background: @default-btn-bg-hover;
+					border-color: @default-btn-bg-hover;
+				}
+			}
+
+			&:active {
+				.primary-item:active,
+				.secondary-picker:active {
+					background: @default-btn-bg-active;
+					border-color: @default-btn-bg-active;
+				}
+			}
+		}
+	}
+}

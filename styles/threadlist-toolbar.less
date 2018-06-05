@@ -1,0 +1,50 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Thread list toolbar
+//------------------------------------------------------------
+.toolbar-ThreadList {
+	height: 100%;
+	background: @threadlist;
+	border-bottom: 1px solid @border-medium;
+
+	//---------------------------------
+	// Search box
+	//---------------------------------
+	.nylas-search-bar .header-container {
+		margin-left: 5px;
+		margin-right: 5px;
+
+		input[type="text"] {
+			box-shadow: none;
+		}
+	}
+
+	//---------------------------------
+	// Search box dropdown
+	//---------------------------------
+	.nylas-search-bar .content-container {
+		background: @threadlist;
+		margin-top: 3px;
+
+		.item.selected {
+			background: @accent;
+		}
+
+		.item.divider {
+			color: fade(@base-text, 40%);
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Drafts/trash empty button header
+//------------------------------------------------------------
+.thread-list-empty-folder-bar {
+	background-color: darken(@messagelist, 5%);
+	border-bottom-color: @border-medium;
+
+	.notice {
+		color: @base-text;
+	}
+}

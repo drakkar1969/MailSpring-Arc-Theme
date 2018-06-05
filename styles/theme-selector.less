@@ -1,0 +1,61 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Theme selector window
+//------------------------------------------------------------
+.modal {
+	width: 270px !important;
+}
+
+.theme-picker {
+	padding-left: 10px;
+
+	.scroll-region content {
+		margin-right: 10px;
+	}
+
+	//---------------------------------
+	// Create theme link
+	//---------------------------------
+	.create-theme a {
+		color: @accent !important;
+		cursor: pointer;
+	}
+}
+
+//------------------------------------------------------------
+// Scroll bar
+//------------------------------------------------------------
+.theme-picker .scrollbar-track {
+ background: @threadlist;
+ border-left: none;
+ width: 12px;
+
+ .scrollbar-handle {
+  background: fade(darken(@threadlist, 45%), 40%);
+  border: none;
+ }
+}
+
+//------------------------------------------------------------
+// Close button
+//------------------------------------------------------------
+.modal-container .modal .modal-close {
+	width: 16px !important;
+	height: 16px !important;
+	zoom: 0.9 !important;
+	margin: 8px;
+	content: url(mailspring://Arc/styles/images/window-buttons/titlebutton-close.png);
+
+	&:hover {
+		content: url(mailspring://Arc/styles/images/window-buttons/titlebutton-close-hover.png);
+	}
+
+	&:active {
+		content: url(mailspring://Arc/styles/images/window-buttons/titlebutton-close-active.png);
+	}
+
+	.platform-linux.is-blurred & {
+		content: url(mailspring://Arc/styles/images/window-buttons/titlebutton-close-backdrop.png);
+	}
+}

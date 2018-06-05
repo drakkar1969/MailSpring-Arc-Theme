@@ -1,0 +1,291 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Message list area
+//------------------------------------------------------------
+.column-MessageList {
+	background: @messagelist;
+	border-left: 1px solid @border-medium;
+	padding-top: 12px;
+}
+
+#message-list .messages-wrap .scroll-region-content-inner {
+	padding: 0 20px;
+}
+
+//------------------------------------------------------------
+// Message body
+//------------------------------------------------------------
+#message-list .message-item-wrap {
+	.message-item-white-wrap {
+		box-shadow: none !important;
+		background: @messagearea;
+		border: 1px solid @border-medium;
+		border-radius: 3px;
+
+		.message-item-area {
+			padding: 0 25px 14px 25px;
+		}
+
+		//---------------------------------
+		// Message header text
+		//---------------------------------
+		.from-contact {
+			font-size: 14px;
+		}
+
+		.to-participants {
+			font-size: 14px;
+
+			&.collapsed {
+				margin-top: 3px;
+			}
+		}
+
+		//---------------------------------
+		// Message header track icon
+		//---------------------------------
+		.message-header-right {
+			.open-tracking-message-status.opened {
+				img.content-mask {
+					background-color: @accent;
+				}
+			}
+		}
+	}
+
+	//---------------------------------
+	// Collapsed message
+	//---------------------------------
+	&.collapsed {
+		.message-item-white-wrap {
+			background-color: darken(@messagearea, 1%);
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message subject area
+//------------------------------------------------------------
+#message-list .message-subject-wrap {
+	padding-left: 2px;
+
+	//---------------------------------
+	// Message subject
+	//---------------------------------
+	.message-subject {
+		font-size: 18px;
+	}
+
+	//---------------------------------
+	// Subject area buttons
+	//---------------------------------
+	.message-icons-wrap {
+		cursor: default;
+	}
+
+	.message-icons-wrap div {
+		background: none;
+		border: 1px solid transparent;
+	 	border-radius: 3px;
+		height: 26px;
+		padding: 0px 13px;
+
+		img.content-mask {
+			margin-top: -6px;
+		}
+
+		&:hover {
+			border-color: @btn-border-hover;
+			background-color: @btn-bg-hover;
+		}
+
+		&:active {
+			border-color: @btn-border-active;
+			background-color: @btn-bg-active;
+
+			img.content-mask {
+				background-color: @btn-icon-active;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message footer
+//------------------------------------------------------------
+#message-list  .footer-reply-area-wrap {
+	box-shadow: none;
+	background: @messagearea;
+	border: 1px solid @border-medium;
+	border-radius: 0 0 3px 3px;
+
+	//---------------------------------
+	// Reply icon/text
+	//---------------------------------
+	.footer-reply-area {
+		width: max-content;
+		margin: 9px 12px;
+		font-size: 14px;
+		color: @accent;
+
+		img.content-mask {
+			background-color: @accent;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Minified messages
+//------------------------------------------------------------
+#message-list .minified-bundle {
+	margin-top: 1px !important;
+	margin-bottom: 12px;
+
+	.msg-line {
+		box-shadow: none;
+		border: none;
+		background-color: @messagelist;
+	}
+
+	.num-messages {
+		border: 1px solid @border-medium;
+		border-radius: 10px;
+		background-color: darken(@messagearea, 1%);
+		margin-top: -8px;
+		color: @accent;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message attachments
+//------------------------------------------------------------
+.nylas-attachment-item {
+	//---------------------------------
+	// File attachment box
+	//---------------------------------
+	&.file-attachment-item {
+		.file-info-wrap {
+			background-color: darken(@messagelist, 3%);
+			border: 1px solid darken(@border-medium, 3%);
+			border-radius: 3px 0 0 3px;
+			border-right-width: 0px;
+			box-shadow: none;
+		}
+
+		.file-action-icon {
+			background-color: darken(@messagelist, 3%);
+			border: 1px solid darken(@border-medium, 3%);
+			border-radius: 0 3px 3px 0;
+
+			img.content-mask {
+				background-color: fade(@base-text, 80%);
+			}
+
+			&:hover {
+				background-color: darken(@messagelist, 6%);
+			}
+
+			&:active {
+				background-color: darken(@messagelist, 10%);
+			}
+		}
+
+		&:focus {
+			.file-info-wrap {
+				border-color: @accent;
+			}
+
+			.file-action-icon {
+				border-color: @accent;
+				border-left-color: @border-medium;
+			}
+		}
+	}
+	//---------------------------------
+	// Image attachment download button
+	//---------------------------------
+	&.image-attachment-item {
+		.file-action-icon {
+			right: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			cursor: pointer;
+
+			img {
+				display: none;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Other attachment controls
+//------------------------------------------------------------
+#message-list .download-all {
+	.attachment-number {
+		font-size: 14px;
+	}
+
+	.separator {
+		display: none;
+	}
+
+	.download-all-action {
+		padding-left: 14px;
+		font-size: 14px;
+		color: @accent;
+
+		img.content-mask {
+			background-color: @accent;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message warning bar
+//------------------------------------------------------------
+#message-list .show-hidden-messages {
+	border: none;
+	border-left: 3px solid @accent;
+	border-radius: 0px;
+	background-color: @warning-bar;
+
+	a {
+		color: @accent;
+		cursor: pointer;
+	}
+}
+
+//------------------------------------------------------------
+// Scroll bars
+//------------------------------------------------------------
+#message-list .scrollbar-track,
+.composer-full-window .scrollbar-track {
+	background: @messagelist;
+	border-left: none;
+	width: 12px;
+
+	.scrollbar-handle {
+		background: fade(darken(@threadlist, 45%), 40%);
+		border: none;
+	}
+}
+
+.composer-full-window .scrollbar-track {
+	background: @threadlist;
+}

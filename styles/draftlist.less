@@ -1,0 +1,57 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Draft list area
+//------------------------------------------------------------
+.column-DraftList {
+	// Needed to fake bottom border for drafts toolbar
+	border-top: 5px solid @messagelist;
+
+	.draft-list {
+		border-top: 1px solid @border-medium;
+	}
+}
+
+//------------------------------------------------------------
+// Draft items
+//------------------------------------------------------------
+.draft-list .list-container .list-item {
+	background-color: @threadlist;
+	border-bottom: 1px solid @border-medium;
+
+	.checkmark .inner {
+		border: 1px solid @check-border;
+	}
+
+	&:hover {
+		background-color: @threadlist-hover;
+
+		.checkmark .inner {
+			border-color: darken(@check-border, 5%);
+		}
+	}
+
+	&.selected {
+		.checkmark .inner {
+			background-color: @accent;
+		}
+	}
+
+	&.keyboard-cursor {
+		border-left-color: @accent;
+	}
+}
+
+//------------------------------------------------------------
+// Scroll bar
+//------------------------------------------------------------
+.draft-list .scrollbar-track {
+	background: @threadlist;
+	border-left: none;
+	width: 12px;
+
+	.scrollbar-handle {
+		background: fade(darken(@threadlist, 45%), 40%);
+		border: none;
+	}
+}

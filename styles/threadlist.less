@@ -1,0 +1,62 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Thread list items
+//------------------------------------------------------------
+.thread-list .list-item {
+	background-color: @threadlist !important;
+	border-bottom: 1px solid @border-medium !important;
+
+	&:hover {
+		background-color: @threadlist-hover !important;
+	}
+
+	&.focused,
+	&.selected {
+		background-color: @accent !important;
+	}
+
+	&.unread {
+		.participants span,
+		.subject {
+			font-weight: bold;
+		}
+	}
+
+	&.keyboard-cursor {
+		border-left-color: darken(@accent, 15%);
+	}
+
+	body.is-blurred & {
+		&.focused,
+		&.selected {
+			.participants span,
+			.timestamp,
+			.subject,
+			.snippet-and-labels {
+				color: @threadlist-text-active;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Hover action bar
+//------------------------------------------------------------
+.thread-list .list-item:hover .list-column-HoverActions .inner {
+	display: none;
+}
+
+//------------------------------------------------------------
+// Scrollbar
+//------------------------------------------------------------
+.thread-list .scrollbar-track {
+	background: @threadlist;
+	border-left: none;
+	width: 12px;
+
+	.scrollbar-handle {
+		background: fade(darken(@threadlist, 45%), 40%);
+		border: none;
+	}
+}
