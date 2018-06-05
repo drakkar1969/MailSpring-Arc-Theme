@@ -5,7 +5,7 @@ A project for personal use.
 
 ## Screenshots
 Main window:
-<div align="left"><img src="screenshots/mainwindow.png" alt="Preview" /></div>
+<div align="left"><img src="screenshots/main.png" alt="Preview" /></div>
 <br><br>
 
 Composer window:
