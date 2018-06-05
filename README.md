@@ -5,10 +5,10 @@ A project for personal use.
 
 ## Screenshots
 Main window:
-<div align="center"><img src="screenshots/mainwindow.png" alt="Preview" /></div>
+<div align="left"><img src="screenshots/mainwindow.png" alt="Preview" /></div>
 <br><br>
 
 Composer window:
 <br><br>
 
-<div align="center"><img src="screenshots/composer.png" alt="Preview" /></div>
+<div align="left"><img src="screenshots/composer.png" width="50%" alt="Preview" /></div>
