@@ -9,6 +9,6 @@ Main window:
 <br><br>
 
 Composer window:
-<br><br>
+<br>
 
 <div align="left"><img src="screenshots/composer.png" width="50%" alt="Preview" /></div>
