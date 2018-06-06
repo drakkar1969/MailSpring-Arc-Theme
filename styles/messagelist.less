@@ -112,6 +112,24 @@
 }
 
 //------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.mail-label.removable {
+	box-shadow: none !important;
+	background: fade(@accent, 80%) !important;
+	color: fade(@threadlist-text-active, 95%) !important;
+	margin-top: 3px;
+
+	img.content-mask {
+		background-color: fade(@threadlist-text-active, 80%) !important;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Message footer
 //------------------------------------------------------------
 #message-list  .footer-reply-area-wrap {

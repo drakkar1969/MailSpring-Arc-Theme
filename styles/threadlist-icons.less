@@ -96,3 +96,24 @@
 		background-color: @accent;
 	}
 }
+
+//------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.thread-list .thread-injected-mail-labels,
+.draft-list .thread-injected-mail-labels {
+	margin-right: 0;
+
+	.mail-label {
+		box-shadow: none !important;
+		background: fade(@accent, 80%) !important;
+		color: fade(@threadlist-text-active, 95%) !important;
+		-webkit-filter: none !important;
+	}
+}
+
+.thread-list .focused .mail-label,
+.draft-list .focused .mail-label,
+.thread-list.handler-split .list-item.selected .mail-label {
+	background-color: lighten(fade(@accent, 80%), 15%) !important;
+}
