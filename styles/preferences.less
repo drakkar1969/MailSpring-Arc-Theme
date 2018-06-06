@@ -171,6 +171,38 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 }
 
 //------------------------------------------------------------
+// Accounts/Signatures tab
+//------------------------------------------------------------
+.nylas-editable-list .items-wrapper .selected.editing, .nylas-editable-list:focus .items-wrapper .selected {
+	background-color: @accent;
+}
+
+//------------------------------------------------------------
+// Appearance tab
+//------------------------------------------------------------
+.preferences-wrap .container-appearance .appearance-mode-switch .appearance-mode {
+	background-color: @prefs-body;
+	border: 1px solid darken(@border-medium, 10%);
+	border-radius: 4px;
+	color: fade(@base-text, 50%);
+
+	img.content-mask {
+		background-color: fade(@base-text, 50%);
+	}
+
+	&.active {
+		border: 1px solid @accent;
+		color: @accent;
+
+		img.content-mask {
+			background-color: @accent;
+		}
+	}
+}
+
+
+
+//------------------------------------------------------------
 // Scrollbar
 //------------------------------------------------------------
 .column-Preferences .scrollbar-track {
