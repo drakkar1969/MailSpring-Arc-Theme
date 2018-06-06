@@ -107,6 +107,9 @@
 .activity-list-container {
 	background-color: @threadlist;
 
+	//---------------------------------
+	// Activity dropdown items
+	//---------------------------------
 	.activity-list-item {
 		border-bottom: 1px solid @border-medium;
 		color: @base-text;
@@ -123,6 +126,20 @@
 			.timestamp {
 				color: fade(@threadlist-text-active, 50%);
 			}
+		}
+	}
+
+	//---------------------------------
+	// Activity dropdown scrollbar
+	//---------------------------------
+	.scrollbar-track {
+		background: @threadlist;
+		border-left: none;
+		width: 12px;
+
+		.scrollbar-handle {
+			background: fade(darken(@threadlist, 45%), 40%);
+			border: none;
 		}
 	}
 }
