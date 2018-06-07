@@ -85,6 +85,25 @@
 }
 
 //------------------------------------------------------------
+// Adjust icon vertical positions
+//------------------------------------------------------------
+.thread-list .list-container .list-item {
+	.thread-icon-unread,
+	.thread-icon-star,
+	.thread-icon-none {
+		margin-top: 1px;
+	}
+}
+
+.thread-list-narrow .list-container .list-item {
+	.thread-icon-unread,
+	.thread-icon-star,
+	.thread-icon-none {
+		margin-top: 0px;
+	}
+}
+
+//------------------------------------------------------------
 // Link tracking icons
 //------------------------------------------------------------
 .open-tracking-icon img.content-mask {
@@ -95,6 +114,17 @@
 	&.opened {
 		background-color: @accent;
 	}
+}
+
+//------------------------------------------------------------
+// Important icon (gmail)
+//------------------------------------------------------------
+.thread-list .mail-important-icon {
+	margin-top: -1px;
+}
+
+.thread-list-narrow .mail-important-icon {
+	margin-top: -3px;
 }
 
 //------------------------------------------------------------
