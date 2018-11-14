@@ -7,32 +7,38 @@
 	height: 100%;
 	background: @threadlist;
 	border-bottom: 1px solid @border-medium;
+}
 
-	//---------------------------------
-	// Search box
-	//---------------------------------
-	.nylas-search-bar .header-container {
-		margin-left: 5px;
-		margin-right: 5px;
-
-		input[type="text"] {
-			box-shadow: none;
-		}
-	}
+//------------------------------------------------------------
+// Search box
+//------------------------------------------------------------
+.thread-search-bar {
+	box-shadow: none;
+	padding-left: 9px;
 
 	//---------------------------------
 	// Search box dropdown
 	//---------------------------------
-	.nylas-search-bar .content-container {
-		background: @threadlist;
-		margin-top: 3px;
+	.suggestions {
+		.suggestion {
+			color: fade(@base-text, 50%);
 
-		.item.selected {
-			background: @accent;
+			&.selected {
+				background-color: @accent;
+			}
+
+			&:hover:not(.selected) {
+				background-color: @threadlist-hover;
+			}
+
+			.suggestion-token {
+				color: @accent;
+			}
 		}
 
-		.item.divider {
-			color: fade(@base-text, 40%);
+		.footer {
+			background-color: @messagelist;
+			border-color: @border-medium;
 		}
 	}
 }
