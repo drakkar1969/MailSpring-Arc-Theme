@@ -8,9 +8,6 @@ Main window:
 <div align="left"><img src="screenshots/main.png" alt="Preview" /></div>
 <br><br>
 
-
-
-
 Composer window:
 <br>
 
