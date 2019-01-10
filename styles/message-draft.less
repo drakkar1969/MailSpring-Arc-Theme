@@ -213,8 +213,7 @@
 //------------------------------------------------------------
 // Draft message footer send button
 //------------------------------------------------------------
-#message-list .message-item-wrap.draft,
-.composer-full-window .composer-inner-wrap {
+#message-list .message-item-wrap.draft {
 	.composer-action-bar-content {
 		.btn-send {
 			background: none;
@@ -263,6 +262,35 @@
 					background: @default-btn-bg-active;
 					border-color: @default-btn-bg-active;
 				}
+			}
+		}
+	}
+}
+
+.composer-full-window .composer-inner-wrap {
+	.composer-action-bar-content {
+		button.btn-send {
+			background: @default-btn-bg;
+			box-shadow: none;
+			border: 1px solid @default-btn-bg;
+			border-radius: 3px;
+			height: 26px;
+			// margin-top: 3px;
+			// padding-top: 1px;
+			color: @default-btn-text;
+
+			img.content-mask {
+				background-color: @default-btn-text !important;
+			}
+
+			&:hover {
+				background: @default-btn-bg-hover;
+				border-color: @default-btn-bg-hover;
+			}
+
+			&:active {
+				background: @default-btn-bg-active;
+				border-color: @default-btn-bg-active;
 			}
 		}
 	}
