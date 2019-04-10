@@ -122,12 +122,6 @@ sidebar-toolbar.less
 - @btn-border-active
 - @btn-icon-active
 ------------------------------
-sidebar.less
-- @sidebar-text
-- @sidebar-text-active
-- @warning-red
-- @warning-yellow
-------------------------------
 theme-colors.less
 - @base-text
 - @threadlist
