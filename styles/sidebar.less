@@ -4,12 +4,12 @@
 // Sidebar
 //------------------------------------------------------------
 .column-RootSidebar {
-	background-color: @sidebar;
+	background-color: @colorSidebarBg;
 	padding-top: 12px;
 }
 
 .account-sidebar {
-	background-color: @sidebar;
+	background-color: @colorSidebarBg;
 }
 
 //------------------------------------------------------------
@@ -153,7 +153,7 @@
 // Sidebar syncing box
 //------------------------------------------------------------
 .sidebar-activity {
-	background-color: darken(@sidebar, 5%);;
+	background-color: darken(@colorSidebarBg, 5%);;
 	box-shadow: none;
 	font-weight: 500;
   color: lighten(@sidebar-text, 5%);
@@ -216,7 +216,7 @@
 // Sidebar notifications (error/offline/update)
 //------------------------------------------------------------
 .notifications {
-	background-color: darken(@sidebar, 5%);;
+	background-color: darken(@colorSidebarBg, 5%);;
 	box-shadow: none;
 }
 
@@ -255,12 +255,12 @@
 // Scrollbar
 //------------------------------------------------------------
 .account-sidebar .scrollbar-track {
-	background: @sidebar;
+	background: @colorSidebarBg;
 	border-left: none;
 	width: 12px;
 
 	.scrollbar-handle {
-		background: fade(lighten(@sidebar, 50%), 40%);
+		background: fade(lighten(@colorSidebarBg, 50%), 40%);
 		border: none;
 	}
 }

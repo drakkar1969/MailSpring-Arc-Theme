@@ -16,7 +16,7 @@ body.platform-linux .sheet-toolbar-container {
 //------------------------------------------------------------
 .toolbar-RootSidebar {
 	height: 100%;
-	background-color: @sidebar;
+	background-color: @colorSidebarBg;
 
 	//---------------------------------
 	// New email button
@@ -34,8 +34,8 @@ body.platform-linux .sheet-toolbar-container {
 		}
 
 		&:hover {
-			background-color: lighten(@sidebar, 15%);
-			border-color: darken(@sidebar, 1%);
+			background-color: lighten(@colorSidebarBg, 15%);
+			border-color: darken(@colorSidebarBg, 1%);
 
 			img.content-mask {
 				background-color: @sidebar-text;
@@ -62,8 +62,8 @@ body.platform-linux .sheet-toolbar-container {
 			}
 
 			&:hover {
-				background-color: lighten(@sidebar, 15%);
-				border-color: darken(@sidebar, 1%);
+				background-color: lighten(@colorSidebarBg, 15%);
+				border-color: darken(@colorSidebarBg, 1%);
 			}
 		}
 	}
