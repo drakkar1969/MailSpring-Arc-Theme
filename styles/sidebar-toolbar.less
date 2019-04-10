@@ -30,7 +30,7 @@ body.platform-linux .sheet-toolbar-container {
 		padding-bottom: 10px;
 
 		img.content-mask {
-			background-color: fade(@sidebar-text, 65%);
+			background-color: fade(@colorSidebarText, 65%);
 		}
 
 		&:hover {
@@ -38,7 +38,7 @@ body.platform-linux .sheet-toolbar-container {
 			border-color: darken(@colorSidebarBg, 1%);
 
 			img.content-mask {
-				background-color: @sidebar-text;
+				background-color: @colorSidebarText;
 			}
 		}
 
@@ -79,10 +79,10 @@ body.platform-linux .sheet-toolbar-container {
 	// Activity icon
 	//---------------------------------
 	.activity-toolbar-icon {
-		background-color: fade(@sidebar-text, 65%);
+		background-color: fade(@colorSidebarText, 65%);
 
 		&:hover {
-			background-color: @sidebar-text;
+			background-color: @colorSidebarText;
 			cursor: pointer;
 		}
 
