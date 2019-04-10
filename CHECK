@@ -122,6 +122,8 @@ sidebar-toolbar.less
 - @btn-border-active
 - @btn-icon-active
 ------------------------------
+sidebar.less  OK
+------------------------------
 theme-colors.less
 - @base-text
 - @threadlist
@@ -152,3 +154,4 @@ window-controls.less
 
 TODO:
   - scrollbars
+  - account selector (down arrow) vertical position in sidebar; same for add folder button

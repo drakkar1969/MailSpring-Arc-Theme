@@ -8,7 +8,7 @@
 }
 
 body.platform-linux .sheet-toolbar-container {
-	background: @messagelist;
+	background: @colorWindowBg;
 }
 
 //------------------------------------------------------------
@@ -30,12 +30,12 @@ body.platform-linux .sheet-toolbar-container {
 		padding-bottom: 10px;
 
 		img.content-mask {
-			background-color: fade(@colorSidebarText, 65%);
+			background-color: @colorSidebarText;
 		}
 
 		&:hover {
-			background-color: lighten(@colorSidebarBg, 15%);
-			border-color: darken(@colorSidebarBg, 1%);
+			background-color: @colorBtnBgDark;
+			border-color: @colorBtnBorderDark;
 
 			img.content-mask {
 				background-color: @colorSidebarText;
@@ -43,11 +43,11 @@ body.platform-linux .sheet-toolbar-container {
 		}
 
 		&:active {
-			background-color: @btn-bg-active;
-			border-color: @btn-border-active;
+			background-color: @colorBtnBgActiveDark;
+			border-color: @colorBtnBorderActiveDark;
 
 			img.content-mask{
-				background-color: @btn-icon-active;
+				background-color: @colorBtnTextActive;
 			}
 		}
 
@@ -62,8 +62,8 @@ body.platform-linux .sheet-toolbar-container {
 			}
 
 			&:hover {
-				background-color: lighten(@colorSidebarBg, 15%);
-				border-color: darken(@colorSidebarBg, 1%);
+				background-color: @colorBtnBgDark;
+				border-color: @colorBtnBorderDark;
 			}
 		}
 	}
@@ -79,7 +79,7 @@ body.platform-linux .sheet-toolbar-container {
 	// Activity icon
 	//---------------------------------
 	.activity-toolbar-icon {
-		background-color: fade(@colorSidebarText, 65%);
+		background-color: @colorSidebarTextDarker;
 
 		&:hover {
 			background-color: @colorSidebarText;
@@ -109,26 +109,26 @@ body.platform-linux .sheet-toolbar-container {
 // Activity dropdown menu
 //------------------------------------------------------------
 .activity-list-container {
-	background-color: @threadlist;
+	background-color: @colorMenuBg;
 
 	//---------------------------------
 	// Activity dropdown items
 	//---------------------------------
 	.activity-list-item {
-		border-bottom: 1px solid @border-medium;
-		color: @base-text;
+		border-bottom: 1px solid @colorBorder;
+		color: @colorMenuText;
 
 		&:hover {
-			background-color: @threadlist-hover;
+			background-color: @colorMenuItemHover;
 		}
 
 		&.unread,
 		&.unread:hover {
 			background-color: @colorAccent;
-			color: @threadlist-text-active;
+			color: @colorMenuTextActive;
 
 			.timestamp {
-				color: fade(@threadlist-text-active, 50%);
+				color: fade(@colorMenuTextActive, 50%);
 			}
 		}
 	}
