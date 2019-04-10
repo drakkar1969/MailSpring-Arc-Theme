@@ -84,11 +84,11 @@
 		}
 
 		&:hover {
-			background-color: @colorSidebarHover;
+			background-color: @colorSidebarItemHover;
 		}
 
 		&.selected {
-			background-color: @accent;
+			background-color: @colorAccent;
 			color: @sidebar-text-active;
 
 			img.content-mask {
@@ -104,7 +104,7 @@
 		background: transparent;
 
 		.item {
-			background-color: @accent;
+			background-color: @colorAccent;
 			color: @sidebar-text-active;
 
 			img.content-mask {
@@ -120,11 +120,11 @@
 .nylas-outline-view .item {
 	.item-count-box {
 		box-shadow: none;
-		background-color: @accent;
+		background-color: @colorAccent;
 		color: @sidebar-text-active;
 
 		&.alt-count {
-			background-color: @accent;
+			background-color: @colorAccent;
 			color: @sidebar-text-active;
 		}
 	}
@@ -132,11 +132,11 @@
 	&.selected {
 		.item-count-box {
 			background-color: fade(@sidebar-text-active, 90%);
-			color: @accent;
+			color: @colorAccent;
 
 			&.alt-count {
 				background-color: fade(@sidebar-text-active, 90%);
-				color: @accent;
+				color: @colorAccent;
 			}
 		}
 	}
@@ -170,7 +170,7 @@
 	// Hide link
 	//---------------------------------
 	.inner a {
-		color: @accent;
+		color: @colorAccent;
 		cursor: pointer;
 	}
 
@@ -187,8 +187,8 @@
 	// Syncing indicators (circles)
 	//---------------------------------
 	.item .sync-activity .account .folder-progress::before {
-		background-color: @accent;
-		border-color: @accent;
+		background-color: @colorAccent;
+		border-color: @colorAccent;
 	}
 
 	.item .sync-activity .account .folder-progress.busy::before {
@@ -200,7 +200,7 @@
 			border-color: transparent;
 		}
 		100% {
-			border-color: @accent;
+			border-color: @colorAccent;
 		}
 	}
 
@@ -221,7 +221,7 @@
 }
 
 .notification {
-	background: @accent;
+	background: @colorAccent;
 	border-radius: 3px;
 	margin-top: 16px;
 
@@ -230,7 +230,7 @@
 
 		&:hover {
 			box-shadow: none !important;
-			background: darken(@accent, 10%);
+			background: darken(@colorAccent, 10%);
 		}
 	}
 

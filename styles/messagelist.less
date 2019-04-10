@@ -48,7 +48,7 @@
 		.message-header-right {
 			.open-tracking-message-status.opened {
 				img.content-mask {
-					background-color: @accent;
+					background-color: @colorAccent;
 				}
 			}
 		}
@@ -116,7 +116,7 @@
 //------------------------------------------------------------
 .mail-label.removable {
 	box-shadow: none !important;
-	background: fade(@accent, 80%) !important;
+	background: fade(@colorAccent, 80%) !important;
 	color: fade(@threadlist-text-active, 95%) !important;
 	margin-top: 3px;
 
@@ -145,10 +145,10 @@
 		width: max-content;
 		margin: 9px 12px;
 		font-size: 14px;
-		color: @accent;
+		color: @colorAccent;
 
 		img.content-mask {
-			background-color: @accent;
+			background-color: @colorAccent;
 		}
 
 		&:hover {
@@ -175,7 +175,7 @@
 		border-radius: 10px;
 		background-color: darken(@messagearea, 1%);
 		margin-top: -8px;
-		color: @accent;
+		color: @colorAccent;
 
 		&:hover {
 			cursor: pointer;
@@ -219,11 +219,11 @@
 
 		&:focus {
 			.file-info-wrap {
-				border-color: @accent;
+				border-color: @colorAccent;
 			}
 
 			.file-action-icon {
-				border-color: @accent;
+				border-color: @colorAccent;
 				border-left-color: @border-medium;
 			}
 		}
@@ -262,10 +262,10 @@
 	.download-all-action {
 		padding-left: 14px;
 		font-size: 14px;
-		color: @accent;
+		color: @colorAccent;
 
 		img.content-mask {
-			background-color: @accent;
+			background-color: @colorAccent;
 		}
 
 		&:hover {
@@ -279,12 +279,12 @@
 //------------------------------------------------------------
 #message-list .show-hidden-messages {
 	border: none;
-	border-left: 3px solid @accent;
+	border-left: 3px solid @colorAccent;
 	border-radius: 0px;
 	background-color: @warning-bar;
 
 	a {
-		color: @accent;
+		color: @colorAccent;
 		cursor: pointer;
 	}
 }

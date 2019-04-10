@@ -20,13 +20,13 @@
 		}
 
 		&.selected {
-			background: fade(@accent, 80%);
-			border-color: @accent;
+			background: fade(@colorAccent, 80%);
+			border-color: @colorAccent;
 			margin: -2px 5px 4px 1px;
 		}
 
 		&.selected:hover {
-			background: @accent;
+			background: @colorAccent;
 		}
 
 		//---------------------------------
@@ -70,11 +70,11 @@
 .composer-inner-wrap	.composer-header-actions {
 	.action {
 		&:hover {
-			color: @accent;
+			color: @colorAccent;
 			cursor: pointer;
 
 			&.show-popout img.content-mask {
-				background-color: @accent;
+				background-color: @colorAccent;
 			}
 		}
 	}
@@ -97,7 +97,7 @@
 			cursor: pointer;
 
 			img.content-mask {
-				background-color: @accent;
+				background-color: @colorAccent;
 			}
 		}
 	}
@@ -117,7 +117,7 @@
 	//---------------------------------
 	button.undefined:not(.with-select) {
 		&.active {
-			color: @accent;
+			color: @colorAccent;
 		}
 	}
 
@@ -157,7 +157,7 @@
 	}
 
 	&.focused {
-		border: 1px solid @accent;
+		border: 1px solid @colorAccent;
 
 		.composer-action-bar-wrap {
 			background-color: lighten(@messagelist, 1%);

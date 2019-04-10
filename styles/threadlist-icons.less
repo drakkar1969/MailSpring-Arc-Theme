@@ -21,7 +21,7 @@
 	// Unread icon
 	//---------------------------------
 	.thread-icon-unread {
-		.arc-threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), @accent);
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), @colorAccent);
 	}
 
 	&.focused,
@@ -112,7 +112,7 @@
 	}
 
 	&.opened {
-		background-color: @accent;
+		background-color: @colorAccent;
 	}
 }
 
@@ -136,7 +136,7 @@
 
 	.mail-label {
 		box-shadow: none !important;
-		background: fade(@accent, 80%) !important;
+		background: fade(@colorAccent, 80%) !important;
 		color: fade(@threadlist-text-active, 95%) !important;
 		-webkit-filter: none !important;
 	}
@@ -145,5 +145,5 @@
 .thread-list .focused .mail-label,
 .draft-list .focused .mail-label,
 .thread-list.handler-split .list-item.selected .mail-label {
-	background-color: lighten(fade(@accent, 80%), 15%) !important;
+	background-color: lighten(fade(@colorAccent, 80%), 15%) !important;
 }
