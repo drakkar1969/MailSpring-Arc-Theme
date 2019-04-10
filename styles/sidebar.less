@@ -20,7 +20,7 @@
 		font-size: 13px;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		color: fade(@colorSidebarText, 50%);
+		color: @colorSidebarTextDarker;
 		margin-bottom: 7px;
 		padding-top: 0px;
 	}
@@ -31,7 +31,7 @@
 
 	.add-item-button {
 		img.content-mask {
-			background-color: fade(@colorSidebarText, 50%);
+			background-color: @colorSidebarTextDarker;
 			margin-top: 4px;
 		}
 	}
@@ -49,7 +49,7 @@
 	img.content-dark {
 		zoom: 1 !important;
 		background-image: none;
-		background-color: fade(@colorSidebarText, 65%);
+		background-color: @colorSidebarTextDarker;
 		-webkit-mask-repeat: no-repeat;
 		-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path fill="#FFF" d="M0 0h1l4 4 4-4h1v1L5 6 0 1z"/></svg>');
 		transform: none;
@@ -59,7 +59,7 @@
 		cursor: pointer;
 
 		img.content-dark {
-			background-color: fade(@colorSidebarTextActive, 85%);
+			background-color: @colorSidebarText;
 		}
 	}
 }
@@ -73,7 +73,7 @@
 	//---------------------------------
 	.item {
 		font-size: 14px;
-		font-weight: 500;
+		font-weight: 400;
 		color: @colorSidebarText;
 
 		img.content-mask {
@@ -131,11 +131,11 @@
 
 	&.selected {
 		.item-count-box {
-			background-color: fade(@colorSidebarTextActive, 90%);
+			background-color: @colorSidebarTextActive;
 			color: @colorAccent;
 
 			&.alt-count {
-				background-color: fade(@colorSidebarTextActive, 90%);
+				background-color: @colorSidebarTextActive;
 				color: @colorAccent;
 			}
 		}
@@ -146,7 +146,7 @@
 // Folder expand/collapse arrows
 //------------------------------------------------------------
 .disclosure-triangle.visible div {
-	border-left-color: fade(@colorSidebarText, 40%);
+	border-left-color: @colorSidebarTextDarker;
 }
 
 //------------------------------------------------------------
@@ -156,14 +156,14 @@
 	background-color: darken(@colorSidebarBg, 5%);;
 	box-shadow: none;
 	font-weight: 500;
-  color: lighten(@colorSidebarText, 5%);
+  color: @colorSidebarTextLighter;
 
 	//---------------------------------
 	// Task count label
 	//---------------------------------
 	.item .count {
 		font-weight: 500;
-	  color: lighten(@colorSidebarText, 5%);
+	  color: @colorSidebarTextLighter;
 	}
 
 	//---------------------------------
@@ -179,7 +179,7 @@
 	//---------------------------------
 	.item h2 {
 		font-weight: 600;
-		color: darken(@colorSidebarText, 15%);
+		color: @colorSidebarTextDarker;
 		margin: 6px 0px 12px;
 	}
 
@@ -208,7 +208,7 @@
 	// Progress labels
 	//---------------------------------
 	.item .sync-activity .account .folder-progress .progress-label {
-		color: darken(@colorSidebarText, 25%);
+		color: @colorSidebarTextDarker;
 	}
 }
 
@@ -216,7 +216,7 @@
 // Sidebar notifications (error/offline/update)
 //------------------------------------------------------------
 .notifications {
-	background-color: darken(@colorSidebarBg, 5%);;
+	background-color: darken(@colorSidebarBg, 5%);
 	box-shadow: none;
 }
 
