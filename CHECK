@@ -19,7 +19,6 @@ arc-variables.less
 - @default-btn-bg-active
 - @default-btn-text
 - @prefs-body
-- @check-border
 ------------------------------
 contact-sidebar.less  OK
 ------------------------------
@@ -32,12 +31,7 @@ draftlist-toolbar.less
 - @btn-border-active
 - @btn-icon-active
 ------------------------------
-draftlist.less
-- @border-medium
-- @threadlist
-- @threadlist-hover
-- @messagelist
-- @check-border
+draftlist.less  OK
 ------------------------------
 index.less
 ------------------------------
@@ -82,5 +76,5 @@ window-controls.less
 ------------------------------
 
 TODO:
-  - scrollbars (sidebar, sidebar-toolbar, messagelist, threadlist, activity, preferences, theme-selector)
+  - scrollbars (sidebar, sidebar-toolbar, messagelist, threadlist, activity, preferences, theme-selector, draftlist)
   - check message reply etc. buttons
