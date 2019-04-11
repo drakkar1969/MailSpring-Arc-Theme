@@ -3,8 +3,8 @@
 .toolbar-MessageList,
 .toolbar-MessageListSidebar {
 	height: 100%;
-	background: @messagelist;
-	border-left: 1px solid @border-medium;
+	background: @colorWindowBg;
+	border-left: 1px solid @colorBorder;
 
 	//---------------------------------
 	// Toolbar buttons
@@ -17,17 +17,17 @@
 		height: 26px;
 
 		&:hover {
-			border-color: @btn-border-hover !important;
-			background-color: @btn-bg-hover;
+			border-color: @colorBtnBorderLight !important;
+			background-color: @colorBtnBgLight;
 		}
 
 		&:active,
 		&.mode-toggle.mode-false {
-			border-color: @btn-border-active !important;
-			background-color: @btn-bg-active;
+			border-color: @colorBtnBorderActiveLight !important;
+			background-color: @colorBtnBgActiveLight;
 
 			img.content-mask {
-				background-color: @btn-icon-active;
+				background-color: @colorBtnTextActive;
 			}
 		}
 
@@ -42,13 +42,13 @@
 			}
 
 			&:hover {
-				border-color: @btn-border-hover;
-				background-color: @btn-bg-hover;
+				border-color: @colorBtnBorderLight;
+				background-color: @colorBtnBgLight;
 			}
 		}
 
 		body.is-blurred &.mode-toggle.mode-false {
-			background-color: @btn-bg-active;
+			background-color: @colorBtnBgActiveLight;
 		}
 	}
 }

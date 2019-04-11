@@ -72,14 +72,7 @@ message-draft.less
 - @default-btn-text
 - @warning-red
 ------------------------------
-messagelist-toolbar.less
-- @border-medium
-- @messagelist
-- @btn-bg-hover
-- @btn-border-hover
-- @btn-bg-active
-- @btn-border-active
-- @btn-icon-active
+messagelist-toolbar.less  OK
 ------------------------------
 messagelist.less  OK
 ------------------------------
@@ -134,4 +127,5 @@ TODO:
   - scrollbars (sidebar, messagelist)
   - account selector (down arrow) vertical position in sidebar; same for add folder button (sidebar)
   - activity toolbar + dropdown (sidebar)
-  = redo minified messages (messagelist)
+  - redo minified messages (messagelist)
+  - check message reply etc. buttons
