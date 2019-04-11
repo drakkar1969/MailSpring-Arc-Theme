@@ -37,7 +37,7 @@ threadlist.less OK
 ------------------------------
 
 TODO:
-  - scrollbars (sidebar, sidebar-toolbar, messagelist, threadlist, activity, preferences, theme-selector, draftlist)
+  - scrollbars (sidebar)
   - check message reply etc. buttons
   - message-draft tokens
   - message-draft send button
