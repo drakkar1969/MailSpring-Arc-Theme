@@ -10,13 +10,13 @@
 		// Normal token
 		//---------------------------------
 		box-shadow: none;
-		background: darken(@messagearea, 7%);
-		border: 1px solid @border-medium;
+		background: darken(@colorWindowBg, 3%);
+		border: 1px solid @colorBorder;
 		border-radius: 3px;
 		margin: -2px 5px 4px 1px;
 
 		&:hover {
-			background: darken(@messagearea, 10%);
+			background: darken(@colorWindowBg, 6%);
 		}
 
 		&.selected {
@@ -42,10 +42,10 @@
 			&.selected {
 				background-color: fade(@colorWarningRed, 80%);
 				border-color: @colorWarningRed;
-				color: white;
+				color: @colorBtnTextActive;
 
 				img.content-mask {
-					background-color: white;
+					background-color: @colorBtnTextActive;
 				}
 			}
 
@@ -84,7 +84,7 @@
 // Draft message To/Cc/Bcc/Subject horizontal lines
 //------------------------------------------------------------
 .composer-participant-field:after {
-	background: @border-medium;
+	background: @colorBorder;
 }
 
 //------------------------------------------------------------
@@ -107,7 +107,7 @@
 // Draft message rich edit toolbar
 //------------------------------------------------------------
 .RichEditor-toolbar .inner {
-	background: @messagearea !important;
+	background: @colorBodyBg !important;
 	padding-top: 1px;
 }
 
@@ -147,12 +147,12 @@
 // Draft message footer bar
 //------------------------------------------------------------
 #message-list .message-item-wrap.draft .message-item-white-wrap {
-	background-color: @messagearea;
+	background-color: @colorBodyBg;
 
 	.composer-action-bar-wrap {
-		background-color: lighten(@messagelist, 1%);
+		background-color: @colorBodyBgDarker;
 		box-shadow: none;
-		border-top: 1px solid @border-medium;
+		border-top: 1px solid @colorBorder;
 		border-radius: 0 0 3px 3px;
 	}
 
@@ -160,9 +160,9 @@
 		border: 1px solid @colorAccent;
 
 		.composer-action-bar-wrap {
-			background-color: lighten(@messagelist, 1%);
+			background-color: @colorBodyBgDarker;
 			box-shadow: none;
-			border-top: 1px solid @border-medium;
+			border-top: 1px solid @colorBorder;
 			border-radius: 0 0 3px 3px;
 		}
 	}
@@ -170,8 +170,8 @@
 
 .composer-full-window .composer-inner-wrap .composer-action-bar-wrap {
 	box-shadow: none;
-	background: lighten(@messagelist, 1%);
-	border-top-color: @border-medium;
+	background: @colorWindowBg;
+	border-top-color: @colorBorder;
 }
 
 //------------------------------------------------------------
@@ -189,21 +189,21 @@
 			padding: 0px 13px 1px !important;
 
 			img.content-mask {
-				background-color: fade(@base-text, 95%) !important;
+				background-color: @colorText !important;
 			}
 
 			&:hover {
-				background: @btn-bg-hover;
-				border-color: @btn-border-hover;
+				background: @colorBtnBgLight;
+				border-color: @colorBtnBorderLight;
 			}
 
 			&:active,
 			&.btn-enabled {
-				background: @btn-bg-active;
-				border-color: @btn-border-active;
+				background: @colorBtnBgActiveLight;
+				border-color: @colorBtnBorderActiveLight;
 
 				img.content-mask {
-					background-color: @btn-icon-active !important;
+					background-color: @colorBtnTextActive !important;
 				}
 			}
 		}
@@ -221,47 +221,47 @@
 			border: none;
 
 			.primary-item {
-				background: @default-btn-bg;
+				background: @colorBtnDefaultBg;
 				box-shadow: none;
-				border: 1px solid @default-btn-bg;
+				border: 1px solid @colorBtnDefaultBg;
 				border-radius: 3px 0px 0px 3px;
 				height: 26px;
 				// margin-top: 3px;
 				// padding-top: 1px;
-				color: @default-btn-text;
+				color: @colorBtnDefaultText;
 
 				img.content-mask {
-					background-color: @default-btn-text;
+					background-color: @colorBtnDefaultText;
 				}
 			}
 
 			.secondary-picker {
-				background: @default-btn-bg;
+				background: @colorBtnDefaultBg;
 				box-shadow: none;
-				border: 1px solid @default-btn-bg;
+				border: 1px solid @colorBtnDefaultBg;
 				border-radius: 0px 3px 3px 0px;
 				height: 26px;
 				// margin-top: 1px;
 				// padding-top: 1px;
 
 				img.content-mask {
-					background-color: @default-btn-text;
+					background-color: @colorBtnDefaultText;
 				}
 			}
 
 			&:hover {
 				.primary-item,
 				.secondary-picker {
-					background: @default-btn-bg-hover;
-					border-color: @default-btn-bg-hover;
+					background: @colorBtnDefaultBgHover;
+					border-color: @colorBtnDefaultBgHover;
 				}
 			}
 
 			&:active {
 				.primary-item:active,
 				.secondary-picker:active {
-					background: @default-btn-bg-active;
-					border-color: @default-btn-bg-active;
+					background: @colorBtnDefaultBgActive;
+					border-color: @colorBtnDefaultBgActive;
 				}
 			}
 		}
@@ -271,27 +271,27 @@
 .composer-full-window .composer-inner-wrap {
 	.composer-action-bar-content {
 		button.btn-send {
-			background: @default-btn-bg;
+			background: @colorBtnDefaultBg;
 			box-shadow: none;
-			border: 1px solid @default-btn-bg;
+			border: 1px solid @colorBtnDefaultBg;
 			border-radius: 3px;
 			height: 26px;
 			// margin-top: 3px;
 			// padding-top: 1px;
-			color: @default-btn-text;
+			color: @colorBtnDefaultText;
 
 			img.content-mask {
-				background-color: @default-btn-text !important;
+				background-color: @colorBtnDefaultText !important;
 			}
 
 			&:hover {
-				background: @default-btn-bg-hover;
-				border-color: @default-btn-bg-hover;
+				background: @colorBtnDefaultBgHover;
+				border-color: @colorBtnDefaultBgHover;
 			}
 
 			&:active {
-				background: @default-btn-bg-active;
-				border-color: @default-btn-bg-active;
+				background: @colorBtnDefaultBgActive;
+				border-color: @colorBtnDefaultBgActive;
 			}
 		}
 	}

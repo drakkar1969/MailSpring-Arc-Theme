@@ -2,21 +2,10 @@
 activity.less OK
 ------------------------------
 arc-variables.less
-- @border-medium
 - @base-text
 - @threadlist
 - @threadlist-text-active
 - @messagelist
-- @messagearea
-- @btn-bg-hover
-- @btn-border-hover
-- @btn-bg-active
-- @btn-border-active
-- @btn-icon-active
-- @default-btn-bg
-- @default-btn-bg-hover
-- @default-btn-bg-active
-- @default-btn-text
 - @prefs-body
 ------------------------------
 contact-sidebar.less  OK
@@ -25,22 +14,7 @@ draftlist-toolbar.less  OK
 ------------------------------
 draftlist.less  OK
 ------------------------------
-index.less
-------------------------------
-message-draft.less
-- @border-medium
-- @base-text
-- @messagelist
-- @messagearea
-- @btn-bg-hover
-- @btn-border-hover
-- @btn-bg-active
-- @btn-border-active
-- @btn-icon-active
-- @default-btn-bg
-- @default-btn-bg-hover
-- @default-btn-bg-active
-- @default-btn-text
+message-draft.less  OK
 ------------------------------
 messagelist-toolbar.less  OK
 ------------------------------
@@ -64,9 +38,10 @@ threadlist-toolbar.less OK
 ------------------------------
 threadlist.less OK
 ------------------------------
-window-controls.less
-------------------------------
 
 TODO:
   - scrollbars (sidebar, sidebar-toolbar, messagelist, threadlist, activity, preferences, theme-selector, draftlist)
   - check message reply etc. buttons
+  - message-draft tokens
+  - message-draft send button
+  - update warning red color to match Arc
