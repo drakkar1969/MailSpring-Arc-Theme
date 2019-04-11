@@ -71,10 +71,7 @@ sidebar-toolbar.less  OK
 ------------------------------
 sidebar.less  OK
 ------------------------------
-theme-colors.less
-- @base-text
-- @threadlist
-- @messagelist
+theme-colors.less OK
 ------------------------------
 theme-selector.less OK
 ------------------------------
@@ -90,6 +87,5 @@ window-controls.less
 ------------------------------
 
 TODO:
-  - scrollbars (sidebar, messagelist, threadlist, activity, preferences, theme-selector)
-  - activity toolbar + dropdown (sidebar)
+  - scrollbars (sidebar, sidebar-toolbar, messagelist, threadlist, activity, preferences, theme-selector)
   - check message reply etc. buttons

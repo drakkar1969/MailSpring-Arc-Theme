@@ -109,26 +109,26 @@ body.platform-linux .sheet-toolbar-container {
 // Activity dropdown menu
 //------------------------------------------------------------
 .activity-list-container {
-	background-color: @colorMenuBg;
+	background-color: @colorListBg;
 
 	//---------------------------------
 	// Activity dropdown items
 	//---------------------------------
 	.activity-list-item {
 		border-bottom: 1px solid @colorBorder;
-		color: @colorMenuText;
+		color: @colorListText;
 
 		&:hover {
-			background-color: @colorMenuItemHover;
+			background-color: @colorListItemHover;
 		}
 
 		&.unread,
 		&.unread:hover {
 			background-color: @colorAccent;
-			color: @colorMenuTextActive;
+			color: @colorListTextActive;
 
 			.timestamp {
-				color: fade(@colorMenuTextActive, 50%);
+				color: @colorListTextActiveFaded;
 			}
 		}
 	}
