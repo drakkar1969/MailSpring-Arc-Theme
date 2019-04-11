@@ -109,7 +109,6 @@ window-controls.less
 
 TODO:
   - scrollbars (sidebar, messagelist, threadlist, activity)
-  - add folder button vertical position (sidebar)
   - activity toolbar + dropdown (sidebar)
   - redo minified messages (messagelist)
   - check message reply etc. buttons
