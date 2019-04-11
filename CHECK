@@ -3,7 +3,6 @@ activity.less OK
 ------------------------------
 arc-variables.less
 - @base-text
-- @threadlist
 - @threadlist-text-active
 ------------------------------
 contact-sidebar.less  OK
