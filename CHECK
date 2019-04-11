@@ -18,11 +18,7 @@ arc-variables.less
 - @default-btn-bg-hover
 - @default-btn-bg-active
 - @default-btn-text
-- @prefs
 - @prefs-body
-- @prefs-tabs
-- @prefs-tabs-hover
-- @prefs-tabs-active
 - @check-border
 ------------------------------
 contact-sidebar.less
@@ -69,20 +65,7 @@ messagelist-toolbar.less  OK
 ------------------------------
 messagelist.less  OK
 ------------------------------
-preferences.less
-- @border-medium
-- @base-text
-- @btn-bg-hover
-- @btn-border-hover
-- @btn-bg-active
-- @btn-border-active
-- @btn-icon-active
-- @prefs
-- @prefs-body
-- @prefs-tabs
-- @prefs-tabs-hover
-- @prefs-tabs-active
-- @check-border
+preferences.less  OK
 ------------------------------
 sidebar-toolbar.less  OK
 ------------------------------
@@ -93,8 +76,7 @@ theme-colors.less
 - @threadlist
 - @messagelist
 ------------------------------
-theme-selector.less
-- @threadlist
+theme-selector.less OK
 ------------------------------
 threadlist-icons.less
 - @base-text
@@ -108,7 +90,6 @@ window-controls.less
 ------------------------------
 
 TODO:
-  - scrollbars (sidebar, messagelist, threadlist, activity)
+  - scrollbars (sidebar, messagelist, threadlist, activity, preferences, theme-selector)
   - activity toolbar + dropdown (sidebar)
-  - redo minified messages (messagelist)
   - check message reply etc. buttons

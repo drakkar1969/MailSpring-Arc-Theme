@@ -4,7 +4,7 @@
 // Toolbar
 //------------------------------------------------------------
 body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
-		background: @prefs;
+		background: @colorPrefsWindowBg;
 }
 
 //------------------------------------------------------------
@@ -30,20 +30,20 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	}
 
 	&:hover {
-		background-color: @btn-bg-hover;
-		border-color: @btn-border-hover;
+		background-color: @colorBtnBgLight;
+		border-color: @colorBtnBorderLight;
 	}
 
 	&:active {
-		background-color: @btn-bg-active;
-		border-color: @btn-border-active;
+		background-color: @colorBtnBgActiveLight;
+		border-color: @colorBtnBorderActiveLight;
 
 		img.content-mask {
-			background-color: @btn-icon-active;
+			background-color: @colorBtnTextActive;
 		}
 
 		.item-back-title {
-			color: @btn-icon-active;
+			color: @colorBtnTextActive;
 		}
 	}
 }
@@ -52,10 +52,10 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Tab control
 //------------------------------------------------------------
 .preferences-wrap .container-preference-tabs {
-	border-color: @border-medium;
+	border-color: @colorBorder;
 
 	.preferences-tabs {
-		background-color: @prefs-tabs;
+		background-color: @colorPrefsWindowBg;
 		padding-top: 10px;
 
 		.item {
@@ -73,27 +73,27 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 				padding: 10px 11px 8px;
 				font-size: 14px;
 				font-weight: 500;
-				color: fade(@base-text, 50%);
+				color: @colorTextFaded;
 			}
 
 			&:hover {
-				background: @prefs-tabs-hover;
-				border-color: @border-medium;
+				background: @colorPrefsTabHover;
+				border-color: @colorBorder;
 
 				.name {
-					color: fade(@base-text, 65%);
+					color: colorTextFaded;
 				}
 			}
 
 			&.active {
 				box-shadow: none;
-				background: @prefs-tabs-active;
-				border-color: @border-medium;
-				border-bottom-color: @prefs-tabs-active;
+				background: @colorPrefsTabActive;
+				border-color: @colorBorder;
+				border-bottom-color: @colorPrefsTabActive;
 				border-radius: 0px;
 
 				.name {
-					color: @base-text;
+					color: @colorText;
 				}
 			}
 		}
@@ -104,14 +104,14 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences body common settings
 //------------------------------------------------------------
 .preferences-wrap .preferences-content {
-	background-color: @prefs-body;
+	background-color: @colorPrefsBodyBg;
 }
 
 //---------------------------------
 // Warning bar
 //---------------------------------
 .preferences-wrap .platform-note {
-	background-color: darken(@prefs, 5%);
+	background-color: @colorWarningBar;
 	border-color: @colorAccent;
 
 	&::before {
@@ -125,8 +125,8 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 .preferences-wrap h6 {
 	font-size: 13px;
 	text-transform: uppercase;
-	color: fade(@base-text, 40%);
-	border-bottom: 1px solid @border-medium;
+	color: @colorTextFaded;
+	border-bottom: 1px solid @colorBorder;
 	padding-bottom: 3px;
 }
 
@@ -135,8 +135,8 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	font-size: 13px;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: fade(@base-text, 40%);
-	border-bottom: 1px solid @border-medium;
+	color: @colorTextFaded;
+	border-bottom: 1px solid @colorBorder;
 	margin: 20px 0px 10px;
 	padding-bottom: 3px;
 }
@@ -149,8 +149,8 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	width: 13px;
 	height: 13px;
 	top: 1px;
-	background: @prefs-body;
-	border: 1px solid @check-border;
+	background: @colorPrefsBodyBg;
+	border: 1px solid @colorCheckboxBorder;
 	border-radius: 2px;
 
 	&:checked {
@@ -181,13 +181,13 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Appearance tab
 //------------------------------------------------------------
 .preferences-wrap .container-appearance .appearance-mode-switch .appearance-mode {
-	background-color: @prefs-body;
-	border: 1px solid darken(@border-medium, 10%);
+	background-color: @colorPrefsBodyBg;
+	border: 1px solid @colorBorder;
 	border-radius: 4px;
-	color: fade(@base-text, 50%);
+	color: @colorTextFaded;
 
 	img.content-mask {
-		background-color: fade(@base-text, 50%);
+		background-color: @colorTextFaded;
 	}
 
 	&.active {
@@ -199,8 +199,6 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 }
-
-
 
 //------------------------------------------------------------
 // Scrollbar
