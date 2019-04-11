@@ -21,12 +21,7 @@ arc-variables.less
 - @prefs-body
 - @check-border
 ------------------------------
-contact-sidebar.less
-- @border-medium
-- @base-text
-- @threadlist-hover
-- @messagelist
-- @messagearea
+contact-sidebar.less  OK
 ------------------------------
 draftlist-toolbar.less
 - @base-text

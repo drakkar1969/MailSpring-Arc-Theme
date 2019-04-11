@@ -4,8 +4,8 @@
 // Contact sidebar
 //------------------------------------------------------------
 .column-MessageListSidebar {
-	background: @messagelist;
-	border-left: 1px solid @border-medium;
+	background: @colorWindowBg;
+	border-left: 1px solid @colorBorder;
 	padding-top: 12px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -15,8 +15,8 @@
 // Contact card
 //------------------------------------------------------------
 .sidebar-section {
-	background: @messagearea;
-	border: 1px solid @border-medium;
+	background: @colorListBg;
+	border: 1px solid @colorBorder;
 	border-radius: 3px;
 }
 
@@ -52,14 +52,14 @@
 	border-top: none;
 
 	.related-thread {
-		border-top: 1px solid @border-medium;
+		border-top: 1px solid @colorBorder;
 
 		.content {
-			color: fade(@base-text, 80%);
+			color: @colorTextFaded;
 		}
 
 		&:hover {
-			background-color: @threadlist-hover;
+			background-color: @colorListItemHover;
 		}
 	}
 
