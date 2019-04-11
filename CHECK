@@ -5,7 +5,6 @@ arc-variables.less
 - @border-medium
 - @base-text
 - @threadlist
-- @threadlist-hover
 - @threadlist-text-active
 - @messagelist
 - @messagearea
@@ -22,14 +21,7 @@ arc-variables.less
 ------------------------------
 contact-sidebar.less  OK
 ------------------------------
-draftlist-toolbar.less
-- @base-text
-- @messagelist
-- @btn-bg-hover
-- @btn-border-hover
-- @btn-bg-active
-- @btn-border-active
-- @btn-icon-active
+draftlist-toolbar.less  OK
 ------------------------------
 draftlist.less  OK
 ------------------------------

@@ -5,13 +5,13 @@
 //------------------------------------------------------------
 .toolbar-DraftList {
 	height: 100%;
-	background: @messagelist;
+	background: @colorWindowBg;
 	border: none;
 
 	border-left: 1px solid transparent;
 
 	.selection-bar .absolute {
-		background: @messagelist
+		background: @colorWindowBg;
 	}
 
 	//---------------------------------
@@ -25,17 +25,17 @@
 		height: 26px;
 
 		&:hover {
-			background: @btn-bg-hover;
-			border-color: @btn-border-hover;
+			background: @colorBtnBgLight;
+			border-color: @colorBtnBorderLight;
 		}
 
 		&:active {
-			background: @btn-bg-active;
-			border-color: @btn-border-active;
-			color: @btn-icon-active;
+			background: @colorBtnBgActiveLight;
+			border-color: @colorBtnBorderActiveLight;
+			color: @colorBtnTextActive;
 
 			img.content-mask {
-				background-color: @btn-icon-active;
+				background-color: @colorBtnTextActive;
 			}
 		}
 	}
@@ -45,6 +45,6 @@
 	//---------------------------------
 	.inner .centered {
 		padding-top: 2px;
-		color: fade(@base-text, 60%) !important;
+		color: @colorTextFaded !important;
 	}
 }
