@@ -114,17 +114,13 @@ threadlist-toolbar.less
 - @threadlist-hover
 - @messagelist
 ------------------------------
-threadlist.less
-- @border-medium
-- @threadlist
-- @threadlist-hover
-- @threadlist-text-active
+threadlist.less OK
 ------------------------------
 window-controls.less
 ------------------------------
 
 TODO:
-  - scrollbars (sidebar, messagelist)
+  - scrollbars (sidebar, messagelist, threadlist)
   - account selector (down arrow) vertical position in sidebar; same for add folder button (sidebar)
   - activity toolbar + dropdown (sidebar)
   - redo minified messages (messagelist)
