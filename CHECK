@@ -1,12 +1,9 @@
 ------------------------------
-activity.less
-- @threadlist
+activity.less OK
 ------------------------------
 arc-variables.less
 - @border-medium
 - @base-text
-- @sidebar-text
-- @sidebar-text-active
 - @threadlist
 - @threadlist-hover
 - @threadlist-text-active
@@ -26,10 +23,7 @@ arc-variables.less
 - @prefs-tabs
 - @prefs-tabs-hover
 - @prefs-tabs-active
-- @warning-bar
 - @check-border
-- @warning-red
-- @warning-yellow
 ------------------------------
 contact-sidebar.less
 - @border-medium
@@ -70,7 +64,6 @@ message-draft.less
 - @default-btn-bg-hover
 - @default-btn-bg-active
 - @default-btn-text
-- @warning-red
 ------------------------------
 messagelist-toolbar.less  OK
 ------------------------------
@@ -115,7 +108,7 @@ window-controls.less
 ------------------------------
 
 TODO:
-  - scrollbars (sidebar, messagelist, threadlist)
+  - scrollbars (sidebar, messagelist, threadlist, activity)
   - account selector (down arrow) vertical position in sidebar; same for add folder button (sidebar)
   - activity toolbar + dropdown (sidebar)
   - redo minified messages (messagelist)
