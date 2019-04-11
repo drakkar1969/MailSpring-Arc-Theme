@@ -37,8 +37,6 @@ threadlist.less OK
 ------------------------------
 
 TODO:
-  - scrollbars (sidebar)
   - check message reply etc. buttons
   - message-draft tokens
-  - message-draft send button
   - update warning red color to match Arc
