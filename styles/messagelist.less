@@ -161,20 +161,16 @@
 // Minified messages
 //------------------------------------------------------------
 #message-list .minified-bundle {
-	margin-top: 1px !important;
-	margin-bottom: 12px;
-
 	.msg-line {
 		box-shadow: none;
-		border: none;
-		background-color: @colorWindowBg;
+		border: 1px solid @colorBorder;
+		border-radius: 3px 3px 0 0;
+		background-color: @colorBodyBgDarker;
 	}
 
 	.num-messages {
 		border: 1px solid @colorBorder;
-		border-radius: 10px;
-		background-color: @colorBodyBgDarker;
-		margin-top: -8px;
+		background-color: @colorBodyBg;
 		color: @colorAccent;
 
 		&:hover {
