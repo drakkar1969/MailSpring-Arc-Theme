@@ -109,7 +109,7 @@ window-controls.less
 
 TODO:
   - scrollbars (sidebar, messagelist, threadlist, activity)
-  - account selector (down arrow) vertical position in sidebar; same for add folder button (sidebar)
+  - add folder button vertical position (sidebar)
   - activity toolbar + dropdown (sidebar)
   - redo minified messages (messagelist)
   - check message reply etc. buttons
