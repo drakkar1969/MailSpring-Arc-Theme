@@ -81,19 +81,7 @@ messagelist-toolbar.less
 - @btn-border-active
 - @btn-icon-active
 ------------------------------
-messagelist.less
-- @border-medium
-- @base-text
-- @threadlist
-- @threadlist-text-active
-- @messagelist
-- @messagearea
-- @btn-bg-hover
-- @btn-border-hover
-- @btn-bg-active
-- @btn-border-active
-- @btn-icon-active
-- @warning-bar
+messagelist.less  OK
 ------------------------------
 preferences.less
 - @border-medium
@@ -110,17 +98,7 @@ preferences.less
 - @prefs-tabs-active
 - @check-border
 ------------------------------
-sidebar-toolbar.less
-- @border-medium
-- @base-text
-- @sidebar-text
-- @threadlist
-- @threadlist-hover
-- @threadlist-text-active
-- @messagelist
-- @btn-bg-active
-- @btn-border-active
-- @btn-icon-active
+sidebar-toolbar.less  OK
 ------------------------------
 sidebar.less  OK
 ------------------------------
@@ -153,5 +131,7 @@ window-controls.less
 ------------------------------
 
 TODO:
-  - scrollbars
-  - account selector (down arrow) vertical position in sidebar; same for add folder button
+  - scrollbars (sidebar, messagelist)
+  - account selector (down arrow) vertical position in sidebar; same for add folder button (sidebar)
+  - activity toolbar + dropdown (sidebar)
+  = redo minified messages (messagelist)

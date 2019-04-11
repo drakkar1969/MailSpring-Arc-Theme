@@ -4,8 +4,8 @@
 // Message list area
 //------------------------------------------------------------
 .column-MessageList {
-	background: @messagelist;
-	border-left: 1px solid @border-medium;
+	background: @colorWindowBg;
+	border-left: 1px solid @colorBorder;
 	padding-top: 12px;
 }
 
@@ -19,8 +19,8 @@
 #message-list .message-item-wrap {
 	.message-item-white-wrap {
 		box-shadow: none !important;
-		background: @messagearea;
-		border: 1px solid @border-medium;
+		background: @colorBodyBg;
+		border: 1px solid @colorBorder;
 		border-radius: 3px;
 
 		.message-item-area {
@@ -59,7 +59,7 @@
 	//---------------------------------
 	&.collapsed {
 		.message-item-white-wrap {
-			background-color: darken(@messagearea, 1%);
+			background-color: @colorBodyBgDarker;
 		}
 	}
 }
@@ -96,16 +96,16 @@
 		}
 
 		&:hover {
-			border-color: @btn-border-hover;
-			background-color: @btn-bg-hover;
+			border-color: @colorBtnBorderLight;
+			background-color: @colorBtnBgLight;
 		}
 
 		&:active {
-			border-color: @btn-border-active;
-			background-color: @btn-bg-active;
+			border-color: @colorBtnBorderActiveLight;
+			background-color: @colorBtnBgActiveLight;
 
 			img.content-mask {
-				background-color: @btn-icon-active;
+				background-color: @colorBtnTextActive;
 			}
 		}
 	}
@@ -116,12 +116,12 @@
 //------------------------------------------------------------
 .mail-label.removable {
 	box-shadow: none !important;
-	background: fade(@colorAccent, 80%) !important;
-	color: fade(@threadlist-text-active, 95%) !important;
+	background: @colorAccent !important;
+	color: @colorBtnTextActive !important;
 	margin-top: 3px;
 
 	img.content-mask {
-		background-color: fade(@threadlist-text-active, 80%) !important;
+		background-color: @colorBtnTextActive !important;
 
 		&:hover {
 			cursor: pointer;
@@ -134,8 +134,8 @@
 //------------------------------------------------------------
 #message-list  .footer-reply-area-wrap {
 	box-shadow: none;
-	background: @messagearea;
-	border: 1px solid @border-medium;
+	background: @colorBodyBg;
+	border: 1px solid @colorBorder;
 	border-radius: 0 0 3px 3px;
 
 	//---------------------------------
@@ -167,13 +167,13 @@
 	.msg-line {
 		box-shadow: none;
 		border: none;
-		background-color: @messagelist;
+		background-color: @colorWindowBg;
 	}
 
 	.num-messages {
-		border: 1px solid @border-medium;
+		border: 1px solid @colorBorder;
 		border-radius: 10px;
-		background-color: darken(@messagearea, 1%);
+		background-color: @colorBodyBgDarker;
 		margin-top: -8px;
 		color: @colorAccent;
 
@@ -191,40 +191,61 @@
 	// File attachment box
 	//---------------------------------
 	&.file-attachment-item {
+		.file-thumbnail-preview {
+			border: 1px solid @colorBorder;
+			border-radius: 3px 3px 0 0;
+		}
+
 		.file-info-wrap {
-			background-color: darken(@messagelist, 3%);
-			border: 1px solid darken(@border-medium, 3%);
+			background-color: darken(@colorWindowBg, 3%);
+			border: 1px solid @colorBorder;
 			border-radius: 3px 0 0 3px;
-			border-right-width: 0px;
 			box-shadow: none;
 		}
 
 		.file-action-icon {
-			background-color: darken(@messagelist, 3%);
-			border: 1px solid darken(@border-medium, 3%);
+			background-color: darken(@colorWindowBg, 3%);
+			border: 1px solid @colorBorder;
+			border-left-width: 0px;
 			border-radius: 0 3px 3px 0;
 
 			img.content-mask {
-				background-color: fade(@base-text, 80%);
+				background-color: @colorText;
+			}
+
+			&:not(:last-child) {
+				border-radius: 0;
 			}
 
 			&:hover {
-				background-color: darken(@messagelist, 6%);
+				background-color: darken(@colorWindowBg, 6%);
 			}
 
 			&:active {
-				background-color: darken(@messagelist, 10%);
+				background-color: @colorAccent;
+
+				img.content-mask {
+					background-color: @colorBtnTextActive;
+				}
 			}
 		}
 
 		&:focus {
+			.file-thumbnail-preview {
+				border-color: @colorAccent;
+			}
+
 			.file-info-wrap {
 				border-color: @colorAccent;
+				border-right-color: @colorBorder;
 			}
 
 			.file-action-icon {
 				border-color: @colorAccent;
-				border-left-color: @border-medium;
+
+				&:not(:last-child) {
+					border-right-color: @colorBorder;
+				}
 			}
 		}
 	}
@@ -281,7 +302,7 @@
 	border: none;
 	border-left: 3px solid @colorAccent;
 	border-radius: 0px;
-	background-color: @warning-bar;
+	background-color: @colorWarningBar;
 
 	a {
 		color: @colorAccent;
