@@ -107,12 +107,7 @@ threadlist-icons.less
 - @base-text
 - @threadlist-text-active
 ------------------------------
-threadlist-toolbar.less
-- @border-medium
-- @base-text
-- @threadlist
-- @threadlist-hover
-- @messagelist
+threadlist-toolbar.less OK
 ------------------------------
 threadlist.less OK
 ------------------------------

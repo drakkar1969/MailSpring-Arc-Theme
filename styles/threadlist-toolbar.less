@@ -5,8 +5,8 @@
 //------------------------------------------------------------
 .toolbar-ThreadList {
 	height: 100%;
-	background: @threadlist;
-	border-bottom: 1px solid @border-medium;
+	background: @colorListBg;
+	border-bottom: 1px solid @colorBorder;
 }
 
 //------------------------------------------------------------
@@ -21,14 +21,14 @@
 	//---------------------------------
 	.suggestions {
 		.suggestion {
-			color: fade(@base-text, 50%);
+			color: @colorTextFaded;
 
 			&.selected {
 				background-color: @colorAccent;
 			}
 
 			&:hover:not(.selected) {
-				background-color: @threadlist-hover;
+				background-color: @colorListItemHover;
 			}
 
 			.suggestion-token {
@@ -37,8 +37,8 @@
 		}
 
 		.footer {
-			background-color: @messagelist;
-			border-color: @border-medium;
+			background-color: @colorWindowBg;
+			border-color: @colorBorder;
 		}
 	}
 }
@@ -47,10 +47,10 @@
 // Drafts/trash empty button header
 //------------------------------------------------------------
 .thread-list-empty-folder-bar {
-	background-color: darken(@messagelist, 5%);
-	border-bottom-color: @border-medium;
+	background-color: @colorWindowBgDarker;
+	border-bottom-color: @colorBorder;
 
 	.notice {
-		color: @base-text;
+		color: @colorText;
 	}
 }
