@@ -10,19 +10,21 @@
 		// Normal token
 		//---------------------------------
 		box-shadow: none;
-		background: darken(@colorWindowBg, 3%);
+		background: darken(@colorWindowBg, 6%);
 		border: 1px solid @colorBorder;
-		border-radius: 3px;
-		margin: -2px 5px 4px 1px;
+		border-radius: 2px;
+		margin: 2px 5px 4px 1px;
+		height: 22px;
+		line-height: 1.5em;
 
 		&:hover {
-			background: darken(@colorWindowBg, 6%);
+			background: darken(@colorWindowBg, 9%);
 		}
 
 		&.selected {
-			background: fade(@colorAccent, 80%);
+			background: fade(@colorAccent, 90%);
 			border-color: @colorAccent;
-			margin: -2px 5px 4px 1px;
+			margin: 2px 5px 4px 1px;
 		}
 
 		&.selected:hover {
@@ -40,7 +42,7 @@
 			}
 
 			&.selected {
-				background-color: fade(@colorWarningRed, 80%);
+				background-color: fade(@colorWarningRed, 90%);
 				border-color: @colorWarningRed;
 				color: @colorBtnTextActive;
 
