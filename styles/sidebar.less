@@ -232,6 +232,10 @@
 
 		&:hover {
 			box-shadow: none !important;
+			background: lighten(@colorAccent, 10%);
+		}
+
+		&:active {
 			background: darken(@colorAccent, 10%);
 		}
 	}
@@ -240,6 +244,10 @@
 		background: @colorWarningRed;
 
 		.action:hover {
+			background: lighten(@colorWarningRed, 10%);
+		}
+
+		.action:active {
 			background: darken(@colorWarningRed, 10%);
 		}
 	}
@@ -248,6 +256,10 @@
 		background: @colorWarningYellow;
 
 		.action:hover {
+			background: lighten(@colorWarningYellow, 10%);
+		}
+
+		.action:active {
 			background: darken(@colorWarningYellow, 10%);
 		}
 	}
