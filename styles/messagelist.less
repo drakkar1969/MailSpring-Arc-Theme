@@ -112,6 +112,58 @@
 }
 
 //------------------------------------------------------------
+// Reply/forward buttons
+//------------------------------------------------------------
+#message-list .message-header .message-actions-wrap {
+	.button-dropdown.bordered {
+		.primary-item {
+			box-shadow: none;
+			background: @colorBodyBg;
+			border: 1px solid transparent;
+			border-radius: 3px 0 0 3px;
+		}
+
+		.secondary-picker {
+			box-shadow: none;
+			background: @colorBodyBg;
+			border: 1px solid transparent;
+			border-left-width: 0;
+			border-radius: 0 3px 3px 0;
+		}
+
+		&:hover {
+			.primary-item {
+				background: @colorBtnBgLight;
+				border-color: @colorBtnBorderLight;
+			}
+
+			.secondary-picker {
+				background: @colorBtnBgLight;
+				border-color: @colorBtnBorderLight;
+			}
+		}
+
+		.primary-item:active {
+			background: @colorAccent;
+			border-color: @colorAccent;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+
+		.secondary-picker:active {
+			background: @colorAccent;
+			border-color: @colorAccent;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Gmail labels
 //------------------------------------------------------------
 .mail-label.removable {
