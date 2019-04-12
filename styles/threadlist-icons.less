@@ -22,12 +22,16 @@
 	//---------------------------------
 	.thread-icon-unread {
 		.arc-threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), @colorAccent);
+
+		&:hover {
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
+		}
 	}
 
 	&.focused,
 	&.selected {
 		.thread-icon-unread {
-			background-color: @threadlist-text-active;
+			background-color: @colorListTextActive;
 		}
 	}
 
@@ -35,20 +39,20 @@
 	// Star icon
 	//---------------------------------
 	.thread-icon-star {
-		.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@base-text, 70%));
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@colorListText, 70%));
 
 		&:hover {
-			background-color: fade(@base-text, 45%);
+			background-color: fade(@colorListText, 45%);
 		}
 	}
 
 	&.focused,
 	&.selected {
 		.thread-icon-star {
-			background-color: fade(@threadlist-text-active, 100%);
+			background-color: fade(@colorListTextActive, 100%);
 
 			&:hover {
-				background-color: fade(@threadlist-text-active, 75%);
+				background-color: fade(@colorListTextActive, 75%);
 			}
 		}
 	}
@@ -58,14 +62,14 @@
 	//---------------------------------
 	&:hover:not(.unread) {
 		.thread-icon-none {
-			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@base-text, 15%));
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@colorListText, 15%));
 		}
 	}
 
 	&.focused:hover,
 	&.selected:hover {
 		.thread-icon-none {
-			background-color: fade(@threadlist-text-active, 40%);
+			background-color: fade(@colorListTextActive, 40%);
 		}
 	}
 
@@ -74,13 +78,13 @@
 	//---------------------------------
 	&:hover {
 		.thread-icon-star-on-hover:hover {
-			background-color: fade(@base-text, 30%);
+			background-color: fade(@colorListText, 30%);
 		}
 	}
 
 	&.focused .thread-icon-star-on-hover:hover,
 	&.selected .thread-icon-star-on-hover:hover {
-		background-color: fade(@threadlist-text-active, 65%);
+		background-color: fade(@colorListTextActive, 65%);
 	}
 }
 
@@ -108,7 +112,7 @@
 //------------------------------------------------------------
 .open-tracking-icon img.content-mask {
 	&.unopened {
-		background-color: fade(@base-text, 30%);
+		background-color: fade(@colorListText, 30%);
 	}
 
 	&.opened {
@@ -125,25 +129,4 @@
 
 .thread-list-narrow .mail-important-icon {
 	margin-top: -3px;
-}
-
-//------------------------------------------------------------
-// Gmail labels
-//------------------------------------------------------------
-.thread-list .thread-injected-mail-labels,
-.draft-list .thread-injected-mail-labels {
-	margin-right: 0;
-
-	.mail-label {
-		box-shadow: none !important;
-		background: fade(@colorAccent, 80%) !important;
-		color: fade(@threadlist-text-active, 95%) !important;
-		-webkit-filter: none !important;
-	}
-}
-
-.thread-list .focused .mail-label,
-.draft-list .focused .mail-label,
-.thread-list.handler-split .list-item.selected .mail-label {
-	background-color: lighten(fade(@colorAccent, 80%), 15%) !important;
 }

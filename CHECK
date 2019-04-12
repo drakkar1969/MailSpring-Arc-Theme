@@ -1,9 +1,7 @@
 ------------------------------
 activity.less OK
 ------------------------------
-arc-variables.less
-- @base-text
-- @threadlist-text-active
+arc-variables.less  OK
 ------------------------------
 contact-sidebar.less  OK
 ------------------------------
@@ -27,9 +25,7 @@ theme-colors.less OK
 ------------------------------
 theme-selector.less OK
 ------------------------------
-threadlist-icons.less
-- @base-text
-- @threadlist-text-active
+threadlist-icons.less OK
 ------------------------------
 threadlist-toolbar.less OK
 ------------------------------
@@ -39,4 +35,3 @@ threadlist.less OK
 TODO:
   - check message reply etc. buttons
   - message-draft tokens
-  - update warning red color to match Arc
