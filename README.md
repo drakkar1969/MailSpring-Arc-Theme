@@ -4,11 +4,8 @@ A theme for [Mailspring](https://github.com/Foundry376/Mailspring) inspired by t
 A project for personal use.
 
 ## Screenshots
-Main window:
 <div align="left"><img src="screenshots/main.png" alt="Preview" /></div>
-<br><br>
 
-Composer window:
-<br>
-
-<div align="left"><img src="screenshots/composer.png" width="50%" alt="Preview" /></div>
+## Installation
+Clone this repository and copy all files to a sub-folder named `Arc` in your Mailspring `packages` folder: `~/.config/Mailspring/packages/Arc`.  
+Restart Mailspsring and select the theme (`Edit -> Change Theme...`)
