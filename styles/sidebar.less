@@ -23,19 +23,30 @@
 		color: @colorSidebarTextFaded;
 		margin-bottom: 7px;
 		padding-top: 0px;
+
+		.add-item-button {
+			margin-top: -2px;
+
+			img.content-mask {
+				background-color: @colorSidebarTextFaded;
+				margin-top: 4px;
+			}
+
+			&:hover {
+				img.content-mask {
+					background-color: @colorSidebarText;
+					margin-top: 4px;
+				}
+			}
+		}
+
+		.collapse-button:hover {
+			color: @colorSidebarText;
+		}
 	}
 
 	&:not(:first-of-type) .heading {
 		margin-top: 16px;
-	}
-
-	.add-item-button {
-		margin-top: -2px;
-
-		img.content-mask {
-			background-color: @colorSidebarTextFaded;
-			margin-top: 4px;
-		}
 	}
 }
 
