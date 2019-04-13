@@ -130,3 +130,25 @@
 .thread-list-narrow .mail-important-icon {
 	margin-top: -3px;
 }
+
+//------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.thread-list .thread-injected-mail-labels,
+.draft-list .thread-injected-mail-labels {
+	margin-right: 0;
+
+	.mail-label {
+		box-shadow: none !important;
+		background: @colorAccent !important;
+		color: @colorListTextActive !important;
+		-webkit-filter: none !important;
+	}
+}
+
+.thread-list .focused .mail-label,
+.draft-list .focused .mail-label,
+.thread-list.handler-split .list-item.selected .mail-label {
+	box-shadow: none !important;
+	background-color: lighten(@colorAccent, 15%) !important;
+}
