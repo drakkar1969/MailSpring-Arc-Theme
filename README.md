@@ -1,6 +1,6 @@
 # Mailspring Arc Theme
 
-A theme for [Mailspring](https://github.com/Foundry376/Mailspring) inspired by the [Arc](https://github.com/NicoHood/arc-theme) theme.
+A theme for [Mailspring](https://github.com/Foundry376/Mailspring) inspired by the [Arc](https://github.com/jnsh/arc-theme) theme.
 A project for personal use.
 
 <div align="left"><img src="screenshots/main.png" alt="Preview" /></div>
