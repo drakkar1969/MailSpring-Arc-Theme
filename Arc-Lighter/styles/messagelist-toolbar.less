@@ -1,0 +1,54 @@
+@import "arc-variables";
+
+.toolbar-MessageList,
+.toolbar-MessageListSidebar {
+	height: 100%;
+	background: @colorWindowBg;
+	border-left: 1px solid @colorBorder;
+
+	//---------------------------------
+	// Toolbar buttons
+	//---------------------------------
+	.btn-toolbar {
+		background: none;
+		box-shadow: none;
+		border: 1px solid transparent !important;
+		border-radius: 3px !important;
+		height: 26px;
+
+		&:hover {
+			border-color: @colorBtnBorderLight !important;
+			background-color: @colorBtnBgLight;
+		}
+
+		&:active,
+		&.mode-toggle.mode-false {
+			border-color: @colorBtnBorderActiveLight !important;
+			background-color: @colorBtnBgActiveLight;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+
+		//---------------------------------
+		// Inactive window toolbar buttons
+		//---------------------------------
+		body.is-blurred & {
+			box-shadow: none;
+
+			img.content-mask {
+				opacity: 1.0;
+			}
+
+			&:hover {
+				border-color: @colorBtnBorderLight;
+				background-color: @colorBtnBgLight;
+			}
+		}
+
+		body.is-blurred &.mode-toggle.mode-false {
+			background-color: @colorBtnBgActiveLight;
+		}
+	}
+}

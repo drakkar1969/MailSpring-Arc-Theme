@@ -1,0 +1,28 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Theme selector window
+//------------------------------------------------------------
+.theme-picker {
+	//---------------------------------
+	// Create theme link
+	//---------------------------------
+	.create-theme a {
+		color: @colorAccent !important;
+		cursor: pointer;
+	}
+}
+
+//------------------------------------------------------------
+// Scroll bar
+//------------------------------------------------------------
+.theme-picker .scrollbar-track {
+ background: @colorListBg;
+ border-left: none;
+ width: 10px;
+
+ .scrollbar-handle {
+  background: fade(darken(@colorListBg, 45%), 40%);
+  border: none;
+ }
+}

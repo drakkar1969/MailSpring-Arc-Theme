@@ -1,0 +1,56 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Thread list toolbar
+//------------------------------------------------------------
+.toolbar-ThreadList {
+	height: 100%;
+	background: @colorListBg;
+	border-bottom: 1px solid @colorBorder;
+}
+
+//------------------------------------------------------------
+// Search box
+//------------------------------------------------------------
+.thread-search-bar {
+	box-shadow: none;
+	padding-left: 9px;
+
+	//---------------------------------
+	// Search box dropdown
+	//---------------------------------
+	.suggestions {
+		.suggestion {
+			color: @colorTextFaded;
+
+			&.selected {
+				background-color: @colorAccent;
+			}
+
+			&:hover:not(.selected) {
+				background-color: @colorListItemHover;
+			}
+
+			.suggestion-token {
+				color: @colorAccent;
+			}
+		}
+
+		.footer {
+			background-color: @colorWindowBg;
+			border-color: @colorBorder;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Drafts/trash empty button header
+//------------------------------------------------------------
+.thread-list-empty-folder-bar {
+	background-color: @colorWarningBar;
+	border-bottom-color: @colorBorder;
+
+	.notice {
+		color: @colorText;
+	}
+}

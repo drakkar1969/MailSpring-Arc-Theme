@@ -1,0 +1,215 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Toolbar
+//------------------------------------------------------------
+body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
+		background: @colorPrefsWindowBg;
+}
+
+//------------------------------------------------------------
+// Back button
+//------------------------------------------------------------
+.sheet-toolbar .item-back {
+	height: 26px;
+	background: transparent;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	margin-left: 10px;
+	margin-top: 9px;
+	padding: 0;
+	padding: 0px 13px 0px 5px;
+
+	img.content-mask {
+		zoom: 0.3 !important;
+	}
+
+	.item-back-title {
+		margin: 1px 2px 0 3px;
+		font-size: 14px;
+	}
+
+	&:hover {
+		background-color: @colorBtnBgLight;
+		border-color: @colorBtnBorderLight;
+	}
+
+	&:active {
+		background-color: @colorBtnBgActiveLight;
+		border-color: @colorBtnBorderActiveLight;
+
+		img.content-mask {
+			background-color: @colorBtnTextActive;
+		}
+
+		.item-back-title {
+			color: @colorBtnTextActive;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Tab control
+//------------------------------------------------------------
+.preferences-wrap .container-preference-tabs {
+	border-color: @colorBorder;
+
+	.preferences-tabs {
+		background-color: @colorPrefsWindowBg;
+		padding-top: 10px;
+
+		.item {
+			box-shadow: none;
+			border: 1px solid transparent;
+			border-radius: 0px;
+			margin: 0px -1px -1px 0px;
+			padding-top: 0px;
+
+			.tab-icon {
+				display: none;
+			}
+
+			.name {
+				padding: 10px 11px 8px;
+				font-size: 14px;
+				font-weight: 500;
+				color: @colorTextFaded;
+			}
+
+			&:hover {
+				background: @colorPrefsTabHover;
+				border-color: @colorBorder;
+
+				.name {
+					color: colorTextFaded;
+				}
+			}
+
+			&.active {
+				box-shadow: none;
+				background: @colorPrefsTabActive;
+				border-color: @colorBorder;
+				border-bottom-color: @colorPrefsTabActive;
+				border-radius: 0px;
+
+				.name {
+					color: @colorText;
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences body common settings
+//------------------------------------------------------------
+.preferences-wrap .preferences-content {
+	background-color: @colorPrefsBodyBg;
+}
+
+//---------------------------------
+// Warning bar
+//---------------------------------
+.preferences-wrap .platform-note {
+	background-color: @colorWarningBar;
+	border-color: @colorAccent;
+
+	&::before {
+		color: @colorAccent;
+	}
+}
+
+//---------------------------------
+// Section headers
+//---------------------------------
+.preferences-wrap h6 {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: @colorTextFaded;
+	border-bottom: 1px solid @colorBorder;
+	padding-bottom: 3px;
+}
+
+.preferences-wrap .container-keymaps .shortcut-section-title,
+.account-section-title {
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: @colorTextFaded;
+	border-bottom: 1px solid @colorBorder;
+	margin: 20px 0px 10px;
+	padding-bottom: 3px;
+}
+
+//---------------------------------
+// Checkboxes
+//---------------------------------
+.preferences-wrap input[type='checkbox'] {
+	-webkit-appearance: none;
+	width: 13px;
+	height: 13px;
+	top: 1px;
+	background: @colorPrefsBodyBg;
+	border: 1px solid @colorCheckboxBorder;
+	border-radius: 2px;
+
+	&:checked {
+		background-image: url(images/thread-list/checkbox-checkmark@2x.png);
+		background-repeat: no-repeat;
+		background-size: 11px 9px;
+		background-position: center;
+		background-color: @colorAccent;
+		border-color: @colorAccent;
+	}
+}
+
+//---------------------------------
+// Gray text
+//---------------------------------
+.preferences-wrap p {
+	font-size: 13px;
+}
+
+//------------------------------------------------------------
+// Accounts/Signatures tab
+//------------------------------------------------------------
+.nylas-editable-list .items-wrapper .selected.editing, .nylas-editable-list:focus .items-wrapper .selected {
+	background-color: @colorAccent;
+}
+
+//------------------------------------------------------------
+// Appearance tab
+//------------------------------------------------------------
+.preferences-wrap .container-appearance .appearance-mode-switch .appearance-mode {
+	background-color: @colorPrefsBodyBg;
+	border: 1px solid @colorBorder;
+	border-radius: 4px;
+	color: @colorTextFaded;
+
+	img.content-mask {
+		background-color: @colorTextFaded;
+	}
+
+	&.active {
+		border: 1px solid @colorAccent;
+		color: @colorAccent;
+
+		img.content-mask {
+			background-color: @colorAccent;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Scrollbar
+//------------------------------------------------------------
+.column-Preferences .scrollbar-track {
+	background: @colorPrefsBodyBg;
+	border-left: none;
+	width: 10px;
+
+	.scrollbar-handle {
+		background: fade(darken(@colorPrefsBodyBg, 45%), 40%);
+		border: none;
+	}
+}

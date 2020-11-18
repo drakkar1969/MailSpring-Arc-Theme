@@ -1,0 +1,378 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Message list area
+//------------------------------------------------------------
+.column-MessageList {
+	background: @colorWindowBg;
+	border-left: 1px solid @colorBorder;
+	padding-top: 12px;
+}
+
+#message-list .messages-wrap .scroll-region-content-inner {
+	padding: 0 20px;
+}
+
+//------------------------------------------------------------
+// Message body
+//------------------------------------------------------------
+#message-list .message-item-wrap {
+	.message-item-white-wrap {
+		box-shadow: none !important;
+		background: @colorBodyBg;
+		border: 1px solid @colorBorder;
+		border-radius: 3px;
+
+		.message-item-area {
+			padding: 0 25px 14px 25px;
+		}
+
+		//---------------------------------
+		// Message header text
+		//---------------------------------
+		.from-contact {
+			font-size: 14px;
+		}
+
+		.to-participants {
+			font-size: 14px;
+
+			&.collapsed {
+				margin-top: 3px;
+			}
+		}
+
+		//---------------------------------
+		// Message header track icon
+		//---------------------------------
+		.message-header-right {
+			.open-tracking-message-status.opened {
+				img.content-mask {
+					background-color: @colorAccent;
+				}
+			}
+		}
+	}
+
+	//---------------------------------
+	// Collapsed message
+	//---------------------------------
+	&.collapsed {
+		.message-item-white-wrap {
+			background-color: @colorBodyBgDarker;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message subject area
+//------------------------------------------------------------
+#message-list .message-subject-wrap {
+	padding-left: 2px;
+
+	//---------------------------------
+	// Message subject
+	//---------------------------------
+	.message-subject {
+		font-size: 18px;
+	}
+
+	//---------------------------------
+	// Subject area buttons
+	//---------------------------------
+	.message-icons-wrap {
+		cursor: default;
+	}
+
+	.message-icons-wrap div {
+		background: none;
+		border: 1px solid transparent;
+	 	border-radius: 3px;
+		height: 26px;
+		padding: 0px 13px;
+
+		img.content-mask {
+			margin-top: -6px;
+		}
+
+		&:hover {
+			border-color: @colorBtnBorderLight;
+			background-color: @colorBtnBgLight;
+		}
+
+		&:active {
+			border-color: @colorBtnBorderActiveLight;
+			background-color: @colorBtnBgActiveLight;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Reply/forward buttons
+//------------------------------------------------------------
+#message-list .message-header .message-actions-wrap {
+	.button-dropdown.bordered {
+		.primary-item {
+			box-shadow: none;
+			background: @colorBodyBg;
+			border: 1px solid transparent;
+			border-radius: 3px 0 0 3px;
+		}
+
+		.secondary-picker {
+			box-shadow: none;
+			background: @colorBodyBg;
+			border: 1px solid transparent;
+			border-left-width: 0;
+			border-radius: 0 3px 3px 0;
+		}
+
+		&:hover {
+			.primary-item {
+				background: @colorBtnBgLight;
+				border-color: @colorBtnBorderLight;
+			}
+
+			.secondary-picker {
+				background: @colorBtnBgLight;
+				border-color: @colorBtnBorderLight;
+			}
+		}
+
+		.primary-item:active {
+			background: @colorAccent;
+			border-color: @colorAccent;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+
+		.secondary-picker:active {
+			background: @colorAccent;
+			border-color: @colorAccent;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.mail-label.removable {
+	box-shadow: none !important;
+	background: @colorAccent !important;
+	color: @colorBtnTextActive !important;
+	margin-top: 3px;
+
+	img.content-mask {
+		background-color: @colorBtnTextActive !important;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message footer
+//------------------------------------------------------------
+#message-list  .footer-reply-area-wrap {
+	box-shadow: none;
+	background: @colorBodyBg;
+	border: 1px solid @colorBorder;
+	border-radius: 0 0 3px 3px;
+
+	//---------------------------------
+	// Reply icon/text
+	//---------------------------------
+	.footer-reply-area {
+		width: max-content;
+		margin: 9px 12px;
+		font-size: 14px;
+		color: @colorAccent;
+
+		img.content-mask {
+			background-color: @colorAccent;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Minified messages
+//------------------------------------------------------------
+#message-list .minified-bundle {
+	.msg-line {
+		box-shadow: none;
+		border: 1px solid @colorBorder;
+		border-radius: 3px 3px 0 0;
+		background-color: @colorBodyBgDarker;
+	}
+
+	.num-messages {
+		border: 1px solid @colorBorder;
+		background-color: @colorBodyBg;
+		color: @colorAccent;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message attachments
+//------------------------------------------------------------
+.nylas-attachment-item {
+	//---------------------------------
+	// File attachment box
+	//---------------------------------
+	&.file-attachment-item {
+		.file-thumbnail-preview {
+			border: 1px solid @colorBorder;
+			border-radius: 3px 3px 0 0;
+		}
+
+		.file-info-wrap {
+			background-color: darken(@colorWindowBg, 3%);
+			border: 1px solid @colorBorder;
+			border-radius: 3px 0 0 3px;
+			box-shadow: none;
+		}
+
+		.file-action-icon {
+			background-color: darken(@colorWindowBg, 3%);
+			border: 1px solid @colorBorder;
+			border-left-width: 0px;
+			border-radius: 0 3px 3px 0;
+
+			img.content-mask {
+				background-color: @colorText;
+			}
+
+			&:not(:last-child) {
+				border-radius: 0;
+			}
+
+			&:hover {
+				background-color: darken(@colorWindowBg, 6%);
+			}
+
+			&:active {
+				background-color: @colorAccent;
+
+				img.content-mask {
+					background-color: @colorBtnTextActive;
+				}
+			}
+		}
+
+		&:focus {
+			.file-thumbnail-preview {
+				border-color: @colorAccent;
+			}
+
+			.file-info-wrap {
+				border-color: @colorAccent;
+				border-right-color: @colorBorder;
+			}
+
+			.file-action-icon {
+				border-color: @colorAccent;
+
+				&:not(:last-child) {
+					border-right-color: @colorBorder;
+				}
+			}
+		}
+	}
+	//---------------------------------
+	// Image attachment download button
+	//---------------------------------
+	&.image-attachment-item {
+		.file-action-icon {
+			right: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			cursor: pointer;
+
+			img {
+				display: none;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Other attachment controls
+//------------------------------------------------------------
+#message-list .download-all {
+	.attachment-number {
+		font-size: 14px;
+	}
+
+	.separator {
+		display: none;
+	}
+
+	.download-all-action {
+		padding-left: 14px;
+		font-size: 14px;
+		color: @colorAccent;
+
+		img.content-mask {
+			background-color: @colorAccent;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message warning bar
+//------------------------------------------------------------
+#message-list .show-hidden-messages {
+	border: none;
+	border-left: 3px solid @colorAccent;
+	border-radius: 0px;
+	background-color: @colorWarningBar;
+
+	a {
+		color: @colorAccent;
+		cursor: pointer;
+	}
+}
+
+//------------------------------------------------------------
+// Scroll bars
+//------------------------------------------------------------
+#message-list .scrollbar-track,
+.composer-full-window .scrollbar-track {
+	background: @colorWindowBg;
+	border-left: none;
+	width: 10px;
+
+	.scrollbar-handle {
+		background: fade(darken(@colorBodyBg, 45%), 40%);
+		border: none;
+	}
+}
+
+.composer-full-window .scrollbar-track {
+	background: @colorBodyBg;
+}
