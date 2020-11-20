@@ -79,6 +79,7 @@
 	//---------------------------------
 	.message-subject {
 		font-size: 18px;
+		color: @colorText;
 	}
 
 	//---------------------------------
@@ -97,6 +98,7 @@
 
 		img.content-mask {
 			margin-top: -6px;
+			background-color: @colorText;
 		}
 
 		&:hover {
@@ -116,6 +118,63 @@
 }
 
 //------------------------------------------------------------
+// Message header
+//------------------------------------------------------------
+.message-participants {
+	.from-contact {
+		color: @colorText;
+	}
+
+	.from-label,
+	.to-label,
+	.reply-to-label,
+	.cc-label,
+	.bcc-label {
+		color: @colorTextFaded;
+	}
+
+	.to-contact,
+	.reply-to-contact,
+	.cc-contact,
+	.bcc-contact,
+	.to-everyone {
+		color: @colorTextFaded;
+	}
+
+	.expanded-participants {
+		.participant-primary {
+			color: @colorTextFaded;
+		}
+		.participant-secondary {
+			color: @colorTextFaded;
+		}
+		.from-contact .participant-primary {
+			color: @colorText;
+		}
+		.from-contact .participant-secondary {
+			color: @colorText;
+		}
+	}
+}
+
+#message-list {
+	.message-header {
+		.header-row {
+			color: @colorTextFaded;
+		}
+
+		.message-time,
+		.message-indicator {
+			color: @colorTextFaded;
+		}
+	}
+
+	.header-toggle-control img {
+		background: @colorTextFaded;
+	}
+}
+
+//------------------------------------------------------------
 // Reply/forward buttons
 //------------------------------------------------------------
 #message-list .message-header .message-actions-wrap {
@@ -125,6 +184,10 @@
 			background: @colorBodyBg;
 			border: 1px solid transparent;
 			border-radius: 3px 0 0 3px;
+
+			img.content-mask {
+				background-color: @colorText;
+			}
 		}
 
 		.secondary-picker {
@@ -133,6 +196,10 @@
 			border: 1px solid transparent;
 			border-left-width: 0;
 			border-radius: 0 3px 3px 0;
+
+			img.content-mask {
+				background-color: @colorText;
+			}
 		}
 
 		&:hover {
