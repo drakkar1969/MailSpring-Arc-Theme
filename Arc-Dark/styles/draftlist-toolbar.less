@@ -1,0 +1,50 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Drafts list toolbar
+//------------------------------------------------------------
+.toolbar-DraftList {
+	height: 100%;
+	background: @colorWindowBg;
+	border: none;
+
+	border-left: 1px solid transparent;
+
+	.selection-bar .absolute {
+		background: @colorWindowBg;
+	}
+
+	//---------------------------------
+	// Toolbar buttons
+	//---------------------------------
+	.btn-toolbar {
+		box-shadow: none;
+		background: transparent;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		height: 26px;
+
+		&:hover {
+			background: @colorBtnBgLight;
+			border-color: @colorBtnBorderLight;
+		}
+
+		&:active {
+			background: @colorBtnBgActiveLight;
+			border-color: @colorBtnBorderActiveLight;
+			color: @colorBtnTextActive;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Toolbar text
+	//---------------------------------
+	.inner .centered {
+		padding-top: 2px;
+		color: @colorTextFaded !important;
+	}
+}

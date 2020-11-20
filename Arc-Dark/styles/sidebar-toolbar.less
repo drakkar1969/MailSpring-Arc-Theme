@@ -1,0 +1,139 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Sidebar toolbar
+//------------------------------------------------------------
+.toolbar-RootSidebar {
+	height: 100%;
+	background-color: @colorSidebarBg;
+	border-right: 1px solid @colorSidebarBorder;
+
+	//---------------------------------
+	// New email button
+	//---------------------------------
+	.item-compose {
+		background: none;
+		box-shadow: none;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		height: 26px;
+		padding-bottom: 10px;
+
+		img.content-mask {
+			background-color: @colorSidebarText;
+		}
+
+		&:hover {
+			background-color: @colorBtnBgDark;
+			border-color: @colorBtnBorderDark;
+
+			img.content-mask {
+				background-color: @colorSidebarText;
+			}
+		}
+
+		&:active {
+			background-color: @colorBtnBgActiveDark;
+			border-color: @colorBtnBorderActiveDark;
+
+			img.content-mask{
+				background-color: @colorBtnTextActive;
+			}
+		}
+
+		//---------------------------------
+		// New email button - inactive window
+		//---------------------------------
+		body.is-blurred & {
+			box-shadow: none !important;
+
+			img.content-mask {
+				opacity: 1.0;
+			}
+
+			&:hover {
+				background-color: @colorBtnBgDark;
+				border-color: @colorBtnBorderDark;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Activity toolbar
+//------------------------------------------------------------
+.toolbar-activity {
+	margin-top: 2px;
+
+	//---------------------------------
+	// Activity icon
+	//---------------------------------
+	.activity-toolbar-icon {
+		background-color: @colorSidebarTextFaded;
+
+		&:hover {
+			background-color: @colorSidebarText;
+			cursor: pointer;
+		}
+
+		&.unread {
+			background-color: @colorAccent;
+
+			&:hover {
+				background-color: @colorAccent;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Activity unread count
+	//---------------------------------
+	.unread-count.active {
+		background: @colorAccent;
+		font-weight: 600;
+		padding-top: 1px;
+	}
+}
+
+//------------------------------------------------------------
+// Activity dropdown menu
+//------------------------------------------------------------
+.activity-list-container {
+	background-color: @colorListBg;
+
+	//---------------------------------
+	// Activity dropdown items
+	//---------------------------------
+	.activity-list-item {
+		border-bottom: 1px solid @colorBorder;
+		color: @colorListText;
+
+		&:hover {
+			background-color: @colorListItemHover;
+		}
+
+		&.unread,
+		&.unread:hover {
+			background-color: @colorAccent;
+			color: @colorListTextActive;
+
+			.timestamp {
+				color: @colorListTextActiveFaded;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Activity dropdown scrollbar
+	//---------------------------------
+	.scrollbar-track {
+		background: @colorListBg;
+		border-left: none;
+		width: 10px;
+
+		.scrollbar-handle {
+			background: fade(darken(@colorListBg, 45%), 40%);
+			border: none;
+		}
+	}
+}

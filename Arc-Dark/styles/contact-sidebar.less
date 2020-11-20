@@ -1,0 +1,74 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Contact sidebar
+//------------------------------------------------------------
+.column-MessageListSidebar {
+	background: @colorWindowBg;
+	border-left: 1px solid @colorBorder;
+	padding-top: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+//------------------------------------------------------------
+// Contact card
+//------------------------------------------------------------
+.sidebar-section {
+	background: @colorListBg;
+	border: 1px solid @colorBorder;
+	border-radius: 3px;
+}
+
+.participant-profile {
+	.profile-photo-wrap {
+		left: 0px;
+		top: 0px;
+		box-shadow: none;
+
+		.profile-photo .default-profile-image {
+			box-shadow: none;
+			background-image: none;
+		}
+	}
+
+	.personal-info {
+		padding-top: 30px;
+		text-align: center;
+
+		.selectable {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Related threads
+//------------------------------------------------------------
+.related-threads {
+	border-top: none;
+
+	.related-thread {
+		border-top: 1px solid @colorBorder;
+
+		.content {
+			color: @colorTextFaded;
+		}
+
+		&:hover {
+			background-color: @colorListItemHover;
+		}
+	}
+
+	.toggle {
+		padding: 6px 15px 8px;
+		font-size: 13px;
+		color: @colorAccent;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

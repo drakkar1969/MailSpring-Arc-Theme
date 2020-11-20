@@ -1,0 +1,154 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Thread list icons
+//------------------------------------------------------------
+.thread-list .list-container .list-item {
+	//---------------------------------
+	// LESS mixin
+	//---------------------------------
+	.arc-threadlist-icon(@image, @color) {
+		background-image: none;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-image: @image;
+		-webkit-mask-size: 14px;
+		-webkit-mask-position: 6px 4px;
+		-webkit-filter: none;
+		background-color: @color;
+	}
+
+	//---------------------------------
+	// Unread icon
+	//---------------------------------
+	.thread-icon-unread {
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), @colorAccent);
+
+		&:hover {
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
+		}
+	}
+
+	&.focused,
+	&.selected {
+		.thread-icon-unread {
+			background-color: @colorListTextActive;
+		}
+	}
+
+	//---------------------------------
+	// Star icon
+	//---------------------------------
+	.thread-icon-star {
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@colorListText, 70%));
+
+		&:hover {
+			background-color: fade(@colorListText, 45%);
+		}
+	}
+
+	&.focused,
+	&.selected {
+		.thread-icon-star {
+			background-color: fade(@colorListTextActive, 100%);
+
+			&:hover {
+				background-color: fade(@colorListTextActive, 75%);
+			}
+		}
+	}
+
+	//---------------------------------
+	// None icon
+	//---------------------------------
+	&:hover:not(.unread) {
+		.thread-icon-none {
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@colorListText, 15%));
+		}
+	}
+
+	&.focused:hover,
+	&.selected:hover {
+		.thread-icon-none {
+			background-color: fade(@colorListTextActive, 40%);
+		}
+	}
+
+	//---------------------------------
+	// Star hover icon
+	//---------------------------------
+	&:hover {
+		.thread-icon-star-on-hover:hover {
+			background-color: fade(@colorListText, 30%);
+		}
+	}
+
+	&.focused .thread-icon-star-on-hover:hover,
+	&.selected .thread-icon-star-on-hover:hover {
+		background-color: fade(@colorListTextActive, 65%);
+	}
+}
+
+//------------------------------------------------------------
+// Adjust icon vertical positions
+//------------------------------------------------------------
+.thread-list .list-container .list-item {
+	.thread-icon-unread,
+	.thread-icon-star,
+	.thread-icon-none {
+		margin-top: 1px;
+	}
+}
+
+.thread-list-narrow .list-container .list-item {
+	.thread-icon-unread,
+	.thread-icon-star,
+	.thread-icon-none {
+		margin-top: 0px;
+	}
+}
+
+//------------------------------------------------------------
+// Link tracking icons
+//------------------------------------------------------------
+.open-tracking-icon img.content-mask {
+	&.unopened {
+		background-color: fade(@colorListText, 30%);
+	}
+
+	&.opened {
+		background-color: @colorAccent;
+	}
+}
+
+//------------------------------------------------------------
+// Important icon (gmail)
+//------------------------------------------------------------
+.thread-list .mail-important-icon {
+	margin-top: -1px;
+}
+
+.thread-list-narrow .mail-important-icon {
+	margin-top: -3px;
+}
+
+//------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.thread-list .thread-injected-mail-labels,
+.draft-list .thread-injected-mail-labels {
+	margin-right: 0;
+
+	.mail-label {
+		box-shadow: none !important;
+		background: @colorAccent !important;
+		color: @colorListTextActive !important;
+		-webkit-filter: none !important;
+	}
+}
+
+.thread-list .focused .mail-label,
+.draft-list .focused .mail-label,
+.thread-list.handler-split .list-item.selected .mail-label {
+	box-shadow: none !important;
+	background-color: lighten(@colorAccent, 15%) !important;
+}

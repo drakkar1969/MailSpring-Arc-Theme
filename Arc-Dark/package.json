@@ -1,0 +1,12 @@
+{
+	"name": "Arc",
+  "displayName": "Arc",
+  "theme": "ui",
+  "version": "1.0.0",
+  "description": "Arc theme for Mailspring",
+  "license": "MIT",
+  "engines": {
+    "mailspring": "*"
+  },
+  "private": true
+}

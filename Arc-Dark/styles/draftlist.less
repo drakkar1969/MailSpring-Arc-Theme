@@ -1,0 +1,58 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Draft list area
+//------------------------------------------------------------
+.column-DraftList {
+	// Needed to fake bottom border for drafts toolbar
+	border-top: 5px solid @colorWindowBg;
+
+	.draft-list {
+		border-top: 1px solid @colorBorder;
+	}
+}
+
+//------------------------------------------------------------
+// Draft items
+//------------------------------------------------------------
+.draft-list .list-container .list-item {
+	background-color: @colorListBg;
+	border-bottom: 1px solid @colorBorder;
+
+	.checkmark .inner {
+		border: 1px solid @colorCheckboxBorder;
+	}
+
+	&:hover {
+		background-color: @colorListItemHover;
+
+		.checkmark .inner {
+			border-color: @colorCheckboxBorder;
+		}
+	}
+
+	&.selected {
+		.checkmark .inner {
+			background-color: @colorAccent;
+			border-color: @colorAccent;
+		}
+	}
+
+	&.keyboard-cursor {
+		border-left-color: @colorAccent;
+	}
+}
+
+//------------------------------------------------------------
+// Scroll bar
+//------------------------------------------------------------
+.draft-list .scrollbar-track {
+	background: @colorListBg;
+	border-left: none;
+	width: 10px;
+
+	.scrollbar-handle {
+		background: fade(darken(@colorListBg, 45%), 40%);
+		border: none;
+	}
+}

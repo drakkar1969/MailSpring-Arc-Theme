@@ -1,0 +1,303 @@
+@import "arc-variables";
+
+//------------------------------------------------------------
+// Sidebar
+//------------------------------------------------------------
+.column-RootSidebar {
+	background-color: @colorSidebarBg;
+	border-right: 1px solid @colorSidebarBorder;
+	padding-top: 12px;
+
+	.flexbox-handle-horizontal div {
+		box-shadow: none;
+	}
+}
+
+.account-sidebar {
+	background-color: @colorSidebarBg;
+}
+
+//------------------------------------------------------------
+// Sidebar headings
+//------------------------------------------------------------
+.nylas-outline-view {
+	.heading {
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: @colorSidebarTextFaded;
+		margin-bottom: 7px;
+		padding-top: 0px;
+
+		.add-item-button {
+			margin-top: -2px;
+
+			img.content-mask {
+				background-color: @colorSidebarTextFaded;
+				margin-top: 4px;
+			}
+
+			&:hover {
+				img.content-mask {
+					background-color: @colorSidebarText;
+					margin-top: 4px;
+				}
+			}
+		}
+
+		.collapse-button:hover {
+			color: @colorSidebarText;
+		}
+	}
+
+	&:not(:first-of-type) .heading {
+		margin-top: 16px;
+	}
+}
+
+//------------------------------------------------------------
+// Account switcher (dropdown arrow)
+//------------------------------------------------------------
+.account-switcher {
+	height: 16px;
+	width: 16px;
+	top: 0px;
+	padding: 6px 3px;
+
+	img.content-dark {
+		zoom: 1 !important;
+		background-image: none;
+		background-color: @colorSidebarTextFaded;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path fill="#FFF" d="M0 0h1l4 4 4-4h1v1L5 6 0 1z"/></svg>');
+		transform: none;
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		img.content-dark {
+			background-color: @colorSidebarText;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Sidebar items
+//------------------------------------------------------------
+.nylas-outline-view {
+	//---------------------------------
+	// Items
+	//---------------------------------
+	.item {
+		font-size: 14px;
+		font-weight: 400;
+		color: @colorSidebarText;
+
+		.icon {
+			margin-left: 8px;
+		}
+
+		img.content-mask {
+			background-color: @colorSidebarText;
+			margin-top: -1px;
+			margin-bottom: 1px;
+		}
+
+		&:hover {
+			background-color: @colorSidebarItemHover;
+		}
+
+		&.selected {
+			background-color: @colorAccent;
+			color: @colorSidebarTextActive;
+
+			img.content-mask {
+				background-color: @colorSidebarTextActive;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Drop target item
+	//---------------------------------
+	.item-container.dropping {
+		background: transparent;
+
+		.item {
+			background-color: @colorAccent;
+			color: @colorSidebarTextActive;
+
+			img.content-mask {
+				background-color: @colorSidebarTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Item count badges
+//------------------------------------------------------------
+.nylas-outline-view .item {
+	.item-count-box {
+		box-shadow: none;
+		background-color: @colorAccent;
+		color: @colorSidebarTextActive;
+
+		&.alt-count {
+			background-color: @colorAccent;
+			color: @colorSidebarTextActive;
+		}
+	}
+
+	&.selected {
+		.item-count-box {
+			background-color: @colorSidebarTextActive;
+			color: @colorAccent;
+
+			&.alt-count {
+				background-color: @colorSidebarTextActive;
+				color: @colorAccent;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Folder expand/collapse arrows
+//------------------------------------------------------------
+.disclosure-triangle.visible div {
+	border-left-color: @colorSidebarTextFaded;
+}
+
+.disclosure-triangle.visible:hover div {
+	border-left-color: @colorSidebarText;
+}
+
+//------------------------------------------------------------
+// Sidebar syncing box
+//------------------------------------------------------------
+.sidebar-activity {
+	background-color: darken(@colorSidebarBg, 5%);;
+	box-shadow: none;
+	font-weight: 500;
+  color: @colorSidebarTextLighter;
+
+	//---------------------------------
+	// Task count label
+	//---------------------------------
+	.item .count {
+		font-weight: 500;
+	  color: @colorSidebarTextLighter;
+	}
+
+	//---------------------------------
+	// Hide link
+	//---------------------------------
+	.inner a {
+		color: @colorAccent;
+		cursor: pointer;
+	}
+
+	//---------------------------------
+	// Account name
+	//---------------------------------
+	.item h2 {
+		font-weight: 600;
+		color: @colorSidebarTextFaded;
+		margin: 6px 0px 12px;
+	}
+
+	//---------------------------------
+	// Syncing indicators (circles)
+	//---------------------------------
+	.item .sync-activity .account .folder-progress::before {
+		background-color: @colorAccent;
+		border-color: @colorAccent;
+	}
+
+	.item .sync-activity .account .folder-progress.busy::before {
+		animation: border-pulse 3s ease-in infinite;
+	}
+
+	@keyframes border-pulse {
+		0% {
+			border-color: transparent;
+		}
+		100% {
+			border-color: @colorAccent;
+		}
+	}
+
+	//---------------------------------
+	// Progress labels
+	//---------------------------------
+	.item .sync-activity .account .folder-progress .progress-label {
+		color: @colorSidebarTextFaded;
+	}
+}
+
+//------------------------------------------------------------
+// Sidebar notifications (error/offline/update)
+//------------------------------------------------------------
+.notifications {
+	background-color: darken(@colorSidebarBg, 5%);
+	box-shadow: none;
+}
+
+.notification {
+	background: @colorAccent;
+	border-radius: 3px;
+	margin-top: 16px;
+
+	.action {
+		border: none !important;
+
+		&:hover {
+			box-shadow: none !important;
+			background: lighten(@colorAccent, 10%);
+		}
+
+		&:active {
+			background: darken(@colorAccent, 10%);
+		}
+	}
+
+	&.error {
+		background: @colorWarningRed;
+
+		.action:hover {
+			background: lighten(@colorWarningRed, 10%);
+		}
+
+		.action:active {
+			background: darken(@colorWarningRed, 10%);
+		}
+	}
+
+	&.offline {
+		background: @colorWarningYellow;
+
+		.action:hover {
+			background: lighten(@colorWarningYellow, 10%);
+		}
+
+		.action:active {
+			background: darken(@colorWarningYellow, 10%);
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Scrollbar
+//------------------------------------------------------------
+.account-sidebar .scrollbar-track {
+	background: @colorSidebarBg;
+	border-left: none;
+	width: 10px;
+
+	.scrollbar-handle {
+		background: fade(lighten(@colorSidebarBg, 50%), 40%);
+		border: none;
+	}
+}
