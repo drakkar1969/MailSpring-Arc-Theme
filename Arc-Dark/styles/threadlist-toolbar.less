@@ -16,30 +16,67 @@
 	background: rgba(0, 0, 0, 0);
 	box-shadow: none;
 	padding-left: 9px;
+	color: @colorText;
+
+	//---------------------------------
+	// Search box text
+	//---------------------------------
+	&.placeholder .tokenizing-contenteditable .layer-tokens {
+		color: @colorTextFaded;
+	}
+
+	.tokenizing-contenteditable .layer-tokens {
+		color: @colorText;
+
+		.layer-token {
+			color: @colorAccent;
+		}
+	}
+
+	.tokenizing-contenteditable .layer-text {
+		caret-color: @colorText;
+	}
+
+	//---------------------------------
+	// Search box icons
+	//---------------------------------
+	// .search-accessory.clear {
+	// 	color: @colorTextFaded !important; // FIXME
+	// }
 
 	//---------------------------------
 	// Search box dropdown
 	//---------------------------------
 	.suggestions {
+		background: @colorListBg;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+
 		.suggestion {
 			color: @colorTextFaded;
 
+			.suggestion-token {
+				color: @colorAccent;
+			}
+
 			&.selected {
 				background-color: @colorAccent;
+				color: @colorBtnTextActive;
+
+				.suggestion-token {
+					color: @colorBtnTextActive;
+				}
 			}
 
 			&:hover:not(.selected) {
 				background-color: @colorListItemHover;
-			}
-
-			.suggestion-token {
-				color: @colorAccent;
 			}
 		}
 
 		.footer {
 			background-color: @colorWindowBg;
 			border-color: @colorBorder;
+			color: fade(@colorText, 70%);
 		}
 	}
 }
