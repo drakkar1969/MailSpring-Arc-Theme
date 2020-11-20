@@ -12,9 +12,15 @@
 //------------------------------------------------------------
 // Thread list items
 //------------------------------------------------------------
+.thread-list .unread:not(.focused):not(.selected) .snippet {
+	color: @colorListText;
+	opacity: 0.7;
+}
+
 .thread-list .list-item {
 	background-color: @colorListBg !important;
 	border-bottom: 1px solid @colorBorder !important;
+	color: @colorListText;
 
 	&:hover {
 		background-color: @colorListItemHover !important;
