@@ -4,8 +4,18 @@
 // Thread list
 //------------------------------------------------------------
 .column-ThreadList {
+	background: @colorListBg;
+
 	.flexbox-handle-horizontal div {
 		box-shadow: none;
+	}
+
+	.empty-state .perspective-empty-state .message {
+		color: @colorTextFaded;
+	}
+
+	.empty-state .perspective-empty-state img {
+		background-color: fade(@colorText, 80%);
 	}
 }
 
