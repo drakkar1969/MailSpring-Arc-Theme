@@ -105,8 +105,12 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 //------------------------------------------------------------
 // Preferences body common settings
 //------------------------------------------------------------
-.preferences-wrap .preferences-content {
-	background-color: @colorPrefsBodyBg;
+.preferences-wrap {
+	color: @colorText;
+
+	.preferences-content {
+		background-color: @colorPrefsBodyBg;
+	}
 }
 
 //---------------------------------
@@ -115,6 +119,8 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 .preferences-wrap .platform-note {
 	background-color: @colorWarningBar;
 	border-color: @colorAccent;
+	color: fade(@colorText, 80%);
+	font-size: 1em;
 
 	&::before {
 		color: @colorAccent;
