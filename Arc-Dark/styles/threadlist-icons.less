@@ -18,6 +18,50 @@
 	}
 
 	//---------------------------------
+	// Attachment icon
+	//---------------------------------
+	.thread-icon.thread-icon-attachment {
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), @colorText);
+	}
+
+	&.focused,
+	&.selected {
+		.thread-icon.thread-icon-attachment {
+			background-color: @colorListTextActive;
+		}
+	}
+
+	//---------------------------------
+	// Replied/forwarded icons
+	//---------------------------------
+	.thread-icon.thread-icon-replied {
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-replied-@2x.png), @colorText);
+
+		&:hover {
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
+		}
+	}
+
+	.thread-icon.thread-icon-forwarded {
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-forwarded-@2x.png), @colorText);
+
+		&:hover {
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
+		}
+	}
+
+	&.focused,
+	&.selected {
+		.thread-icon.thread-icon-replied {
+			background-color: @colorListTextActive;
+		}
+
+		.thread-icon.thread-icon-forwarded {
+			background-color: @colorListTextActive;
+		}
+	}
+
+	//---------------------------------
 	// Unread icon
 	//---------------------------------
 	.thread-icon-unread {
