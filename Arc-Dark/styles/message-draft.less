@@ -108,18 +108,43 @@
 //------------------------------------------------------------
 // Draft message rich edit toolbar
 //------------------------------------------------------------
-.RichEditor-toolbar .inner {
-	background: @colorBodyBg !important;
-	padding-top: 1px;
-}
 
 .RichEditor-toolbar {
+	.inner {
+		background: @colorBodyBg !important;
+		padding-top: 1px;
+	}
+
+	.floating-container {
+		border-color: fade(@colorText, 30%);
+	}
+
 	//---------------------------------
 	// Buttons
 	//---------------------------------
-	button.undefined:not(.with-select) {
-		&.active {
-			color: @colorAccent;
+	button {
+		color: @colorText;
+
+		&:hover {
+			color: @colorText;
+		}
+
+		&.with-select select {
+			color: @colorText;
+
+			&:focus, &:active {
+				background-color: @colorBodyBg;
+			}
+		}
+
+		&.undefined:not(.with-select) {
+			&:hover {
+				color: @colorText;
+			}
+
+			&.active {
+				color: @colorAccent;
+			}
 		}
 	}
 
@@ -128,6 +153,7 @@
 	//---------------------------------
 	.divider {
 		height: 13px;
+		border-color: @colorTextFaded;
 	}
 }
 
