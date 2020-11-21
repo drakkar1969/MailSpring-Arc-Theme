@@ -1,22 +1,23 @@
 @import "arc-variables";
 
 //------------------------------------------------------------
+// LESS mixin
+//------------------------------------------------------------
+.arc-threadlist-icon(@image, @color) {
+	background-image: none;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-image: @image;
+	-webkit-mask-size: 14px;
+	-webkit-mask-position: 6px 4px;
+	-webkit-filter: none;
+	background-color: @color;
+}
+
+//------------------------------------------------------------
 // Thread list icons
 //------------------------------------------------------------
-.thread-list .list-container .list-item {
-	//---------------------------------
-	// LESS mixin
-	//---------------------------------
-	.arc-threadlist-icon(@image, @color) {
-		background-image: none;
-		-webkit-mask-repeat: no-repeat;
-		-webkit-mask-image: @image;
-		-webkit-mask-size: 14px;
-		-webkit-mask-position: 6px 4px;
-		-webkit-filter: none;
-		background-color: @color;
-	}
-
+.thread-list,
+.draft-list {
 	//---------------------------------
 	// Attachment icon
 	//---------------------------------
@@ -30,7 +31,9 @@
 			background-color: @colorListTextActive;
 		}
 	}
+}
 
+.thread-list .list-container .list-item {
 	//---------------------------------
 	// Draft icon
 	//---------------------------------
