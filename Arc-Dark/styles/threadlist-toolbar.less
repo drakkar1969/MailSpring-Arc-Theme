@@ -5,8 +5,8 @@
 //------------------------------------------------------------
 .toolbar-ThreadList {
 	height: 100%;
-	background: @colorListBg;
-	border-bottom: 1px solid @colorBorder;
+	background: @clrListBg;
+	border-bottom: 1px solid @clrWindowBorder;
 }
 
 //------------------------------------------------------------
@@ -16,67 +16,89 @@
 	background: rgba(0, 0, 0, 0);
 	box-shadow: none;
 	padding-left: 9px;
-	color: @colorText;
 
 	//---------------------------------
 	// Search box text
 	//---------------------------------
+	color: @clrText;
+
 	&.placeholder .tokenizing-contenteditable .layer-tokens {
-		color: @colorTextFaded;
+		color: @clrTextFaded;
 	}
 
 	.tokenizing-contenteditable .layer-tokens {
-		color: @colorText;
+		color: @clrText;
 
 		.layer-token {
-			color: @colorAccent;
+			font-weight: 500;
+			color: @clrAccent;
 		}
 	}
 
 	.tokenizing-contenteditable .layer-text {
-		caret-color: @colorText;
+		caret-color: @clrTextFaded;
 	}
 
 	//---------------------------------
 	// Search box icons
 	//---------------------------------
-	// .search-accessory.clear {
-	// 	color: @colorTextFaded !important; // FIXME
-	// }
+	.arc-threadlist-icon(@image, @size, @color) {
+		background-image: none;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-image: @image;
+		-webkit-mask-size: @size;
+		-webkit-mask-position: 0px 0px;
+		-webkit-filter: none;
+		background-color: @color;
+	}
+
+	.search-accessory {
+		.arc-threadlist-icon(url(../static/images/toolbar/searchloupe@2x.png), 15px, @clrText);
+		padding-top: 15px;
+
+		&.clear {
+			.arc-threadlist-icon(url(../static/images/search/searchclear@2x.png), 21px, @clrTextFaded);
+
+			&:hover {
+				background-color: @clrText;
+			}
+		}
+	}
 
 	//---------------------------------
 	// Search box dropdown
 	//---------------------------------
 	.suggestions {
-		background: @colorListBg;
+		background: @clrListBg;
 	  border-bottom-left-radius: 0;
 	  border-bottom-right-radius: 0;
+		top: 29px;
 
 		.suggestion {
-			color: @colorTextFaded;
+			color: @clrTextFadedLess;
 
 			.suggestion-token {
-				color: @colorAccent;
+				color: @clrAccent;
 			}
 
 			&.selected {
-				background-color: @colorAccent;
-				color: @colorBtnTextActive;
+				background-color: @clrAccent;
+				color: @colorListTextActive;
 
 				.suggestion-token {
-					color: @colorBtnTextActive;
+					color: @colorListTextActive;
 				}
 			}
 
 			&:hover:not(.selected) {
-				background-color: @colorListItemHover;
+				background-color: @clrListHover;
 			}
 		}
 
 		.footer {
-			background-color: @colorWindowBg;
-			border-color: @colorBorder;
-			color: fade(@colorText, 70%);
+			background-color: @clrWindowBg;
+			border-color: @clrWindowBorder;
+			color: @clrTextFadedLess;
 		}
 	}
 }
@@ -85,10 +107,8 @@
 // Drafts/trash empty button header
 //------------------------------------------------------------
 .thread-list-empty-folder-bar {
-	background-color: @colorWarningBar;
-	border-bottom-color: @colorBorder;
-
-	.notice {
-		color: @colorText;
-	}
+	background-color: @clrListWarningBar;
+	border-bottom-color: @clrWindowBorder;
+	color: @clrText;
+	font-size: 1em;
 }
