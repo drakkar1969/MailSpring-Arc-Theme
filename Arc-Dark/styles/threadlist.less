@@ -4,18 +4,18 @@
 // Thread list
 //------------------------------------------------------------
 .column-ThreadList {
-	background: @colorListBg;
+	background: @clrListBg;
 
 	.flexbox-handle-horizontal div {
 		box-shadow: none;
 	}
 
 	.empty-state .perspective-empty-state .message {
-		color: @colorTextFaded;
+		color: @clrTextFaded;
 	}
 
 	.empty-state .perspective-empty-state img {
-		background-color: fade(@colorText, 80%);
+		background-color: @clrTextFadedLess;
 	}
 }
 
@@ -23,44 +23,52 @@
 // Thread list items
 //------------------------------------------------------------
 .thread-list .unread:not(.focused):not(.selected) .snippet {
-	color: @colorListText;
-	opacity: 0.7;
+	color: @clrListTextFadedLess;
 }
 
-.thread-list .list-item {
-	background-color: @colorListBg !important;
-	border-bottom: 1px solid @colorBorder !important;
-	color: @colorListText;
+.thread-list {
+	.list-item {
+		background-color: @clrListBg !important;
+		border-bottom: 1px solid @clrWindowBorder !important;
+		color: @clrListText;
 
-	&:hover {
-		background-color: @colorListItemHover !important;
-	}
+		&:hover {
+			background-color: @clrListHover !important;
+		}
 
-	&.focused,
-	&.selected {
-		background-color: @colorAccent !important;
-	}
+		&.focused,
+		&.selected {
+			background-color: @clrAccent !important;
+		}
 
-	&.unread {
-		.participants span,
-		.subject {
-			font-weight: bold;
+		&.unread {
+			.participants span,
+			.subject {
+				font-weight: bold;
+			}
+		}
+
+		&.keyboard-cursor {
+			border-left-color: @clrAccent;
+		}
+
+		body.is-blurred & {
+			&.focused,
+			&.selected {
+				.participants span,
+				.timestamp,
+				.subject,
+				.snippet-and-labels {
+					color: @clrListTextActive;
+				}
+			}
 		}
 	}
 
-	&.keyboard-cursor {
-		border-left-color: darken(@colorAccent, 15%);
-	}
-
-	body.is-blurred & {
-		&.focused,
-		&.selected {
-			.participants span,
-			.timestamp,
-			.subject,
-			.snippet-and-labels {
-				color: @colorListTextActive;
-			}
+	&.handler-split .list-item.selected {
+		.participants span,
+		.subject {
+			font-weight: bold !important;
 		}
 	}
 }
@@ -76,12 +84,12 @@
 // Scrollbar
 //------------------------------------------------------------
 .thread-list .scrollbar-track {
-	background: @colorListBg;
+	background: @clrListBg;
 	border-left: none;
 	width: 10px;
 
 	.scrollbar-handle {
-		background: fade(darken(@colorListBg, 45%), 40%);
+		background: @clrListScrollbar;
 		border: none;
 	}
 }
