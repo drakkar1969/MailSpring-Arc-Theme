@@ -32,6 +32,24 @@
 	}
 
 	//---------------------------------
+	// Draft icon
+	//---------------------------------
+	.draft-icon {
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-draft-pencil@2x.png), @colorText);
+		zoom: 1 !important;
+		width: 26px;
+		height: 24px;
+		padding-top: 24px;
+	}
+
+	&.focused,
+	&.selected {
+		.draft-icon {
+			background-color: @colorListTextActive;
+		}
+	}
+
+	//---------------------------------
 	// Replied/forwarded icons
 	//---------------------------------
 	.thread-icon.thread-icon-replied {
