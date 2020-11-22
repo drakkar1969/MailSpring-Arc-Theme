@@ -59,13 +59,19 @@
 @clrListScrollbar: #767b87;
 @clrListWarningBar: lighten(@clrListBg, 10%);
 
-//---------------------------------
-// Controls
-//---------------------------------
-@clrCheckboxBg: #2d323d;
-@clrCheckboxBorder: #262934;
-@clrCheckboxBgActive: @clrAccent;
-@clrCheckboxBorderActive: @clrAccent;
+//------------------------------------------------------------
+// LESS mixins
+//------------------------------------------------------------
+.arc-control(@image, @size) {
+	width: @size;
+	height: @size;
+	background-image: @image;
+	background-color: transparent;
+	background-size: @size @size;
+	border: none;
+	border-radius: 0;
+}
+
 
 
 

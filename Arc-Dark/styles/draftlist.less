@@ -26,11 +26,9 @@
 		color: @clrListTextFadedLess;
 	}
 
-		.checkmark .inner {
-			background-color: @clrCheckboxBg;
-			border: 1px solid @clrCheckboxBorder;
-		}
-
+	.checkmark .inner {
+		.arc-control(url(mailspring://Arc-Dark/styles/images/controls/checkbox-unchecked-dark.png), 16px);
+	}
 
 	&:hover {
 		background-color: @clrListHover;
@@ -38,8 +36,7 @@
 
 	&.selected {
 		.checkmark .inner {
-			background-color: @clrCheckboxBgActive;
-			border-color: @clrCheckboxBorderActive;
+			.arc-control(url(mailspring://Arc-Dark/styles/images/controls/checkbox-checked-dark.png), 16px);
 		}
 	}
 
