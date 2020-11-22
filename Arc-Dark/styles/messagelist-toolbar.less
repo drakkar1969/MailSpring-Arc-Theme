@@ -30,21 +30,21 @@
 		height: 26px;
 
 		img.content-mask {
-			background-color: @clrBtnText;
+			background-color: @clrToolBtnText;
 		}
 
 		&:hover {
-			border-color: @clrBtnBorderHover !important;
-			background-color: @clrBtnBgHover;
+			border-color: @clrToolBtnBorderHover !important;
+			background-color: @clrToolBtnBgHover;
 		}
 
 		&:active,
 		&.mode-toggle.mode-false {
-			border-color: @clrBtnBorderActive !important;
-			background-color: @clrBtnBgActive;
+			border-color: @clrToolBtnBorderActive !important;
+			background-color: @clrToolBtnBgActive;
 
 			img.content-mask {
-				background-color: @clrBtnTextActive;
+				background-color: @clrToolBtnTextActive;
 			}
 		}
 
@@ -59,13 +59,13 @@
 			}
 
 			&:hover {
-				border-color: @clrBtnBorderHover;
-				background-color: @clrBtnBgHover;
+				border-color: @clrToolBtnBorderHover;
+				background-color: @clrToolBtnBgHover;
 			}
 		}
 
 		body.is-blurred &.mode-toggle.mode-false {
-			background-color: @clrBtnBgActive;
+			background-color: @clrToolBtnBgActive;
 		}
 	}
 }
