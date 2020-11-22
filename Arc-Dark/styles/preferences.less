@@ -274,36 +274,36 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 }
-// //------------------------------------------------------------
-// // Accounts/Signatures tab
-// //------------------------------------------------------------
-// .nylas-editable-list .items-wrapper .selected.editing, .nylas-editable-list:focus .items-wrapper .selected {
-// 	background-color: @colorAccent;
-// }
-//
-// //------------------------------------------------------------
-// // Appearance tab
-// //------------------------------------------------------------
-// .preferences-wrap .container-appearance .appearance-mode-switch .appearance-mode {
-// 	background-color: @colorPrefsBodyBg;
-// 	border: 1px solid @colorBorder;
-// 	border-radius: 4px;
-// 	color: @colorTextFaded;
-//
-// 	img.content-mask {
-// 		background-color: @colorTextFaded;
-// 	}
-//
-// 	&.active {
-// 		border: 1px solid @colorAccent;
-// 		color: @colorAccent;
-//
-// 		img.content-mask {
-// 			background-color: @colorAccent;
-// 		}
-// 	}
-// }
-//
+
+//------------------------------------------------------------
+// Preferences: Appearance tab
+//------------------------------------------------------------
+.preferences-wrap .container-appearance .appearance-mode-switch .appearance-mode {
+	background-color: @clrButtonBg;
+	border: 1px solid @clrButtonBorder;
+	border-radius: 3px;
+	color: @clrButtonText;
+
+	img.content-mask {
+		background-color: @clrButtonText;
+	}
+
+	&:hover {
+		background-color: @clrButtonBgHover;
+		border: 1px solid @clrButtonBorderHover;
+	}
+
+	&.active {
+		background-color: @clrButtonBgActive;
+		border: 1px solid @clrButtonBorderActive;
+		color: @clrButtonTextActive;
+
+		img.content-mask {
+			background-color: @clrButtonTextActive;
+		}
+	}
+}
+
 // //------------------------------------------------------------
 // // Scrollbar
 // //------------------------------------------------------------
