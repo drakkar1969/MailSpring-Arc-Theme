@@ -1,10 +1,23 @@
 @import "arc-variables";
 
+//------------------------------------------------------------
+// Message list toolbar
+//------------------------------------------------------------
+.toolbar-MessageList {
+	.message-toolbar-items {
+		margin-right: 6px;
+	}
+
+	.btn-toolbar.mode-toggle {
+		margin-left: 4.5px;
+	}
+}
+
 .toolbar-MessageList,
 .toolbar-MessageListSidebar {
 	height: 100%;
-	background: @colorWindowBg;
-	border-left: 1px solid @colorBorder;
+	background: @clrWindowBg;
+	border-left: 1px solid @clrWindowBorder;
 
 	//---------------------------------
 	// Toolbar buttons
@@ -17,21 +30,21 @@
 		height: 26px;
 
 		img.content-mask {
-			background-color: @colorText;
+			background-color: @clrBtnText;
 		}
 
 		&:hover {
-			border-color: @colorBtnBorderLight !important;
-			background-color: @colorBtnBgLight;
+			border-color: @clrBtnBorderHover !important;
+			background-color: @clrBtnBgHover;
 		}
 
 		&:active,
 		&.mode-toggle.mode-false {
-			border-color: @colorBtnBorderActiveLight !important;
-			background-color: @colorBtnBgActiveLight;
+			border-color: @clrBtnBorderActive !important;
+			background-color: @clrBtnBgActive;
 
 			img.content-mask {
-				background-color: @colorBtnTextActive;
+				background-color: @clrBtnTextActive;
 			}
 		}
 
@@ -46,13 +59,13 @@
 			}
 
 			&:hover {
-				border-color: @colorBtnBorderLight;
-				background-color: @colorBtnBgLight;
+				border-color: @clrBtnBorderHover;
+				background-color: @clrBtnBgHover;
 			}
 		}
 
 		body.is-blurred &.mode-toggle.mode-false {
-			background-color: @colorBtnBgActiveLight;
+			background-color: @clrBtnBgActive;
 		}
 	}
 }
