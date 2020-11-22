@@ -21,3 +21,79 @@
 body.platform-linux .sheet-toolbar-container {
 	background: @colorWindowBg;
 }
+
+//------------------------------------------------------------
+// Controls
+//------------------------------------------------------------
+input[type='text'],
+input[type='email'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='url'] {
+	background: @clrInputBg;
+	border: 1px solid @clrInputBorder;
+	color: @clrInputText;
+	height: 2.3em;
+
+	&:focus {
+		border: 1px solid @clrAccent;
+		box-shadow: inset 1px 0 @clrAccent, inset -1px 0 @clrAccent, inset 0 1px @clrAccent, inset 0 -1px @clrAccent;
+	}
+
+	&::placeholder {
+		color: @clrInputTextPlaceholder;
+	}
+}
+
+.btn {
+	box-shadow: none;
+	background: @clrButtonBg;
+	border: 1px solid @clrButtonBorder;
+	color: @clrButtonText;
+	height: 2.1em;
+	padding: 0.1em 0.8em;
+
+	&:hover {
+		background: @clrButtonBgHover;
+		border: 1px solid @clrButtonBorderHover;
+	}
+
+	&:active {
+		background: @clrButtonBgActive;
+		border: 1px solid @clrButtonBorderActive;
+		color: @clrButtonTextActive;
+	}
+
+	&.btn-disabled {
+		background: @clrButtonBgDisabled;
+		border: 1px solid @clrButtonBorderDisabled;
+		color: @clrButtonTextDisabled;
+	}
+}
+
+select {
+	background: @clrButtonBg;
+	border: 1px solid @clrButtonBorder;
+	border-radius: 3px;
+	color: @clrButtonText;
+	height: 2.1em;
+	padding: 0.1em 0.8em;
+
+	&:hover {
+		background: @clrButtonBgHover;
+		border: 1px solid @clrButtonBorderHover;
+	}
+
+	&:active {
+		background: @clrButtonBgActive;
+		border: 1px solid @clrButtonBorderActive;
+		color: @clrButtonTextActive;
+	}
+}
