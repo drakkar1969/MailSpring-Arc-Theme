@@ -5,14 +5,14 @@
 //------------------------------------------------------------
 .toolbar-DraftList {
 	height: 100%;
-	background: @colorWindowBg;
-	border: none;
+	background: @clrWindowBg;
 
+	border: none;
 	border-left: 1px solid transparent;
 
 	.selection-bar .absolute {
-		background: @colorWindowBg;
-		border-color: @colorWindowBg;
+		background: @clrWindowBg;
+		border-color: @clrWindowBg;
 	}
 
 	//---------------------------------
@@ -24,24 +24,24 @@
 		border: 1px solid transparent;
 		border-radius: 3px;
 		height: 26px;
-		color: @colorText;
+		color: @clrBtnText;
 
 		img.content-mask {
-			background-color: @colorText;
+			background-color: @clrBtnText;
 		}
 
 		&:hover {
-			background: @colorBtnBgLight;
-			border-color: @colorBtnBorderLight;
+			background: @clrBtnBgHover;
+			border-color: @clrBtnBorderHover;
 		}
 
 		&:active {
-			background: @colorBtnBgActiveLight;
-			border-color: @colorBtnBorderActiveLight;
-			color: @colorBtnTextActive;
+			background: @clrBtnBgActive;
+			border-color: @clrBtnBorderActive;
+			color: @clrBtnTextActive;
 
 			img.content-mask {
-				background-color: @colorBtnTextActive;
+				background-color: @clrBtnTextActive;
 			}
 		}
 	}
@@ -50,7 +50,7 @@
 	// Toolbar text
 	//---------------------------------
 	.inner .centered {
-		padding-top: 2px;
-		color: @colorTextFaded !important;
+		padding-top: 3px;
+		color: @clrTextFadedLess !important;
 	}
 }
