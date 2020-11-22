@@ -179,11 +179,22 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			color: @clrAccent;
 		}
 	}
+
+	//---------------------------------
+	// Labels (top left Shortcuts/Mail rules)
+	//---------------------------------
+	.preferences-content .container-dropdown {
+		margin: 5px 0 8px;
+		div:first-child {
+			margin-top: 3px;
+		}
+	}
 }
 
 //------------------------------------------------------------
 // Preferences: General tab
 //------------------------------------------------------------
+// Local data buttons (bottom of page)
 .preferences-wrap .container-general .local-data .btn {
 	border: 1px solid @clrButtonBorder;
 	border-radius: 3px;
@@ -201,13 +212,16 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences: Accounts tab
 //------------------------------------------------------------
 .preferences-wrap .container-accounts .accounts-content {
+	// Left pane item border
 	.account-list .account {
 		border-bottom: 1px solid @clrWindowBorder;
 	}
 
+	// Right pane
 	.account-details {
 		background-color: @clrPrefsBodyBg;
 		border-color: @clrPrefsBodyBg;
+		width: 420px;
 
 		& > input {
 			font-size: 1em;
@@ -219,6 +233,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	}
 }
 
+// Left pane
 .nylas-editable-list {
 	.items-wrapper {
 		background-color: @clrListBg;
@@ -247,6 +262,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		color: @clrPrefsTextActive;
 	}
 
+	// Left pane button footer
 	.buttons-wrapper {
 		background-color: @clrPrefsBodyBg;
 		border-color: @clrWindowBorder;
@@ -273,10 +289,12 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 .container-identity .identity-content-box {
 	color: @clrPrefsText;
 
+	// Horizontal line
 	.padded:last-child {
 		border-top: 1px solid @clrPrefsTextFadedMore;
 	}
 
+	// Refresh icon
 	.refresh img {
 		background-color: @clrToolBtnText;
 
@@ -287,57 +305,90 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 }
 
 //------------------------------------------------------------
+// Preferences: Appearance tab
+//------------------------------------------------------------
+.preferences-wrap .container-appearance {
+	// Layout selection buttons
+	.appearance-mode-switch .appearance-mode {
+		background-color: @clrButtonBg;
+		border: 1px solid @clrButtonBorder;
+		border-radius: 3px;
+		color: @clrButtonText;
+
+		img.content-mask {
+			background-color: @clrButtonText;
+		}
+
+		&:hover {
+			background-color: @clrButtonBgHover;
+			border: 1px solid @clrButtonBorderHover;
+		}
+
+		&.active {
+			background-color: @clrButtonBgActive;
+			border: 1px solid @clrButtonBorderActive;
+			color: @clrButtonTextActive;
+
+			img.content-mask {
+				background-color: @clrButtonTextActive;
+			}
+		}
+	}
+
+	.platform-linux-only .platform-note .btn {
+		margin-top: -2px;
+	}
+}
+
+//------------------------------------------------------------
 // Preferences: Shortcuts tab
 //------------------------------------------------------------
 .preferences-wrap .container-keymaps {
 	.shortcut {
-		color: @clrPrefsTextFadedLess;
+		color: @clrPrefsText;
 
 		.values {
 			color: @clrPrefsText;
 		}
 	}
+
+	// Large title (bottom of page)
+	h2 {
+		color: @clrPrefsText;
+	}
 }
 
 //------------------------------------------------------------
-// Preferences: Appearance tab
+// Preferences: Folders tab
 //------------------------------------------------------------
-.preferences-wrap .container-appearance .appearance-mode-switch .appearance-mode {
-	background-color: @clrButtonBg;
-	border: 1px solid @clrButtonBorder;
-	border-radius: 3px;
-	color: @clrButtonText;
-
-	img.content-mask {
-		background-color: @clrButtonText;
+.preferences-wrap .category-mapper-container {
+	// Labels
+	.role-section .col-left {
+		color: @clrPrefsText;
+		font-size: 1em;
+		padding-top: 4px;
 	}
 
-	&:hover {
-		background-color: @clrButtonBgHover;
-		border: 1px solid @clrButtonBorderHover;
-	}
-
-	&.active {
-		background-color: @clrButtonBgActive;
-		border: 1px solid @clrButtonBorderActive;
-		color: @clrButtonTextActive;
+	// Dropdowns
+	.category-picker-dropdown .category-item {
+		font-size: 1em;
 
 		img.content-mask {
-			background-color: @clrButtonTextActive;
+			background-color: @clrButtonText
 		}
 	}
 }
 
-// //------------------------------------------------------------
-// // Scrollbar
-// //------------------------------------------------------------
-// .column-Preferences .scrollbar-track {
-// 	background: @colorPrefsBodyBg;
-// 	border-left: none;
-// 	width: 10px;
-//
-// 	.scrollbar-handle {
-// 		background: fade(darken(@colorPrefsBodyBg, 45%), 40%);
-// 		border: none;
-// 	}
-// }
+//------------------------------------------------------------
+// Scrollbar
+//------------------------------------------------------------
+.column-Preferences .scrollbar-track {
+	background: @colorPrefsBodyBg;
+	border-left: none;
+	width: 10px;
+
+	.scrollbar-handle {
+		background: @clrPrefsScrollbar;
+		border: none;
+	}
+}
