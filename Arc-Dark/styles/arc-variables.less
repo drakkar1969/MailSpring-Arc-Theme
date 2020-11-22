@@ -38,6 +38,9 @@
 @clrText: #bac3cf;
 @clrTextFaded: fade(@clrText, 50%);
 @clrTextFadedLess: fade(@clrText, 80%);
+@clrTextFadedMore: fade(@clrText, 30%);
+
+@clrBodyBg: #404552;
 
 @clrBtnBgHover: rgba(95, 105, 127, 0.37);
 @clrBtnBorderHover: rgba(21, 23, 28, 0.37);
@@ -58,6 +61,20 @@
 @clrListTextActiveFaded: fade(@clrListTextActive, 50%);
 @clrListScrollbar: #767b87;
 @clrListWarningBar: lighten(@clrListBg, 10%);
+
+//---------------------------------
+// Preferences
+//---------------------------------
+@clrPrefsWindowBg: @clrWindowBg;
+@clrPrefsBodyBg: darken(@clrBodyBg, 2%);
+@clrPrefsTabHover: lighten(@clrPrefsWindowBg, 5%);
+@clrPrefsTabActive: @clrPrefsBodyBg;
+@clrPrefsText: @clrText;
+@clrPrefsTextFaded: @clrTextFaded;
+@clrPrefsTextFadedLess: @clrTextFadedLess;
+@clrPrefsTextFadedMore: @clrTextFadedMore;
+@clrPrefsTextActive: #ffffff;
+@clrPrefsWarningBar: lighten(@clrPrefsBodyBg, 5%);
 
 //------------------------------------------------------------
 // LESS mixins

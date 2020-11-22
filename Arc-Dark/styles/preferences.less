@@ -4,48 +4,48 @@
 // Toolbar
 //------------------------------------------------------------
 body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
-		background: @colorPrefsWindowBg;
+		background: @clrPrefsWindowBg;
 }
 
 //------------------------------------------------------------
 // Back button
 //------------------------------------------------------------
 .sheet-toolbar .item-back {
-	height: 26px;
+	box-shadow: none;
 	background: transparent;
 	border: 1px solid transparent;
 	border-radius: 3px;
+	height: 26px;
 	margin-left: 10px;
 	margin-top: 9px;
-	padding: 0;
 	padding: 0px 13px 0px 5px;
 
 	img.content-mask {
 		zoom: 0.3 !important;
-		background-color: @colorText;
+		background-color: @clrBtnText;
 	}
 
 	.item-back-title {
 		margin: 1px 2px 0 3px;
 		font-size: 14px;
-		color: @colorText;
+		color: @clrBtnText;
 	}
 
 	&:hover {
-		background-color: @colorBtnBgLight;
-		border-color: @colorBtnBorderLight;
+		background-color: @clrBtnBgHover;
+		border-color: @clrBtnBorderHover;
 	}
 
 	&:active {
-		background-color: @colorBtnBgActiveLight;
-		border-color: @colorBtnBorderActiveLight;
+		background-color: @clrBtnBgActive;
+		border-color: @clrBtnBorderActive;
 
 		img.content-mask {
-			background-color: @colorBtnTextActive;
+			background-color: @clrBtnTextActive;
 		}
 
 		.item-back-title {
-			color: @colorBtnTextActive;
+			color: @clrBtnTextActive;
 		}
 	}
 }
@@ -54,10 +54,10 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Tab control
 //------------------------------------------------------------
 .preferences-wrap .container-preference-tabs {
-	border-color: @colorBorder;
+	border-color: @clrWindowBorder;
 
 	.preferences-tabs {
-		background-color: @colorPrefsWindowBg;
+		background-color: @clrPrefsWindowBg;
 		padding-top: 10px;
 
 		.item {
@@ -75,27 +75,23 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 				padding: 10px 11px 8px;
 				font-size: 14px;
 				font-weight: 500;
-				color: @colorTextFaded;
+				color: @clrPrefsTextFaded;
 			}
 
 			&:hover {
-				background: @colorPrefsTabHover;
-				border-color: @colorBorder;
-
-				.name {
-					color: @colorTextFaded;
-				}
+				background: @clrPrefsTabHover;
+				border-color: @clrWindowBorder;
 			}
 
 			&.active {
 				box-shadow: none;
-				background: @colorPrefsTabActive;
-				border-color: @colorBorder;
-				border-bottom-color: @colorPrefsTabActive;
+				background: @clrPrefsTabActive;
+				border-color: @clrWindowBorder;
+				border-bottom-color: @clrPrefsTabActive;
 				border-radius: 0px;
 
 				.name {
-					color: @colorText;
+					color: @clrPrefsText;
 				}
 			}
 		}
@@ -106,130 +102,218 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences body common settings
 //------------------------------------------------------------
 .preferences-wrap {
-	color: @colorText;
+	color: @clrPrefsText;
 
 	.preferences-content {
-		background-color: @colorPrefsBodyBg;
+		background-color: @clrPrefsBodyBg;
 	}
 
-	.container-identity .identity-content-box {
-		color: @colorText;
+	//---------------------------------
+	// Section headers
+	//---------------------------------
+	h6 {
+		font-size: 13px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: @clrPrefsTextFaded;
+		border-bottom: 1px solid @clrPrefsTextFadedMore;
+		padding-bottom: 3px;
 	}
 
-	.container-keymaps .shortcut {
-		color: fade(@colorText, 80%);
+	.container-keymaps .shortcut-section-title,
+	.account-section-title {
+		font-size: 13px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: @clrPrefsTextFaded;
+		border-bottom: 1px solid @clrPrefsTextFadedMore;
+		padding-bottom: 3px;
+	// 	margin: 20px 0px 10px;
+	}
+
+	//---------------------------------
+	// Checkboxes
+	//---------------------------------
+	input[type='checkbox'] {
+		-webkit-appearance: none;
+		.arc-control(url(mailspring://Arc-Dark/styles/images/controls/checkbox-unchecked-dark.png), 16px);
+		top: 3px;
+
+		&:checked {
+			.arc-control(url(mailspring://Arc-Dark/styles/images/controls/checkbox-checked-dark.png), 16px);
+		}
+	}
+
+	//---------------------------------
+	// Radio buttons
+	//---------------------------------
+	input[type='radio'] {
+		-webkit-appearance: none;
+		.arc-control(url(mailspring://Arc-Dark/styles/images/controls/radio-unchecked-dark.png), 16px);
+		top: -2px;
+
+		&:checked {
+			.arc-control(url(mailspring://Arc-Dark/styles/images/controls/radio-checked-dark.png), 16px);
+		}
+	}
+
+	//---------------------------------
+	// Gray text
+	//---------------------------------
+	p {
+		color: @clrPrefsTextFaded;
+		font-size: 1em;
+	}
+
+	//---------------------------------
+	// Warning bar
+	//---------------------------------
+	.platform-note {
+		background-color: @clrPrefsWarningBar;
+		border-left: 3px solid @clrAccent;
+		color: @clrPrefsTextFadedLess;
+		font-size: 1em;
+		margin: 10px 0;
+
+		&::before {
+			color: @clrAccent;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Accounts tab
+//------------------------------------------------------------
+.preferences-wrap .container-accounts .accounts-content {
+	.account-list .account {
+		border-bottom: 1px solid @clrWindowBorder;
+	}
+
+	.account-details {
+		background-color: @clrPrefsBodyBg;
+		border-color: @clrPrefsBodyBg;
+	}
+}
+
+.nylas-editable-list {
+	.items-wrapper {
+		background-color: @clrListBg;
+		border-color: @clrWindowBorder;
+
+		.selected,
+		.selected.editing {
+			background-color: @clrAccent;
+			color: @clrPrefsTextActive;
+		}
+
+		.scrollbar-track {
+			background: @clrListBg;
+			border-left: none;
+			width: 10px;
+
+			.scrollbar-handle {
+				background: @clrListScrollbar;
+				border: none;
+			}
+		}
+	}
+
+	&:focus .items-wrapper .selected {
+		background-color: @clrAccent;
+		color: @clrPrefsTextActive;
+	}
+
+	.buttons-wrapper {
+		background-color: @clrPrefsBodyBg;
+		border-color: @clrWindowBorder;
+
+		.btn-editable-list {
+			border-color: @clrWindowBorder;
+			color: @clrPrefsTextFadedLess;
+
+			&.btn-disabled {
+				opacity: 1;
+				color: @clrPrefsTextFadedMore;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Subscription tab
+//------------------------------------------------------------
+.container-identity .identity-content-box {
+	color: @clrPrefsText;
+
+	.padded:last-child {
+		border-top: 1px solid @clrPrefsTextFadedMore;
+	}
+
+	.refresh img {
+		background-color: @clrBtnText;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Shortcuts tab
+//------------------------------------------------------------
+.preferences-wrap .container-keymaps {
+	.shortcut {
+		color: @clrPrefsTextFadedLess;
 
 		.values {
-			color: @colorText
+			color: @clrPrefsText;
 		}
 	}
 }
-
-//---------------------------------
-// Warning bar
-//---------------------------------
-.preferences-wrap .platform-note {
-	background-color: @colorWarningBar;
-	border-color: @colorAccent;
-	color: fade(@colorText, 80%);
-	font-size: 1em;
-
-	&::before {
-		color: @colorAccent;
-	}
-}
-
-//---------------------------------
-// Section headers
-//---------------------------------
-.preferences-wrap h6 {
-	font-size: 13px;
-	text-transform: uppercase;
-	color: @colorTextFaded;
-	border-bottom: 1px solid fade(@colorText, 30%);
-	padding-bottom: 3px;
-}
-
-.preferences-wrap .container-keymaps .shortcut-section-title,
-.account-section-title {
-	font-size: 13px;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: @colorTextFaded;
-	border-bottom: 1px solid fade(@colorText, 30%);
-	margin: 20px 0px 10px;
-	padding-bottom: 3px;
-}
-
-//---------------------------------
-// Checkboxes
-//---------------------------------
-.preferences-wrap input[type='checkbox'] {
-	-webkit-appearance: none;
-	width: 13px;
-	height: 13px;
-	top: 1px;
-	background: @colorPrefsBodyBg;
-	border: 1px solid @colorCheckboxBorder;
-	border-radius: 2px;
-
-	&:checked {
-		background-image: url(images/thread-list/checkbox-checkmark@2x.png);
-		background-repeat: no-repeat;
-		background-size: 11px 9px;
-		background-position: center;
-		background-color: @colorAccent;
-		border-color: @colorAccent;
-	}
-}
-
-//---------------------------------
-// Gray text
-//---------------------------------
-.preferences-wrap p {
-	font-size: 13px;
-}
-
-//------------------------------------------------------------
-// Accounts/Signatures tab
-//------------------------------------------------------------
-.nylas-editable-list .items-wrapper .selected.editing, .nylas-editable-list:focus .items-wrapper .selected {
-	background-color: @colorAccent;
-}
-
-//------------------------------------------------------------
-// Appearance tab
-//------------------------------------------------------------
-.preferences-wrap .container-appearance .appearance-mode-switch .appearance-mode {
-	background-color: @colorPrefsBodyBg;
-	border: 1px solid @colorBorder;
-	border-radius: 4px;
-	color: @colorTextFaded;
-
-	img.content-mask {
-		background-color: @colorTextFaded;
-	}
-
-	&.active {
-		border: 1px solid @colorAccent;
-		color: @colorAccent;
-
-		img.content-mask {
-			background-color: @colorAccent;
-		}
-	}
-}
-
-//------------------------------------------------------------
-// Scrollbar
-//------------------------------------------------------------
-.column-Preferences .scrollbar-track {
-	background: @colorPrefsBodyBg;
-	border-left: none;
-	width: 10px;
-
-	.scrollbar-handle {
-		background: fade(darken(@colorPrefsBodyBg, 45%), 40%);
-		border: none;
-	}
-}
+// //------------------------------------------------------------
+// // Accounts/Signatures tab
+// //------------------------------------------------------------
+// .nylas-editable-list .items-wrapper .selected.editing, .nylas-editable-list:focus .items-wrapper .selected {
+// 	background-color: @colorAccent;
+// }
+//
+// //------------------------------------------------------------
+// // Appearance tab
+// //------------------------------------------------------------
+// .preferences-wrap .container-appearance .appearance-mode-switch .appearance-mode {
+// 	background-color: @colorPrefsBodyBg;
+// 	border: 1px solid @colorBorder;
+// 	border-radius: 4px;
+// 	color: @colorTextFaded;
+//
+// 	img.content-mask {
+// 		background-color: @colorTextFaded;
+// 	}
+//
+// 	&.active {
+// 		border: 1px solid @colorAccent;
+// 		color: @colorAccent;
+//
+// 		img.content-mask {
+// 			background-color: @colorAccent;
+// 		}
+// 	}
+// }
+//
+// //------------------------------------------------------------
+// // Scrollbar
+// //------------------------------------------------------------
+// .column-Preferences .scrollbar-track {
+// 	background: @colorPrefsBodyBg;
+// 	border-left: none;
+// 	width: 10px;
+//
+// 	.scrollbar-handle {
+// 		background: fade(darken(@colorPrefsBodyBg, 45%), 40%);
+// 		border: none;
+// 	}
+// }
