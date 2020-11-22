@@ -4,11 +4,13 @@
 // Draft list area
 //------------------------------------------------------------
 .column-DraftList {
+	background: @clrListBg;
+
 	// Needed to fake bottom border for drafts toolbar
-	border-top: 5px solid @colorWindowBg;
+	border-top: 5px solid @clrWindowBg;
 
 	.draft-list {
-		border-top: 1px solid @colorBorder;
+		border-top: 1px solid @clrWindowBorder;
 	}
 }
 
@@ -16,31 +18,33 @@
 // Draft items
 //------------------------------------------------------------
 .draft-list .list-container .list-item {
-	background-color: @colorListBg;
-	border-bottom: 1px solid @colorBorder;
-	color: @colorText;
+	background-color: @clrListBg;
+	border-bottom: 1px solid @clrWindowBorder;
+	color: @clrListText;
 
-	.checkmark .inner {
-		border: 1px solid @colorCheckboxBorder;
+	.participants.no-recipients {
+		color: @clrListTextFadedLess;
 	}
 
-	&:hover {
-		background-color: @colorListItemHover;
-
 		.checkmark .inner {
-			border-color: @colorCheckboxBorder;
+			background-color: @clrCheckboxBg;
+			border: 1px solid @clrCheckboxBorder;
 		}
+
+
+	&:hover {
+		background-color: @clrListHover;
 	}
 
 	&.selected {
 		.checkmark .inner {
-			background-color: @colorAccent;
-			border-color: @colorAccent;
+			background-color: @clrCheckboxBgActive;
+			border-color: @clrCheckboxBorderActive;
 		}
 	}
 
 	&.keyboard-cursor {
-		border-left-color: @colorAccent;
+		border-left-color: @clrAccent;
 	}
 }
 
@@ -48,12 +52,12 @@
 // Scroll bar
 //------------------------------------------------------------
 .draft-list .scrollbar-track {
-	background: @colorListBg;
+	background: @clrListBg;
 	border-left: none;
 	width: 10px;
 
 	.scrollbar-handle {
-		background: fade(darken(@colorListBg, 45%), 40%);
+		background: @clrListScrollbar;
 		border: none;
 	}
 }
