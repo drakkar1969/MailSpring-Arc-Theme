@@ -208,6 +208,14 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	.account-details {
 		background-color: @clrPrefsBodyBg;
 		border-color: @clrPrefsBodyBg;
+
+		& > input {
+			font-size: 1em;
+		}
+
+		select {
+			margin-right: 6px;
+		}
 	}
 }
 
@@ -257,10 +265,6 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 		}
 	}
-}
-
-.preferences-wrap .container-accounts .account-details select {
-	margin-right: 6px;
 }
 
 //------------------------------------------------------------
