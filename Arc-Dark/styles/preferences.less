@@ -367,6 +367,22 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		.values {
 			color: @clrPrefsText;
 		}
+
+		&:hover {
+			.values {
+				background: @clrButtonBgHover;
+				outline: 1px solid @clrButtonBorderHover;
+				color: @clrButtonText;
+			}
+		}
+
+		&.editing {
+			.values {
+				background: @clrButtonBgActive;
+				outline: 1px solid @clrButtonBorderActive;
+				color: @clrButtonTextActive;
+			}
+		}
 	}
 
 	// Large title (bottom of page)
