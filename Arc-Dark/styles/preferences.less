@@ -239,10 +239,20 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		background-color: @clrListBg;
 		border-color: @clrWindowBorder;
 
-		.selected,
-		.selected.editing {
-			background-color: @clrAccent;
-			color: @clrPrefsTextActive;
+		.list-item {
+			&:hover {
+				background: @clrListHover;
+			}
+
+			&.selected,
+			&.editing {
+				background-color: @clrAccent;
+				color: @clrPrefsTextActive;
+			}
+
+			&.editable-item {
+				border-bottom: 1px solid @clrWindowBorder;
+			}
 		}
 
 		.scrollbar-track {
@@ -257,7 +267,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
-	&:focus .items-wrapper .selected {
+	&:focus .items-wrapper .list-item.selected {
 		background-color: @clrAccent;
 		color: @clrPrefsTextActive;
 	}
@@ -269,15 +279,22 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 
 		.btn-editable-list {
 			border-color: @clrWindowBorder;
-			color: @clrPrefsTextFadedLess;
+			color: @clrButtonText;
 
-			&.btn-disabled {
+			&.btn-disabled,
+			&.btn-disabled:active {
 				opacity: 1;
-				color: @clrPrefsTextFadedMore;
+				background-color: @clrPrefsBodyBg;
+				color: @clrButtonTextDisabled;
 			}
 
-			&:hover {
-				cursor: pointer;
+			&:hover:not(.btn-disabled) {
+				background-color: @clrButtonBgHover;
+			}
+
+			&:active:not(.btn-disabled) {
+				background-color: @clrButtonBgActive;
+				color: @clrButtonTextActive;
 			}
 		}
 	}
