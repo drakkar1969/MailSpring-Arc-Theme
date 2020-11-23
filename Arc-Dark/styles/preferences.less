@@ -392,6 +392,48 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 }
 
 //------------------------------------------------------------
+// Preferences: Mail Rules tab
+//------------------------------------------------------------
+.container-mail-rules {
+	.empty-list {
+		background-color: @clrListBg;
+		border: 1px solid @clrWindowBorder;
+
+		h2 {
+			color: @clrPrefsTextFaded;
+		}
+
+		.icon-mail-rules {
+			background-image: none;
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-image: url(../static/images/preferences/mail-rules/rules-big@2x.png);
+			background-color: @clrPrefsTextFadedLess;
+		}
+	}
+
+	.rule-detail {
+		background-color: @clrPrefsBodyBg;
+		border-color: @clrPrefsBodyBg;
+
+		.well {
+			background-color: @clrPrefsBodyBg;
+			border-color: @clrPrefsBodyBg;
+			font-size: 1em;
+
+			.well-row input:last-child {
+				margin-left: 0px;
+				margin-top: 8px;
+			}
+		}
+
+		.inner > select {
+			margin-left: 6px;
+			margin-right: 6px;
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Preferences: Folders tab
 //------------------------------------------------------------
 .preferences-wrap .category-mapper-container {
