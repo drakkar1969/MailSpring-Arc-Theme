@@ -355,6 +355,65 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	.platform-linux-only .platform-note .btn {
 		margin-top: -2px;
 	}
+
+	.appearance-scale-slider {
+		margin: 16px 0;
+
+		.ruler {
+			.midpoint {
+				border-right: 1px solid @clrPrefsTextFadedMore;
+			}
+
+			img {
+				background-image: none;
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-size: 48px;
+				background-color: @clrPrefsText;
+				width: 48px;
+				height: 48px;
+				padding-top: 48px;
+			}
+
+			img[alt='appearance-scale-small.png'] {
+				-webkit-mask-image: url(../static/images/preferences/appearance/appearance-scale-small@2x.png);
+			}
+
+			img[alt='appearance-scale-big.png'] {
+				-webkit-mask-image: url(../static/images/preferences/appearance/appearance-scale-big@2x.png);
+			}
+		}
+
+		input[type='range'] {
+			-webkit-appearance: none;
+			background: transparent;
+
+			&::-webkit-slider-runnable-track {
+			    background-color: @clrSliderTrackBg;
+					border-radius: 2.5px;
+			    height: 5px;
+			}
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				width: 15px;
+				height: 15px;
+				background: @clrSliderButtonBg;
+				border: 1px solid @clrSliderButtonBorder;
+				border-radius: 50%;
+				margin-top: -5px;
+
+				&:hover {
+					background: @clrSliderButtonBgHover;
+					border-color: @clrSliderButtonBorderHover;
+				}
+
+				&:active {
+					background: @clrSliderButtonBgActive;
+					border-color: @clrSliderButtonBorderActive;
+				}
+			}
+		}
+	}
 }
 
 //------------------------------------------------------------
