@@ -297,51 +297,6 @@
 	}
 }
 
-// #message-list .message-item-wrap {
-// 	.message-item-white-wrap {
-//// 		//---------------------------------
-// 		// Message header text
-// 		//---------------------------------
-// 		.to-participants {
-//
-// 			&.collapsed {
-// 				margin-top: 3px;
-// 			}
-// 		}
-//
-// 		//---------------------------------
-// 		// Message header track icon
-// 		//---------------------------------
-// 		.message-header-right {
-// 			.open-tracking-message-status.opened {
-// 				img.content-mask {
-// 					background-color: @colorAccent;
-// 				}
-// 			}
-// 		}
-// 	}
-//
-// }
-// //------------------------------------------------------------
-// // Gmail labels
-// //------------------------------------------------------------
-// .mail-label.removable {
-// 	box-shadow: none !important;
-// 	background: @colorAccent !important;
-// 	color: @colorBtnTextActive !important;
-// 	margin-top: 3px;
-//
-// 	img.content-mask {
-// 		background-color: @colorBtnTextActive !important;
-//
-// 		&:hover {
-// 			cursor: pointer;
-// 		}
-// 	}
-// }
-//
-//
-//
 // //------------------------------------------------------------
 // // Message attachments
 // //------------------------------------------------------------
@@ -453,23 +408,67 @@
 // 		}
 // 	}
 // }
+
+// #message-list .message-item-wrap {
+// 	.message-item-white-wrap {
+//// 		//---------------------------------
+// 		// Message header text
+// 		//---------------------------------
+// 		.to-participants {
 //
-// //------------------------------------------------------------
-// // Message warning bar
-// //------------------------------------------------------------
-// #message-list .show-hidden-messages {
-// 	border: none;
-// 	border-left: 3px solid @colorAccent;
-// 	border-radius: 0px;
-// 	background-color: @colorWarningBar;
-// 	color: @colorTextFaded;
+// 			&.collapsed {
+// 				margin-top: 3px;
+// 			}
+// 		}
 //
-// 	a {
-// 		color: @colorAccent;
-// 		cursor: pointer;
+// 		//---------------------------------
+// 		// Message header track icon
+// 		//---------------------------------
+// 		.message-header-right {
+// 			.open-tracking-message-status.opened {
+// 				img.content-mask {
+// 					background-color: @colorAccent;
+// 				}
+// 			}
+// 		}
 // 	}
 // }
-//
+
+//------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.mail-label.removable {
+	box-shadow: none !important;
+	background: @clrAccent !important;
+	color: @clrTextActive !important;
+	margin-top: 3px;
+
+	img.content-mask {
+		background-color: @clrTextActive !important;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message warning bar
+//------------------------------------------------------------
+#message-list .show-hidden-messages {
+	border: none;
+	border-left: 3px solid @clrAccent;
+	border-radius: 0px;
+	background-color: @clrWarningBar;
+	color: @clrTextFadedLess;
+	margin-bottom: 16px;
+
+	a {
+		color: @clrAccent;
+		cursor: pointer;
+	}
+}
+
 // //------------------------------------------------------------
 // // Scroll bars
 // //------------------------------------------------------------
