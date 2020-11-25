@@ -148,11 +148,11 @@
 		.primary-item,
 		.secondary-picker {
 			box-shadow: none;
-			background: @clrBodyBg;
-			border: 1px solid transparent;
+			background: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
 
 			img.content-mask {
-				background-color: @clrToolBtnText;
+				background-color: @clrButtonText;
 			}
 		}
 
@@ -168,18 +168,18 @@
 		&:hover {
 			.primary-item,
 			.secondary-picker {
-				background: @clrToolBtnBgHover;
-				border-color: @clrToolBtnBorderHover;
+				background: @clrButtonBgHover;
+				border-color: @clrButtonBorderHover;
 			}
 		}
 
 		.primary-item:active,
 		.secondary-picker:active {
-			background: @clrToolBtnBgActive;
-			border-color: @clrToolBtnBorderActive;
+			background: @clrButtonBgActive;
+			border-color: @clrButtonBorderActive;
 
 			img.content-mask {
-				background-color: @clrToolBtnTextActive;
+				background-color: @clrButtonTextActive;
 			}
 		}
 	}
@@ -199,32 +199,33 @@
 	//---------------------------------
 	.footer-reply-area {
 		width: max-content;
-		border: 1px solid transparent;
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder;
 		border-radius: 3px;
 		margin-bottom: 9px;
 		margin-top: 9px;
-		color: @clrToolBtnText;
+		color: @clrButtonText;
 		font-size: 14px;
 		height: 2.1em;
 		line-height: 1.9em;
 		padding: 0 0.8em;
 
 		img.content-mask {
-			background-color: @clrToolBtnText;
+			background-color: @clrButtonText;
 		}
 
 		&:hover {
-			background-color: @clrToolBtnBgHover;
-			border-color: @clrToolBtnBorderHover;
+			background-color: @clrButtonBgHover;
+			border-color: @clrButtonBorderHover;
 		}
 
 		&:active {
-			background-color: @clrToolBtnBgActive;
-			border-color: @clrToolBtnBorderActive;
-			color: @clrToolBtnTextActive;
+			background-color: @clrButtonBgActive;
+			border-color: @clrButtonBorderActive;
+			color: @clrButtonTextActive;
 
 			img.content-mask {
-				background-color: @clrToolBtnTextActive;
+				background-color: @clrButtonTextActive;
 			}
 		}
 	}
