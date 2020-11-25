@@ -356,13 +356,16 @@
 }
 
 //------------------------------------------------------------
-// Image attachment download button
+// Image attachment
 //------------------------------------------------------------
 .nylas-attachment-item.image-attachment-item {
 	&:hover {
 		border: none;
 	}
 
+	//---------------------------------
+	// Download button (covers whole image)
+	//---------------------------------
 	.file-action-icon {
 		right: 0px;
 		top: 0px;
@@ -376,6 +379,17 @@
 		}
 	}
 
+	//---------------------------------
+	// Image name overlay
+	//---------------------------------
+	.file-preview .file-name-container {
+		background: fade(@clrBodyBg, 70%);
+
+		.file-name {
+			color: @clrText;
+			font-weight: 700;
+		}
+	}
 }
 
 //------------------------------------------------------------
