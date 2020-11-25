@@ -297,93 +297,89 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Message attachments
-// //------------------------------------------------------------
-// .nylas-attachment-item {
-// 	//---------------------------------
-// 	// File attachment box
-// 	//---------------------------------
-// 	&.file-attachment-item {
-// 		.file-thumbnail-preview {
-// 			border: 1px solid @colorBorder;
-// 			border-radius: 3px 3px 0 0;
-// 		}
-//
-// 		.file-info-wrap {
-// 			background-color: darken(@colorWindowBg, 3%);
-// 			border: 1px solid @colorBorder;
-// 			border-radius: 3px 0 0 3px;
-// 			box-shadow: none;
-// 		}
-//
-// 		.file-action-icon {
-// 			background-color: darken(@colorWindowBg, 3%);
-// 			border: 1px solid @colorBorder;
-// 			border-left-width: 0px;
-// 			border-radius: 0 3px 3px 0;
-//
-// 			img.content-mask {
-// 				background-color: @colorText;
-// 			}
-//
-// 			&:not(:last-child) {
-// 				border-radius: 0;
-// 			}
-//
-// 			&:hover {
-// 				background-color: darken(@colorWindowBg, 6%);
-// 			}
-//
-// 			&:active {
-// 				background-color: @colorAccent;
-//
-// 				img.content-mask {
-// 					background-color: @colorBtnTextActive;
-// 				}
-// 			}
-// 		}
-//
-// 		&:focus {
-// 			.file-thumbnail-preview {
-// 				border-color: @colorAccent;
-// 			}
-//
-// 			.file-info-wrap {
-// 				border-color: @colorAccent;
-// 				border-right-color: @colorBorder;
-// 			}
-//
-// 			.file-action-icon {
-// 				border-color: @colorAccent;
-//
-// 				&:not(:last-child) {
-// 					border-right-color: @colorBorder;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	//---------------------------------
-// 	// Image attachment download button
-// 	//---------------------------------
-// 	&.image-attachment-item {
-// 		.file-action-icon {
-// 			right: 0px;
-// 			top: 0px;
-// 			width: 100%;
-// 			height: 100%;
-// 			background: transparent;
-// 			cursor: pointer;
-//
-// 			img {
-// 				display: none;
-// 			}
-// 		}
-// 	}
-// }
-//
 //------------------------------------------------------------
-// Image attachment download controls
+// Message attachments
+//------------------------------------------------------------
+.nylas-attachment-item,
+.nylas-attachment-item.file-attachment-item:focus {
+	//---------------------------------
+	// File attachment box
+	//---------------------------------
+	.file-thumbnail-preview {
+		border: 1px solid @clrWindowBorder !important;
+		border-radius: 3px !important;
+	}
+
+	.inner {
+		background: transparent;
+		color: @clrText;
+	}
+
+	.file-info-wrap {
+		border: none !important;
+
+		.file-size {
+			color: @clrTextFaded;
+		}
+	}
+
+	.file-action-icon {
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder !important;
+		border-radius: 3px !important;
+		color: @clrButtonText;
+		font-size: 14px;
+		height: 2.1em;
+		line-height: 1.9em;
+		padding: 0 0.8em;
+		margin-left: 12px;
+
+		img.content-mask {
+			background-color: @clrButtonText;
+		}
+
+		&:hover {
+			background-color: @clrButtonBgHover;
+			border: 1px solid @clrButtonBorderHover;
+		}
+
+		&:active {
+			background-color: @clrButtonBgActive;
+			border: 1px solid @clrButtonBorderActive;
+			color: @clrButtonTextActive;
+
+			img.content-mask {
+				background-color: @clrButtonTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Image attachment download button
+//------------------------------------------------------------
+.nylas-attachment-item.image-attachment-item {
+	&:hover {
+		border: none;
+	}
+
+	.file-action-icon {
+		right: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		cursor: pointer;
+
+		img {
+			display: none;
+		}
+	}
+
+}
+
+//------------------------------------------------------------
+// Attachment download controls
 //------------------------------------------------------------
 .download-all {
 	.attachment-number {
@@ -400,7 +396,6 @@
 	}
 
 	.download-all-action {
-		// width: max-content;
 		background: @clrButtonBg;
 		border: 1px solid @clrButtonBorder;
 		border-radius: 3px;
