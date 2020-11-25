@@ -6,7 +6,6 @@
 .column-MessageList {
 	background: @clrWindowBg;
 	border-left: 1px solid @clrWindowBorder;
-// 	padding-top: 12px;
 }
 
 #message-list {
@@ -80,6 +79,10 @@
 		color: @clrText;
 	}
 
+	&.to-participants .collapsed-participants {
+		margin-top: 3px;
+	}
+
 	.from-label,
 	.to-label,
 	.reply-to-label,
@@ -128,6 +131,17 @@
 		.message-time,
 		.message-indicator {
 			color: @clrTextFaded;
+		}
+
+		//---------------------------------
+		// Message header track icon
+		//---------------------------------
+		.message-header-right {
+			.open-tracking-message-status.opened {
+				img.content-mask {
+					background-color: @clrAccent;
+				}
+			}
 		}
 	}
 
@@ -442,31 +456,6 @@
 	}
 }
 
-// #message-list .message-item-wrap {
-// 	.message-item-white-wrap {
-//// 		//---------------------------------
-// 		// Message header text
-// 		//---------------------------------
-// 		.to-participants {
-//
-// 			&.collapsed {
-// 				margin-top: 3px;
-// 			}
-// 		}
-//
-// 		//---------------------------------
-// 		// Message header track icon
-// 		//---------------------------------
-// 		.message-header-right {
-// 			.open-tracking-message-status.opened {
-// 				img.content-mask {
-// 					background-color: @colorAccent;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
 //------------------------------------------------------------
 // Gmail labels
 //------------------------------------------------------------
@@ -502,21 +491,17 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Scroll bars
-// //------------------------------------------------------------
-// #message-list .scrollbar-track,
-// .composer-full-window .scrollbar-track {
-// 	background: @colorWindowBg;
-// 	border-left: none;
-// 	width: 10px;
-//
-// 	.scrollbar-handle {
-// 		background: fade(darken(@colorBodyBg, 45%), 40%);
-// 		border: none;
-// 	}
-// }
-//
-// .composer-full-window .scrollbar-track {
-// 	background: @colorBodyBg;
-// }
+//------------------------------------------------------------
+// Scroll bars
+//------------------------------------------------------------
+#message-list .scrollbar-track,
+.composer-full-window .scrollbar-track {
+	background: @clrWindowBg;
+	border-left: none;
+	width: 10px;
+
+	.scrollbar-handle {
+		background: @clrScrollBar;
+		border: none;
+	}
+}
