@@ -1,0 +1,37 @@
+@import "arc-variables";
+
+.ignore-in-parent-frame {
+  body {
+		// -webkit-filter: invert() hue-rotate(180deg);
+		color: @clrText;
+	}
+
+	div {
+		color: @clrText !important;
+	}
+
+	p {
+		color: @clrText !important;
+	}
+
+	a {
+		color: @clrAccent !important;
+
+		&:hover {
+			color: @clrAccent !important;
+		}
+
+		&:visited {
+			color: darken(@clrAccent, 10%) !important;
+		}
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid @clrTextFadedMore;
+	}
+
+	blockquote {
+		border-left: 1px solid @clrTextFaded !important;
+	}
+}
