@@ -58,8 +58,6 @@
 		background: @clrButtonBg !important;
 		border: 1px solid @clrButtonBorder;
 		border-radius: 3px;
-		// margin-bottom: 9px;
-		// margin-top: 9px;
 		color: @clrButtonText;
 		height: 2.1em;
 		line-height: 1.9em;
@@ -141,183 +139,261 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Draft message (edit mode) header recipient tokens
-// //------------------------------------------------------------
-// #message-list	.tokenizing-field-input,
-// .composer-full-window	.tokenizing-field-input {
-// 	.token {
-// 		//---------------------------------
-// 		// Normal token
-// 		//---------------------------------
-// 		box-shadow: none !important;
-// 		background: darken(@colorWindowBg, 6%);
-// 		border: 1px solid @colorBorder;
-// 		border-radius: 2px;
-// 		margin: 2px 5px 4px 1px;
-// 		height: 22px;
-// 		line-height: 1.5em;
-//
-// 		&:hover {
-// 			background: darken(@colorWindowBg, 9%);
-// 		}
-//
-// 		&.selected {
-// 			background: fade(@colorAccent, 90%);
-// 			border-color: @colorAccent;
-// 			margin: 2px 5px 4px 1px;
-// 		}
-//
-// 		&.selected:hover {
-// 			background: @colorAccent;
-// 		}
-//
-// 		//---------------------------------
-// 		// Invalid recipient token
-// 		//---------------------------------
-// 		&.invalid {
-// 			color: @colorWarningRed;
-//
-// 			img.content-mask {
-// 				background-color: @colorWarningRed;
-// 			}
-//
-// 			&.selected {
-// 				background-color: fade(@colorWarningRed, 90%);
-// 				border-color: @colorWarningRed;
-// 				color: @colorBtnTextActive;
-//
-// 				img.content-mask {
-// 					background-color: @colorBtnTextActive;
-// 				}
-// 			}
-//
-// 			&.selected:hover {
-// 				background: @colorWarningRed;
-// 			}
-// 		}
-// 	}
-//
-// 	//---------------------------------
-// 	// Edit box
-// 	//---------------------------------
-// 	input {
-// 		margin-top: -2px;
-// 	}
-// }
-//
-//
-// //------------------------------------------------------------
-// // Draft message header actions
-// //------------------------------------------------------------
-// .composer-inner-wrap	.composer-header-actions {
-// 	.action {
-// 		&:hover {
-// 			color: @colorAccent;
-// 			cursor: pointer;
-//
-// 			&.show-popout img.content-mask {
-// 				background-color: @colorAccent;
-// 			}
-// 		}
-// 	}
-// }
-//
-// //------------------------------------------------------------
-// // Draft message To/Cc/Bcc/Subject horizontal lines
-// //------------------------------------------------------------
-// .composer-participant-field:after {
-// 	background: @colorBorder;
-// }
-//
-// //------------------------------------------------------------
-// // Draft message signature button
-// //------------------------------------------------------------
-// #message-list .signature-button-dropdown,
-// .composer-full-window .signature-button-dropdown {
-// 	.button-dropdown {
-// 		.only-item:hover {
-// 			cursor: pointer;
-//
-// 			img.content-mask {
-// 				background-color: @colorAccent;
-// 			}
-// 		}
-// 	}
-// }
-//
-// //------------------------------------------------------------
-// // Draft message rich edit toolbar
-// //------------------------------------------------------------
-//
-// .RichEditor-toolbar {
-// 	.inner {
-// 		background: @colorBodyBg !important;
-// 		padding-top: 1px;
-// 	}
-//
-// 	.floating-container {
-// 		border-color: fade(@colorText, 30%);
-// 	}
-//
-// 	//---------------------------------
-// 	// Buttons
-// 	//---------------------------------
-// 	button {
-// 		color: @colorText;
-//
-// 		&:hover {
-// 			color: @colorText;
-// 		}
-//
-// 		&.with-select select {
-// 			color: @colorText;
-//
-// 			&:focus, &:active {
-// 				background-color: @colorBodyBg;
-// 			}
-// 		}
-//
-// 		&.undefined:not(.with-select) {
-// 			&:hover {
-// 				color: @colorText;
-// 			}
-//
-// 			&.active {
-// 				color: @colorAccent;
-// 			}
-// 		}
-// 	}
-//
-// 	//---------------------------------
-// 	// Dividers
-// 	//---------------------------------
-// 	.divider {
-// 		height: 13px;
-// 		border-color: @colorTextFaded;
-// 	}
-// }
-//
-// //------------------------------------------------------------
-// // Draft message quoted text control (3 dots)
-// //------------------------------------------------------------
-// .quoted-text-control,
-// .composer-inner-wrap .compose-body .quoted-text-control {
-// 	background-color: transparent;
-// 	border-color: transparent;
-// 	margin: 0 14px 14px 16px;
-//
-// 	&:hover {
-// 		border-color: transparent;
-// 	}
-// }
-//
-// //------------------------------------------------------------
-// // Draft message footer bar
-// //------------------------------------------------------------
-// .composer-full-window .composer-inner-wrap .composer-action-bar-wrap {
-// 	box-shadow: none;
-// 	background: @colorWindowBg;
-// 	border-top-color: @colorBorder;
-// }
-//
+//------------------------------------------------------------
+// Draft message (edit mode) header labels
+//------------------------------------------------------------
+.tokenizing-field .tokenizing-field-label {
+	color: @clrTextFaded;
+	margin-top: 2px;
+}
+
+.composer-inner-wrap .composer-field-label {
+	color: @clrTextFaded;
+}
+
+.composer-participant-field {
+	color: @clrText;
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) header horizontal lines
+//------------------------------------------------------------
+.composer-participant-field:after {
+	background: @clrTextFadedMore;
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) recipient tokens
+//------------------------------------------------------------
+.tokenizing-field {
+	.token {
+		box-shadow: none;
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder;
+		color: @clrButtonText;
+		height: 2.1em;
+		font-size: 1em;
+
+		.action img {
+			background-color: @clrButtonText;
+		}
+
+		&:hover {
+			box-shadow: none;
+			background: @clrButtonBgHover;
+			border: 1px solid @clrButtonBorderHover;
+		}
+
+		&.selected,
+		&.dragging {
+			box-shadow: none;
+			background: @clrButtonBgActive;
+			border: 1px solid @clrButtonBorderActive;
+
+			color: @clrButtonTextActive;
+
+			.action img {
+				background-color: @clrButtonTextActive;
+			}
+		}
+
+		&.invalid {
+			border-bottom: 1px dashed @clrWarningRed;
+
+			&:hover {
+				box-shadow: none;
+				border-bottom: 1px dashed @clrWarningRed;
+			}
+
+			&.selected,
+			&.dragging {
+				box-shadow: none;
+				background: @clrWarningRed;
+				border: 1px solid @clrWarningRed;
+			}
+		}
+	}
+
+	.tokenizing-field-input input {
+		margin-top: 1px;
+
+		&:focus {
+			border: none;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) header actions
+//------------------------------------------------------------
+.composer-inner-wrap .composer-header-actions {
+	.action {
+		color: @clrTextFadedLess;
+
+		img.content-mask {
+			background-color: @clrTextFadedLess;
+		}
+
+		&:hover {
+			color: @clrAccent;
+			cursor: pointer;
+
+			img.content-mask {
+				background-color: @clrAccent;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) from dropdown button (new message)
+//------------------------------------------------------------
+.composer-participant-field .button-dropdown .primary-item,
+.composer-participant-field .button-dropdown .only-item {
+	box-shadow: none;
+	background: @clrButtonBg;
+	border: 1px solid @clrButtonBorder;
+	color: @clrButtonText;
+	height: 2.1em;
+	font-size: 1em;
+	margin-top: -2px;
+
+	img.content-mask {
+		background-color: @clrButtonText;
+	}
+
+	&:hover {
+		background: @clrButtonBgHover;
+		border: 1px solid @clrButtonBorderHover;
+	}
+
+	&:active {
+		background: @clrButtonBgActive;
+		border: 1px solid @clrButtonBorderActive;
+		color: @clrButtonTextActive;
+
+		img.content-mask {
+			background-color: @clrButtonTextActive;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) subject (new message)
+//------------------------------------------------------------
+.composer-inner-wrap .composer-subject {
+	input {
+		margin: 3px 0 6px;
+
+		&::placeholder {
+			color: @clrInputTextPlaceholder;
+		}
+
+		&:focus {
+			border: none;
+		}
+	}
+
+	&:after {
+		background: @clrTextFadedMore;
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) signature button
+//------------------------------------------------------------
+.message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .only-item,
+.composer-full-window .message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .only-item {
+	box-shadow: none;
+	background: @clrButtonBg;
+	border: 1px solid @clrButtonBorder;
+	height: 2.1em;
+	font-size: 1em;
+	padding: 0 0.8em;
+	margin-top: -2px;
+
+	img.content-mask {
+		background-color: @clrButtonText;
+	}
+
+	&:hover {
+		background: @clrButtonBgHover;
+		border: 1px solid @clrButtonBorderHover;
+	}
+
+	&:active {
+		background: @clrButtonBgActive;
+		border: 1px solid @clrButtonBorderActive;
+
+		img.content-mask {
+			background-color: @clrButtonTextActive;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) rich edit toolbar
+//------------------------------------------------------------
+.RichEditor-toolbar {
+	.inner {
+		background: @clrBodyBg !important;
+		padding-top: 1px;
+	}
+
+	.floating-container {
+		border-bottom: 1px solid @clrTextFadedMore;
+	}
+
+	//---------------------------------
+	// Buttons
+	//---------------------------------
+	button {
+		color: @clrButtonText;
+
+		&:hover {
+			color: @clrButtonText;
+		}
+
+		&.active {
+			color: @clrAccent;
+		}
+	}
+
+	//---------------------------------
+	// Selects
+	//---------------------------------
+	button.with-select {
+		margin: 3px 0;
+		max-width: 120px;
+
+		select {
+			background: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+			padding: 0 0.8em;
+
+			&:hover,
+			&:focus {
+				background: @clrButtonBgHover;
+				border: 1px solid @clrButtonBorderHover;
+			}
+
+			&:active {
+				background: @clrButtonBgActive;
+				border: 1px solid @clrButtonBorderActive;
+				color: @clrButtonTextActive;
+			}
+		}
+
+		.fa {
+			padding-right: 6px;
+		}
+	}
+
+	//---------------------------------
+	// Dividers
+	//---------------------------------
+	.divider {
+		height: 13px;
+		border-color: @clrTextFadedMore;
+	}
+}
