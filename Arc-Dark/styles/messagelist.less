@@ -382,32 +382,56 @@
 // 	}
 // }
 //
-// //------------------------------------------------------------
-// // Other attachment controls
-// //------------------------------------------------------------
-// #message-list .download-all {
-// 	.attachment-number {
-// 		font-size: 14px;
-// 	}
-//
-// 	.separator {
-// 		display: none;
-// 	}
-//
-// 	.download-all-action {
-// 		padding-left: 14px;
-// 		font-size: 14px;
-// 		color: @colorAccent;
-//
-// 		img.content-mask {
-// 			background-color: @colorAccent;
-// 		}
-//
-// 		&:hover {
-// 			cursor: pointer;
-// 		}
-// 	}
-// }
+//------------------------------------------------------------
+// Image attachment download controls
+//------------------------------------------------------------
+.download-all {
+	.attachment-number {
+		font-size: 14px;
+		color: @clrTextFadedLess;
+
+		img.content-mask {
+			background-color: @clrText;
+		}
+	}
+
+	.separator {
+		display: none;
+	}
+
+	.download-all-action {
+		// width: max-content;
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder;
+		border-radius: 3px;
+		color: @clrButtonText;
+		font-size: 14px;
+		height: 2.1em;
+		line-height: 1.9em;
+		padding: 0 0.8em;
+		margin-left: 12px;
+
+		img.content-mask {
+			background-color: @clrButtonText;
+		}
+
+		&:hover {
+			background-color: @clrButtonBgHover;
+			border-color: @clrButtonBorderHover;
+			color: @clrButtonText;
+		}
+
+		&:active {
+			background-color: @clrButtonBgActive;
+			border-color: @clrButtonBorderActive;
+			color: @clrButtonTextActive;
+
+			img.content-mask {
+				background-color: @clrButtonTextActive;
+			}
+		}
+	}
+}
 
 // #message-list .message-item-wrap {
 // 	.message-item-white-wrap {
