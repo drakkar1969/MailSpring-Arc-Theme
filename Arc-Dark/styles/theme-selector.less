@@ -3,13 +3,47 @@
 //------------------------------------------------------------
 // Theme selector window
 //------------------------------------------------------------
+.modal-container .modal {
+	background: @clrWindowBg !important;
+	border: 1px solid @clrWindowBorder;
+
+	.modal-close {
+		width: 16px !important;
+		height: 16px !important;
+		zoom: 0.9 !important;
+		margin: 8px;
+		content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-dark.png);
+
+		&:hover {
+			content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-hover-dark.png);
+		}
+
+		&:active {
+			content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-active-dark.png);
+		}
+
+		.platform-linux.is-blurred & {
+			content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-backdrop-dark.png);
+		}
+	}
+}
+
 .theme-picker {
-	//---------------------------------
-	// Create theme link
-	//---------------------------------
-	.create-theme a {
-		color: @colorAccent !important;
-		cursor: pointer;
+	h4 {
+		color: @clrText !important;
+	}
+
+	h4 + div {
+		color: @clrText !important;
+	}
+
+	.create-theme {
+		a {
+			color: @clrAccent !important;
+			text-decoration: underline;
+			cursor: pointer;
+
+		}
 	}
 }
 
@@ -17,12 +51,12 @@
 // Scroll bar
 //------------------------------------------------------------
 .theme-picker .scrollbar-track {
- background: @colorListBg;
- border-left: none;
- width: 10px;
+	background: @clrWindowBg;
+	border-left: none;
+	width: 10px;
 
- .scrollbar-handle {
-  background: fade(darken(@colorListBg, 45%), 40%);
-  border: none;
- }
+	.scrollbar-handle {
+		background: @clrScrollBar;
+		border: none;
+	}
 }
