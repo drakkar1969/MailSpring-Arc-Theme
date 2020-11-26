@@ -24,12 +24,23 @@
 
 .contact-profile-photo {
 	box-shadow: none;
-	background: @clrTextFadedLess;
+	background: transparent;
+	padding: 0;
 
-	.profile-photo .default-profile-image {
-		box-shadow: none;
-		background-image: none;
+	.profile-photo {
+		width: 50px;
+		height: 50px;
+
+		.default-profile-image {
+			box-shadow: none;
+			background-image: none;
+			border-radius: 50%;
+			line-height: 50px;
+			width: 50px;
+			height: 50px;
+		}
 	}
+
 }
 
 .participant-profile,
