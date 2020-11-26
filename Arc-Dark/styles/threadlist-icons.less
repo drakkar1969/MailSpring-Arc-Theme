@@ -14,154 +14,159 @@
 }
 
 //------------------------------------------------------------
+// Draft list icons
+//------------------------------------------------------------
+//---------------------------------
+// Attachment icon
+//---------------------------------
+.draft-list {
+	.thread-icon.thread-icon-attachment {
+		.arc-threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), @clrListText);
+	}
+}
+
+//------------------------------------------------------------
 // Thread list icons
 //------------------------------------------------------------
 .thread-list {
-	//---------------------------------
-	// Attachment icon
-	//---------------------------------
 	.list-container .list-item {
+		//---------------------------------
+		// Attachment icon
+		//---------------------------------
 		.thread-icon.thread-icon-attachment {
-			.arc-threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), @colorText);
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), @clrListText);
 		}
 
 		&.focused,
 		&.selected {
 			.thread-icon.thread-icon-attachment {
-				background-color: @colorListTextActive;
+				background-color: @clrListTextActive;
 			}
 		}
-	}
-}
 
-.draft-list {
-	//---------------------------------
-	// Attachment icon
-	//---------------------------------
-	.list-container .list-item {
-		.thread-icon.thread-icon-attachment {
-			.arc-threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), @colorText);
-		}
-	}
-}
-
-.thread-list .list-container .list-item {
-	//---------------------------------
-	// Draft icon
-	//---------------------------------
-	.draft-icon {
-		.arc-threadlist-icon(url(../static/images/thread-list/icon-draft-pencil@2x.png), @colorText);
-		zoom: 1 !important;
-		width: 26px;
-		height: 24px;
-		padding-top: 24px;
-	}
-
-	&.focused,
-	&.selected {
+		//---------------------------------
+		// Draft icon
+		//---------------------------------
 		.draft-icon {
-			background-color: @colorListTextActive;
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-draft-pencil@2x.png), @clrListText);
+			zoom: 1 !important;
+			width: 26px;
+			height: 24px;
+			padding-top: 24px;
 		}
-	}
 
-	//---------------------------------
-	// Replied/forwarded icons
-	//---------------------------------
-	.thread-icon.thread-icon-replied {
-		.arc-threadlist-icon(url(../static/images/thread-list/icon-replied-@2x.png), @colorText);
-
-		&:hover {
-			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
+		&.focused,
+		&.selected {
+			.draft-icon {
+				background-color: @clrListTextActive;
+			}
 		}
-	}
 
-	.thread-icon.thread-icon-forwarded {
-		.arc-threadlist-icon(url(../static/images/thread-list/icon-forwarded-@2x.png), @colorText);
-
-		&:hover {
-			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
-		}
-	}
-
-	&.focused,
-	&.selected {
+		//---------------------------------
+		// Replied/forwarded icons
+		//---------------------------------
 		.thread-icon.thread-icon-replied {
-			background-color: @colorListTextActive;
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-replied-@2x.png), @clrText);
+
+			&:hover {
+				.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
+			}
 		}
 
 		.thread-icon.thread-icon-forwarded {
-			background-color: @colorListTextActive;
-		}
-	}
-
-	//---------------------------------
-	// Unread icon
-	//---------------------------------
-	.thread-icon-unread {
-		.arc-threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), @colorAccent);
-
-		&:hover {
-			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
-		}
-	}
-
-	&.focused,
-	&.selected {
-		.thread-icon-unread {
-			background-color: @colorListTextActive;
-		}
-	}
-
-	//---------------------------------
-	// Star icon
-	//---------------------------------
-	.thread-icon-star {
-		.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@colorListText, 70%));
-
-		&:hover {
-			background-color: fade(@colorListText, 45%);
-		}
-	}
-
-	&.focused,
-	&.selected {
-		.thread-icon-star {
-			background-color: fade(@colorListTextActive, 100%);
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-forwarded-@2x.png), @clrText);
 
 			&:hover {
-				background-color: fade(@colorListTextActive, 75%);
+				.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
 			}
 		}
-	}
 
-	//---------------------------------
-	// None icon
-	//---------------------------------
-	&:hover:not(.unread) {
+		&.focused,
+		&.selected {
+			.thread-icon.thread-icon-replied {
+				background-color: @clrListTextActive;
+			}
+
+			.thread-icon.thread-icon-forwarded {
+				background-color: @clrListTextActive;
+			}
+		}
+
+		//---------------------------------
+		// Unread icon
+		//---------------------------------
+		.thread-icon.thread-icon-unread {
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), @clrAccent);
+
+			&:hover {
+				.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
+			}
+		}
+
+		&.focused,
+		&.selected {
+			.thread-icon.thread-icon-unread {
+				background-color: @clrListTextActive;
+			}
+		}
+
+		//---------------------------------
+		// Star icon
+		//---------------------------------
+		.thread-icon.thread-icon-star {
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), @clrAccent);
+
+			&:hover {
+				background-color: fade(@clrAccent, 70%);
+			}
+		}
+
+		&.focused,
+		&.selected {
+			.thread-icon.thread-icon-star {
+				background-color: @clrListTextActive;
+
+				&:hover {
+					background-color: fade(@clrListTextActive, 70%);
+				}
+			}
+		}
+
+		//---------------------------------
+		// None icon
+		//---------------------------------
 		.thread-icon-none {
-			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), fade(@colorListText, 15%));
+			.arc-threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
 		}
-	}
 
-	&.focused:hover,
-	&.selected:hover {
-		.thread-icon-none {
-			background-color: fade(@colorListTextActive, 40%);
+		&:hover:not(.unread) {
+			.thread-icon-none {
+				background-color: fade(@clrListText, 25%);
+			}
 		}
-	}
 
-	//---------------------------------
-	// Star hover icon
-	//---------------------------------
-	&:hover {
-		.thread-icon-star-on-hover:hover {
-			background-color: fade(@colorListText, 30%);
+		&.focused:hover,
+		&.selected:hover {
+			.thread-icon-none {
+				background-color: fade(@clrListTextActive, 35%);
+			}
 		}
-	}
 
-	&.focused .thread-icon-star-on-hover:hover,
-	&.selected .thread-icon-star-on-hover:hover {
-		background-color: fade(@colorListTextActive, 65%);
+		//---------------------------------
+		// Star hover icon
+		//---------------------------------
+		&:hover {
+			.thread-icon-star-on-hover:hover {
+				background-color: fade(@clrListText, 50%);
+			}
+		}
+
+		&.focused,
+		&.selected {
+			.thread-icon-star-on-hover:hover {
+				background-color: fade(@clrListTextActive, 60%);
+			}
+		}
 	}
 }
 
@@ -169,18 +174,22 @@
 // Adjust icon vertical positions
 //------------------------------------------------------------
 .thread-list .list-container .list-item {
+	.thread-icon-replied,
+	.thread-icon-forwarded,
 	.thread-icon-unread,
 	.thread-icon-star,
 	.thread-icon-none {
-		margin-top: 1px;
+		margin-top: 3px;
 	}
 }
 
 .thread-list-narrow .list-container .list-item {
+	.thread-icon-replied,
+	.thread-icon-forwarded,
 	.thread-icon-unread,
 	.thread-icon-star,
 	.thread-icon-none {
-		margin-top: 0px;
+		margin-top: 1px;
 	}
 }
 
@@ -189,11 +198,11 @@
 //------------------------------------------------------------
 .open-tracking-icon img.content-mask {
 	&.unopened {
-		background-color: fade(@colorListText, 30%);
+		background-color: @clrListTextFadedMore;
 	}
 
 	&.opened {
-		background-color: @colorAccent;
+		background-color: @clrAccent;
 	}
 }
 
@@ -201,31 +210,9 @@
 // Important icon (gmail)
 //------------------------------------------------------------
 .thread-list .mail-important-icon {
-	margin-top: -1px;
+	margin-top: 1px;
 }
 
 .thread-list-narrow .mail-important-icon {
 	margin-top: -3px;
-}
-
-//------------------------------------------------------------
-// Gmail labels
-//------------------------------------------------------------
-.thread-list .thread-injected-mail-labels,
-.draft-list .thread-injected-mail-labels {
-	margin-right: 0;
-
-	.mail-label {
-		box-shadow: none !important;
-		background: @colorAccent !important;
-		color: @colorListTextActive !important;
-		-webkit-filter: none !important;
-	}
-}
-
-.thread-list .focused .mail-label,
-.draft-list .focused .mail-label,
-.thread-list.handler-split .list-item.selected .mail-label {
-	box-shadow: none !important;
-	background-color: lighten(@colorAccent, 15%) !important;
 }
