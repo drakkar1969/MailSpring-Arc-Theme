@@ -504,11 +504,39 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	}
 
 	// Dropdowns
-	.category-picker-dropdown .category-item {
-		font-size: 1em;
+	.category-picker-dropdown {
+		.btn {
+			.category-item {
+				font-size: 1em;
 
-		img.content-mask {
-			background-color: @clrButtonText
+				img.content-mask {
+					background-color: @clrButtonText;
+				}
+
+				& + img {
+					width: 20px;
+					height: 12px;
+					background-image: none;
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-image: url(../static/images/dropdown-menu/dropdown-chevron@2x.png);
+					-webkit-mask-size: 20px 12px;
+					-webkit-mask-position: 0px 0px;
+					background-color: @clrButtonText;
+					padding-top: 12px;
+				}
+			}
+		}
+
+		&:active {
+			.category-item {
+				img.content-mask {
+					background-color: @clrButtonTextActive;
+				}
+
+				& + img {
+					background-color: @clrButtonTextActive;
+				}
+			}
 		}
 	}
 }
