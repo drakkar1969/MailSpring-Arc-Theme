@@ -115,3 +115,34 @@ select {
 		color: @clrButtonTextActive;
 	}
 }
+
+//---------------------------------
+// Popover menu
+//---------------------------------
+.category-picker-popover .menu,
+.category-picker-dropdown .menu,
+.dropdown-menu .menu {
+	box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.35);
+	background: @clrPopoverBg;
+}
+
+.category-picker-popover .menu .header-container,
+.category-picker-dropdown .menu .header-container,
+.menu .header-container {
+	background: @clrPopoverBg;
+}
+
+.menu .content-container {
+	background: @clrPopoverBg;
+}
+
+.menu .item {
+	color: @clrPopoverText;
+
+	&:not(.active):not(.selected):hover,
+	&.selected,
+	&:active {
+		background-color: @clrPopoverBgHover;
+		color: @clrPopoverTextActive;
+	}
+}
