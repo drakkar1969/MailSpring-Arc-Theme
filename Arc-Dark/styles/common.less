@@ -29,6 +29,7 @@ body.platform-linux .sheet-toolbar-container {
 //---------------------------------
 // Input
 //---------------------------------
+.fixed-popover-container .fixed-popover input[type='text'],
 input[type='text'],
 input[type='email'],
 input[type='date'],
@@ -119,6 +120,11 @@ select {
 //---------------------------------
 // Popover menu
 //---------------------------------
+.fixed-popover-container .fixed-popover-pointer {
+	height: 0;
+}
+
+.fixed-popover-container .fixed-popover,
 .category-picker-popover .menu,
 .category-picker-dropdown .menu,
 .dropdown-menu .menu,
@@ -126,14 +132,19 @@ select {
 .button-dropdown.open.open-up .secondary-items {
 	box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.35);
 	background: @clrPopoverBg;
-	border: 1px solid @clrWindowBorder;
+	// border: 1px solid @clrPopoverBorder;
 	border-radius: 0;
 }
 
+.fixed-popover-container .fixed-popover .menu .header-container,
 .category-picker-popover .menu .header-container,
 .category-picker-dropdown .menu .header-container,
 .menu .header-container {
 	background: @clrPopoverBg;
+}
+
+.fixed-popover-container .fixed-popover .menu .header-container {
+	color: @clrPopoverTextFaded;
 }
 
 .menu .header-container {
@@ -149,6 +160,10 @@ select {
 	background: @clrPopoverBg;
 }
 
+.template-picker .footer-container {
+	border-top: 1px solid @clrPopoverBg;
+}
+
 .message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .button-dropdown .secondary-items .menu .footer-container {
 	border-top: 1px solid @clrPopoverBg;
 }
@@ -159,10 +174,25 @@ select {
 	color: @clrPopoverText;
 	border-radius: 0 !important;
 
+	img.content-mask {
+		background-color: @clrPopoverText;
+	}
+
 	&:not(.active):not(.selected):hover,
 	&.selected,
 	&:active {
 		background-color: @clrPopoverBgHover;
 		color: @clrPopoverTextActive;
+
+		img.content-mask {
+			background-color: @clrPopoverTextActive;
+		}
 	}
+}
+
+.category-picker-popover .menu .item.divider,
+.category-picker-dropdown .menu .item.divider,
+.fixed-popover-container .fixed-popover .divider {
+	background: @clrPopoverBg;
+	border-top: 1px solid @clrPopoverBg;
 }
