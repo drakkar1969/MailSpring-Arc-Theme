@@ -542,6 +542,137 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 }
 
 //------------------------------------------------------------
+// Preferences: Signatures tab
+//------------------------------------------------------------
+.preferences-signatures-container .signature-wrap {
+	.account-picker {
+		color: @clrPrefsTextFaded;
+	}
+
+	.button-dropdown .primary-item, .button-dropdown .only-item {
+		box-shadow: none;
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder;
+		color: @clrButtonText;
+		height: 2.1em;
+		font-size: 1em;
+
+		img.content-mask {
+			background-color: @clrButtonText;
+		}
+
+		&:hover {
+			background: @clrButtonBgHover;
+			border: 1px solid @clrButtonBorderHover;
+		}
+
+		&:active {
+			background: @clrButtonBgActive;
+			border: 1px solid @clrButtonBorderActive;
+			color: @clrButtonTextActive;
+
+			img.content-mask {
+				background-color: @clrButtonTextActive;
+			}
+		}
+	}
+
+	.section-header {
+		font-weight: 700;
+		margin-top: 24px;
+		margin-bottom: 12px;
+	}
+
+	.section {
+		background-color: @clrPrefsBodyBg;
+		border: 1px solid @clrWindowBorder;
+
+		&.preview {
+			background-color: @clrListBg;
+			color: @clrInputText;
+
+			.label {
+				color: @clrPrefsTextFaded;
+			}
+
+			a {
+				color: @clrLink;
+			}
+		}
+
+		&.information {
+			border: none;
+			padding: 0;
+
+			.field label {
+				color: @clrPrefsTextFadedLess;
+			}
+
+			.field.photo-picker .drop-note {
+				color: @clrPrefsTextFaded;
+				font-size: 0.9em;
+			}
+		}
+	}
+
+	.signature-template-picker {
+		background: @clrPrefsBodyBg;
+
+		.option {
+			background: @clrPrefsBodyBg;
+			border: 1px solid @clrWindowBorder;
+
+			&.active {
+				border: 1px solid @clrAccent;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Templates tab
+//------------------------------------------------------------
+.preferences-templates-container {
+	a {
+		cursor: pointer;
+		color: @clrLink;
+		font-size: 1em !important;
+		text-decoration: underline;
+	}
+
+	.template-wrap {
+		.RichEditor-root {
+			background: @clrListBg;
+			border: 1px solid @clrWindowBorder;
+
+			.RichEditor-content {
+				color: @clrInputText;
+			}
+
+			.template-variable {
+				background-color: fade(@clrAccent, 50%);
+				border-bottom: 1px solid @clrAccent;
+				color: @clrInputText;
+
+				&.selected {
+					border: 1px solid @clrAccent;
+				}
+			}
+		}
+
+		.section.note {
+			color: @clrPrefsTextFaded;
+			font-size: 1em;
+
+			// a {
+			// 	cursor: pointer;
+			// 	color: @clrLink;
+			// }
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Scrollbar
 //------------------------------------------------------------
 .column-Preferences .scrollbar-track {
