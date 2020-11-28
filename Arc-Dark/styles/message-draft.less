@@ -307,33 +307,41 @@
 //------------------------------------------------------------
 // Draft message (edit mode) signature button
 //------------------------------------------------------------
-.message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .only-item,
-.composer-full-window .message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .only-item {
-	box-shadow: none;
-	background: @clrButtonBg;
-	border: 1px solid @clrButtonBorder;
-	height: 2.1em;
-	font-size: 1em;
-	padding: 0 0.8em;
-	margin-top: -2px;
 
-	img.content-mask {
-		background-color: @clrButtonText;
-	}
+.message-item-white-wrap.composer-outer-wrap,
+.composer-full-window .message-item-white-wrap.composer-outer-wrap {
+	.composer-participant-field .dropdown-component .signature-button-dropdown .only-item {
+		box-shadow: none;
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder;
+		height: 2.1em;
+		font-size: 1em;
+		padding: 0 0.8em;
+		margin-top: -2px;
 
-	&:hover {
-		background: @clrButtonBgHover;
-		border: 1px solid @clrButtonBorderHover;
-	}
+		img.signature-button {
+			background-color: @clrButtonText;
+		}
 
-	&:active {
-		background: @clrButtonBgActive;
-		border: 1px solid @clrButtonBorderActive;
+		&:hover {
+			background: @clrButtonBgHover;
+			border: 1px solid @clrButtonBorderHover;
+		}
 
-		img.content-mask {
-			background-color: @clrButtonTextActive;
+		&:active {
+			background: @clrButtonBgActive;
+			border: 1px solid @clrButtonBorderActive;
+
+			img.signature-button {
+				background-color: @clrButtonTextActive;
+			}
 		}
 	}
+
+	.composer-participant-field .dropdown-component .signature-button-dropdown .button-dropdown.open img.signature-button,
+	.composer-participant-field .dropdown-component .signature-button-dropdown .only-item img.signature-button {
+		background-color: @clrButtonText;
+	}	
 }
 
 //------------------------------------------------------------
