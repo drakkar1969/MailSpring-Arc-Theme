@@ -511,6 +511,60 @@
 }
 
 //------------------------------------------------------------
+// Translation header
+//------------------------------------------------------------
+.translate-message-header {
+	border: none;
+	border-left: 3px solid @clrAccent;
+	border-radius: 0px;
+	background-color: @clrTranslateBar;
+	color: @clrTextFadedLess;
+
+	.message {
+		border: none;
+
+		.message-centered .note {
+			opacity: 1;
+			color: @clrTextFaded;
+		}
+	}
+
+	.actions {
+		.action {
+			background: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+			border-radius: 3px;
+			color: @clrButtonText;
+			margin: 3px;
+
+			&:last-child {
+				border-bottom: 1px solid @clrButtonBorder;
+				margin-top: 0;
+			}
+
+			&.button-dropdown .only-item img.content-mask {
+				background-color: @clrButtonText;
+			}
+
+			&:hover {
+				background: @clrButtonBgHover;
+				border: 1px solid @clrButtonBorderHover;
+			}
+
+			&:active {
+				background: @clrButtonBgActive;
+				border: 1px solid @clrButtonBorderActive;
+				color: @clrButtonTextActive;
+
+				&.button-dropdown .only-item img.content-mask {
+					background-color: @clrButtonTextActive;
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Scroll bars
 //------------------------------------------------------------
 #message-list .scrollbar-track,
