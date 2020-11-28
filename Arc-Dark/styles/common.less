@@ -121,23 +121,37 @@ select {
 //---------------------------------
 .category-picker-popover .menu,
 .category-picker-dropdown .menu,
-.dropdown-menu .menu {
+.dropdown-menu .menu,
+.button-dropdown.open.open-down .secondary-items,
+.button-dropdown.open.open-up .secondary-items {
 	box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.35);
 	background: @clrPopoverBg;
+	border: 1px solid @clrWindowBorder;
+	border-radius: 0;
 }
 
 .category-picker-popover .menu .header-container,
 .category-picker-dropdown .menu .header-container,
 .menu .header-container {
 	background: @clrPopoverBg;
+	border-bottom: 1px solid @clrPopoverBg !important;
 }
 
 .menu .content-container {
 	background: @clrPopoverBg;
 }
 
+.menu .footer-container,
+.button-dropdown .secondary-items .menu .footer-container {
+	background: @clrPopoverBg;
+	border-top: 1px solid @clrPopoverBg !important;
+}
+
+.button-dropdown .secondary-items .menu .item,
 .menu .item {
+	background: @clrPopoverBg;
 	color: @clrPopoverText;
+	border-radius: 0 !important;
 
 	&:not(.active):not(.selected):hover,
 	&.selected,
