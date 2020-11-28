@@ -203,6 +203,31 @@
 			}
 		}
 
+		body.is-blurred &:not(.invalid) {
+			background: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+			color: @clrButtonText;
+
+			&:hover {
+				box-shadow: none;
+				background: @clrButtonBgHover;
+				border: 1px solid @clrButtonBorderHover;
+			}
+
+			&.selected,
+			&.dragging {
+				box-shadow: none;
+				background: @clrButtonBgActive;
+				border: 1px solid @clrButtonBorderActive;
+
+				color: @clrButtonTextActive;
+
+				.action img {
+					background-color: @clrButtonTextActive;
+				}
+			}
+		}
+
 		&.invalid {
 			border-bottom: 1px dashed @clrWarningRed;
 
