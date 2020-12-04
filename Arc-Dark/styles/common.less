@@ -148,6 +148,10 @@ select {
 	background: @clrPopoverBg;
 }
 
+.tokenizing-field .content-container {
+	border: 1px solid @clrPopoverBorder;
+}
+
 .fixed-popover-container .fixed-popover .menu .header-container {
 	color: @clrPopoverTextFaded;
 }
@@ -183,6 +187,10 @@ select {
 		background-color: @clrPopoverText;
 	}
 
+	.secondary {
+		color: @clrPopoverTextFaded;
+	}
+
 	&:not(.active):not(.selected):hover,
 	&.selected,
 	&:active {
@@ -191,6 +199,10 @@ select {
 
 		img.content-mask {
 			background-color: @clrPopoverTextActive;
+		}
+
+		.secondary {
+			color: @clrPopoverTextActiveFaded;
 		}
 	}
 }
