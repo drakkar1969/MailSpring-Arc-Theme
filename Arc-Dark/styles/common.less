@@ -214,6 +214,39 @@ select {
 	border-top: 1px solid @clrPopoverBg;
 }
 
+.message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .button-dropdown .secondary-items .menu .item {
+	padding: 5px 20px 5px 28px;
+
+	&.checked {
+		background-image: url(mailspring://Arc-Dark/styles/images/controls/checkbox-checked-dark.png);
+		background-size: 16px;
+		background-position-y: 5px;
+
+		&:not(.active):not(.selected):hover,
+		&.selected,
+		&:active {
+			background-image: url(mailspring://Arc-Dark/styles/images/controls/checkbox-checked-selected.png);
+		}
+	}
+}
+
+.preferences-signatures-container .signature-wrap .account-picker .button-dropdown .secondary-items .menu .item {
+	padding: 5px 20px 5px 32px;
+
+	&.checked {
+		background-image: url(mailspring://Arc-Dark/styles/images/controls/checkbox-checked-dark.png);
+		background-size: 16px;
+		background-position-y: 7px;
+		padding: 5px 20px 5px 32px;
+
+		&:not(.active):not(.selected):hover,
+		&.selected,
+		&:active {
+			background-image: url(mailspring://Arc-Dark/styles/images/controls/checkbox-checked-selected.png);
+		}
+	}
+}
+
 //---------------------------------
 // Undo/redo toasts
 //---------------------------------
