@@ -201,3 +201,74 @@ select {
 	background: @clrPopoverBg;
 	border-top: 1px solid @clrPopoverBg;
 }
+
+//---------------------------------
+// Undo/redo toasts
+//---------------------------------
+.undo-redo-toast {
+	.content {
+		background: @clrToastBg;
+		border: 1px solid @clrToastBorder;
+		opacity: 0.95;
+	}
+
+	.message {
+		color: @clrToastText;
+	}
+
+	.action {
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder;
+		border-radius: 3px;
+
+		.undo-action-text {
+			color: @clrToastText;
+		}
+
+		img {
+			background-color: @clrToastText;
+		}
+
+		&:hover {
+			background: @clrButtonBgHover;
+			border: 1px solid @clrButtonBorderHover;
+		}
+
+		&:active {
+			background: @clrButtonBgActive;
+			border: 1px solid @clrButtonBorderActive;
+
+			.undo-action-text {
+				color: @clrToastTextActive;
+			}
+
+			img {
+				background-color: @clrToastTextActive;
+			}
+		}
+	}
+}
+
+.countdown {
+	.countdown-number {
+		color: @clrToastText;
+	}
+
+	svg circle {
+		stroke: red;
+	}
+}
+@keyframes countdown {
+	0% {
+		stroke-dashoffset: 0;
+		stroke: @clrToastText;
+	}
+	65% {
+		stroke-dashoffset: 57.2px;
+		stroke: @clrToastText;
+	}
+	100% {
+		stroke-dashoffset: 88px;
+		stroke: @clrWarningYellow;
+	}
+}
