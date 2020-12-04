@@ -443,3 +443,43 @@
 .RichEditor-root .RichEditor-content {
 	color: @clrText;
 }
+
+//------------------------------------------------------------
+// Draft message (edit mode) remove quoted text button
+//------------------------------------------------------------
+.composer-inner-wrap .compose-body .quoted-text-control .remove-quoted-text {
+	background: @clrButtonBg;
+	border: 1px solid @clrButtonBorder;
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+	top: -10px;
+	right: -10px;
+	padding-top: 2px;
+	cursor: default;
+
+	img {
+		height: 0;
+	}
+
+	&:before {
+		content: 'x';
+		margin-left: 6px;
+		color: @clrButtonText;
+	}
+
+	&:hover {
+		background-color: @clrButtonBgHover;
+		border-color: @clrButtonBorderHover;
+	}
+
+	&:active {
+		background-color: @clrButtonBgActive;
+		border-color: @clrButtonBorderActive;
+
+		&:before {
+			content: 'x';
+			color: @clrButtonTextActive;
+		}
+	}
+}
