@@ -210,12 +210,54 @@
 // Important icon (gmail)
 //------------------------------------------------------------
 .thread-list .mail-important-icon {
-	margin-top: 1px;
+	margin-top: 5px;
 }
 
 .thread-list-narrow .mail-important-icon {
-	margin-top: -3px;
+	margin-top: -2px;
 }
+
+#message-list .mail-important-icon {
+	margin-top: 5px;
+}
+
+.mail-important-icon {
+	.arc-threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListText, 25%));
+
+	&.enabled:hover {
+		.arc-threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListText, 50%));
+	}
+
+	&.enabled.active {
+		.arc-threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), @clrAccent);
+	}
+
+	&.enabled.active:hover {
+		.arc-threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrAccent, 70%));
+	}
+}
+
+.thread-list .list-container {
+	.list-item.focused,
+	.list-item.focused {
+		.mail-important-icon {
+			.arc-threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListTextActive, 35%));
+
+			&:hover {
+				.arc-threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListTextActive, 60%));
+			}
+
+			&.enabled.active {
+				.arc-threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), @clrListTextActive);
+			}
+
+			&.enabled.active:hover {
+				.arc-threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListTextActive, 70%));
+			}
+		}
+	}
+}
+
 
 //------------------------------------------------------------
 // Gmail labels
