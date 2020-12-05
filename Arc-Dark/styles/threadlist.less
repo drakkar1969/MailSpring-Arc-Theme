@@ -78,6 +78,27 @@
 }
 
 //------------------------------------------------------------
+// Thread list (single pane view)
+//------------------------------------------------------------
+.list-tabular .list-tabular-item {
+	.checkmark {
+		padding: 10px 11px 12px;
+
+		.inner {
+			.arc-control(url(mailspring://Arc-Dark/styles/images/controls/checkbox-unchecked-dark.png), 16px);
+		}
+	}
+
+	&.selected {
+		color: @clrListTextActive;
+
+		.checkmark .inner {
+			.arc-control(url(mailspring://Arc-Dark/styles/images/controls/checkbox-checked-selected.png), 16px);
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Hover action bar
 //------------------------------------------------------------
 .thread-list .list-item:hover .list-column-HoverActions .inner {
