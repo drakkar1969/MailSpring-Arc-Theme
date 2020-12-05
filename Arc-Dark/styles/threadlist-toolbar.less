@@ -110,6 +110,52 @@
 }
 
 //------------------------------------------------------------
+// Selection toolbar (single pane mode)
+//------------------------------------------------------------
+.toolbar-ThreadList {
+	.selection-bar .absolute {
+		background: @clrWindowBg;
+		border-color: @clrWindowBorder;
+		height: 100%;
+
+		.btn-toolbar {
+			box-shadow: none;
+			background: transparent;
+			border: 1px solid transparent;
+			border-radius: 3px !important;
+			height: 26px;
+			color: @clrToolBtnText;
+			margin-top: 4px;
+			margin-bottom: 1px;
+
+			img.content-mask {
+				background-color: @clrToolBtnText;
+			}
+
+			&:hover {
+				background: @clrToolBtnBgHover;
+				border-color: @clrToolBtnBorderHover;
+			}
+
+			&:active {
+				background: @clrToolBtnBgActive;
+				border-color: @clrToolBtnBorderActive;
+				color: @clrToolBtnTextActive;
+
+				img.content-mask {
+					background-color: @clrToolBtnTextActive;
+				}
+			}
+		}
+
+		.inner .centered {
+			padding-top: 1px;
+			color: @clrTextFadedLess !important;
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Drafts/trash empty button header
 //------------------------------------------------------------
 .thread-list-empty-folder-bar {
