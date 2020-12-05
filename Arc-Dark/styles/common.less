@@ -318,3 +318,21 @@ select {
 		stroke: @clrWarningYellow;
 	}
 }
+
+//---------------------------------
+// Scrollbar tooltips
+//---------------------------------
+.scroll-tooltip {
+	box-shadow: none;
+	background: @clrToastBg;
+	border: 1px solid @clrToastBorder;
+	border-radius: 2px;
+	opacity: 0.95;
+	color: @clrToastText;
+	transform: translate(-8px, 0);
+
+	&:before,
+	&:after {
+		display: none;
+	}
+}
