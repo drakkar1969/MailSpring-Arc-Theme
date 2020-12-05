@@ -643,6 +643,15 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 		}
 	}
+
+	textarea.raw-html {
+		border-radius: 3px;
+
+		&:focus {
+			border: 1px solid @clrAccent;
+			box-shadow: inset 1px 0 @clrAccent, inset -1px 0 @clrAccent, inset 0 1px @clrAccent, inset 0 -1px @clrAccent;
+		}
+	}
 }
 
 //------------------------------------------------------------
@@ -660,6 +669,12 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		.RichEditor-root {
 			background: @clrListBg;
 			border: 1px solid @clrWindowBorder;
+			border-radius: 3px;
+
+			&.focused {
+				border: 1px solid @clrAccent;
+				box-shadow: inset 1px 0 @clrAccent, inset -1px 0 @clrAccent, inset 0 1px @clrAccent, inset 0 -1px @clrAccent;
+			}
 
 			.RichEditor-content {
 				color: @clrInputText;
