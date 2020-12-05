@@ -591,6 +591,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 
 		&.preview {
 			background-color: @clrListBg;
+			border-radius: 3px 3px 0 0;
 			color: @clrInputText;
 
 			.label {
@@ -600,6 +601,11 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			a {
 				color: @clrLink;
 			}
+		}
+
+		&.preview + .section {
+			border-radius: 0 0 3px 3px;
+			border-top-color: @clrPrefsBodyBg;
 		}
 
 		&.information {
@@ -635,8 +641,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		background: @clrPrefsBodyBg;
 
 		.option {
-			background: @clrPrefsBodyBg;
+			background: @clrListBg;
 			border: 1px solid @clrWindowBorder;
+			border-radius: 3px;
 
 			&.active {
 				border: 1px solid @clrAccent;
