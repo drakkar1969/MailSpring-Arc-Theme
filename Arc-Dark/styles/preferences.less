@@ -238,8 +238,13 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	.items-wrapper {
 		background-color: @clrListBg;
 		border-color: @clrWindowBorder;
+		border-radius: 3px 3px 0 0;
 
 		.list-item {
+			&:first-child {
+				border-radius: 3px 3px 0 0;
+			}
+
 			&:hover {
 				background: @clrListHover;
 			}
@@ -276,10 +281,15 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	.buttons-wrapper {
 		background-color: @clrPrefsBodyBg;
 		border-color: @clrWindowBorder;
+		border-radius: 0 0 3px 3px;
 
 		.btn-editable-list {
 			border-color: @clrWindowBorder;
 			color: @clrButtonText;
+
+			&:first-child {
+				border-radius: 0 0 0 3px;
+			}
 
 			&.btn-disabled,
 			&.btn-disabled:active {
