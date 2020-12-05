@@ -22,7 +22,8 @@
 	//---------------------------------
 	// Toolbar buttons
 	//---------------------------------
-	.btn-toolbar {
+	.btn-toolbar,
+	.btn-icon {
 		background: none;
 		box-shadow: none;
 		border: 1px solid transparent !important;
@@ -66,6 +67,18 @@
 
 		body.is-blurred &.mode-toggle.mode-false {
 			background-color: @clrToolBtnBgActive;
+		}
+	}
+
+	.btn-icon {
+		margin-top: 5px;
+		padding: 0 13px;
+
+		img.content-mask {
+			-webkit-mask-position: -7px -15px;
+			-webkit-mask-size: 48px;
+			height: 32px;
+			width: 32px;
 		}
 	}
 }
