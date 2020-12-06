@@ -18,7 +18,6 @@
 @clrSidebarTextActive: #ffffff;
 @clrSidebarBgActivity: darken(@clrSidebarBg, 3%);
 @clrSidebarTextActivity: @clrSidebarText;
-@clrSidebarScrollbar: #8a8e96;
 
 @clrWarningRed: #f04a50;
 @clrWarningYellow: #f27835;
@@ -44,7 +43,11 @@
 @clrBodyBg: #404552;
 @clrWarningBar: lighten(@clrBodyBg, 5%);
 @clrTranslateBar: darken(@clrBodyBg, 3%);
-@clrScrollBar: #767b87;
+
+@clrScrollbar: #767b87;
+@clrScrollbarHover: #676b78;
+@clrScrollbarActive: @clrAccent;
+@clrScrollbarOverlay: fade(#a5abb5, 40%);
 
 @clrLink: #a9caf1;
 @clrLinkVisited: #7eafe9;
@@ -68,7 +71,6 @@
 @clrListTextFadedMore: @clrTextFadedMore;
 @clrListTextActive: #ffffff;
 @clrListTextActiveFaded: fade(@clrListTextActive, 50%);
-@clrListScrollbar: #767b87;
 @clrListWarningBar: @clrWindowBg;
 
 //---------------------------------
@@ -83,7 +85,6 @@
 @clrPrefsTextFadedLess: @clrTextFadedLess;
 @clrPrefsTextFadedMore: @clrTextFadedMore;
 @clrPrefsTextActive: #ffffff;
-@clrPrefsScrollbar: #767b87;
 @clrPrefsWarningBar: lighten(@clrPrefsBodyBg, 5%);
 
 //---------------------------------
@@ -95,7 +96,6 @@
 @clrDashboardTextFadedLess: @clrTextFadedLess;
 @clrDashboardTextFadedMore: @clrTextFadedMore;
 @clrDashboardWarningBar: lighten(@clrDashboardBg, 5%);
-@clrDashboardScrollbar: #767b87;
 
 //---------------------------------
 // Controls
