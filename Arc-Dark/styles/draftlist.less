@@ -15,6 +15,25 @@
 
 	.empty-state .perspective-empty-state .message {
 		color: @clrTextFaded;
+
+
+		.btn {
+			background-color: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+			color: @clrButtonText;
+			font-size: 14px;
+
+			&:hover {
+				background-color: @clrButtonBgHover;
+				border: 1px solid @clrButtonBorderHover;
+			}
+
+			&:active {
+				background-color: @clrButtonBgActive;
+				border: 1px solid @clrButtonBorderActive;
+				color: @clrButtonTextActive;
+			}
+		}
 	}
 
 	.empty-state .perspective-empty-state img {
