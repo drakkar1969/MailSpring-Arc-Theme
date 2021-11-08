@@ -1,15 +1,141 @@
 @import "arc-variables";
 
 //------------------------------------------------------------
+// Activity dashboard
+//------------------------------------------------------------
+.activity-dashboard {
+	background-color: @clrDashboardBg;
+	color: @clrDashboardText;
+
+	.loading-cover {
+		background-color: @clrDashboardBg;
+
+		img.content-mask {
+			background-image: linear-gradient(105deg, @clrDashboardTextFaded 0%, @clrDashboardTextFaded 15%, @clrAccent 45%, @clrDashboardTextFaded 49%, @clrDashboardTextFaded 100%);
+		}
+	}
+
+	.header {
+		background: @clrDashboardBg;
+		margin-top: 0;
+
+		h2 {
+			color: @clrDashboardText;
+		}
+
+		.accounts {
+			color: @clrDashboardTextFadedLess;
+		}
+
+		.timespan-selector .timespan-text {
+			color: @clrDashboardTextFaded;
+		}
+	}
+
+	.section-divider {
+		border-bottom: 1px solid @clrDashboardTextFadedMore;
+
+		div {
+			background: @clrDashboardBg;
+			font-size: 13px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: @clrDashboardTextFaded;
+		}
+	}
+
+	.metric-container .footer {
+		color: @clrDashboardTextFadedLess;
+		border-top: 1px solid @clrDashboardTextFadedMore;
+		padding-top: 4px;
+	}
+
+	.metric-histogram {
+		.legend {
+			color: @clrDashboardTextFaded;
+		}
+
+		.column {
+			background: fade(@clrAccent, 25%);
+			border-top: 2px solid @clrAccent;
+		}
+	}
+
+	.metric-graph {
+		.gridline {
+			border-left: 1px solid @clrDashboardTextFadedMore;
+		}
+
+		.layer.text-overlay {
+			background: transparent;
+		}
+
+		path {
+			stroke: @clrAccent;
+		}
+	}
+
+	.metric-stat img {
+		zoom: 0.3 !important;
+		background: @clrDashboardTextFaded !important;
+	}
+
+	.usage-note {
+		background: @clrDashboardWarningBar;
+		border-left: 3px solid @clrAccent;
+		color: @clrDashboardTextFadedLess;
+	}
+
+	.empty-note {
+		color: @clrDashboardTextFaded;
+
+		a {
+			text-decoration: underline !important;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Scroll bar
 //------------------------------------------------------------
 .activity-dashboard .scrollbar-track {
-	background: @colorBodyBg;
-	border-left: none;
-	width: 10px;
+	background: @clrDashboardBg;
+	border-left: 1px solid transparent;
+	border-right: none;
+	width: 7px;
+	padding: 1px;
 
 	.scrollbar-handle {
-		background: fade(darken(@colorBodyBg, 45%), 40%);
+		background: @clrScrollbarOverlay;
 		border: none;
+		border-radius: 4px;
+	}
+
+	&:hover,
+	&.dragging {
+		border-color: @clrWindowBorder;
+		width: 13px;
+		padding: 3px;
+
+	}
+
+	&:hover:not(.dragging) {
+		.scrollbar-handle {
+			background: @clrScrollbar;
+
+			&:hover {
+				background: @clrScrollbarHover;
+			}
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle {
+			background: @clrScrollbarActive;
+		}
 	}
 }

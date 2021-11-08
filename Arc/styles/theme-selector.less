@@ -3,13 +3,52 @@
 //------------------------------------------------------------
 // Theme selector window
 //------------------------------------------------------------
+.modal-container .modal {
+	background: @clrWindowBg !important;
+	border-radius: 3px !important;
+
+	.modal-close {
+		width: 16px !important;
+		height: 16px !important;
+		zoom: 0.9 !important;
+		margin: 8px;
+		content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-dark.png);
+
+		&:hover {
+			content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-hover-dark.png);
+		}
+
+		&:active {
+			content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-active-dark.png);
+		}
+
+		.platform-linux.is-blurred & {
+			content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-backdrop-dark.png);
+		}
+	}
+}
+
 .theme-picker {
-	//---------------------------------
-	// Create theme link
-	//---------------------------------
-	.create-theme a {
-		color: @colorAccent !important;
-		cursor: pointer;
+	h4 {
+		color: @clrText !important;
+		font-size: 15.5px;
+		margin-top: -16px;
+		margin-bottom: 0;
+	}
+
+	h4 + div {
+		color: @clrText !important;
+		font-size: 13px !important;
+	}
+
+	.create-theme {
+		margin-top: 10px;
+
+		a {
+			color: @clrLink !important;
+			text-decoration: underline;
+			cursor: pointer;
+		}
 	}
 }
 
@@ -17,12 +56,39 @@
 // Scroll bar
 //------------------------------------------------------------
 .theme-picker .scrollbar-track {
- background: @colorListBg;
- border-left: none;
- width: 10px;
+	background: @clrWindowBg;
+	border-left: 1px solid transparent;
+	border-right: none;
+	width: 7px;
+	padding: 1px;
 
- .scrollbar-handle {
-  background: fade(darken(@colorListBg, 45%), 40%);
-  border: none;
- }
+	.scrollbar-handle {
+		background: @clrScrollbarOverlay;
+		border: none;
+		border-radius: 4px;
+	}
+
+	&:hover,
+	&.dragging {
+		border-color: @clrWindowBorder;
+		width: 13px;
+		padding: 3px;
+
+	}
+
+	&:hover:not(.dragging) {
+		.scrollbar-handle {
+			background: @clrScrollbar;
+
+			&:hover {
+				background: @clrScrollbarHover;
+			}
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle {
+			background: @clrScrollbarActive;
+		}
+	}
 }

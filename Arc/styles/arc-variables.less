@@ -1,55 +1,169 @@
 //------------------------------------------------------------
 // Color variables
 //------------------------------------------------------------
-@colorAccent: #5294e2;
 
-@colorWindowBg: #f6f7f8;
-@colorBodyBg: #ffffff;
-@colorBodyBgDarker: darken(@colorBodyBg, 2%);
-@colorBorder: #d4d5db;
-@colorText: #231f20;
-@colorTextFaded: fade(@colorText, 50%);
-@colorWarningBar: darken(@colorWindowBg, 5%);
+//---------------------------------
+// Accent
+//---------------------------------
+@clrAccent: #5294e2;
 
-@colorSidebarBg: #353945;
-@colorSidebarBorder: #353945;
-@colorSidebarItemHover: rgba(186, 195, 207, 0.15);
-@colorSidebarText: #bac3cf;
-@colorSidebarTextFaded: fade(@colorSidebarText, 50%);
-@colorSidebarTextLighter: lighten(@colorSidebarText, 5%);
-@colorSidebarTextActive: #ffffff;
+@clrWarningRed: #f04a50;
+@clrWarningYellow: #f27835;
 
-@colorListBg: #ffffff;
-@colorListItemHover: tint(@colorSidebarBg, 90%);
-@colorListText: @colorText;
-@colorListTextActive: #ffffff;
-@colorListTextActiveFaded: fade(@colorListTextActive, 50%);
+@clrLink: #a9caf1;
+@clrLinkVisited: #7eafe9;
 
-@colorBtnBgLight: #ffffff;
-@colorBtnBorderLight: #cfd6e6;
-@colorBtnBgActiveLight: @colorAccent;
-@colorBtnBorderActiveLight: @colorAccent;
+//---------------------------------
+// Sidebar
+//---------------------------------
+@clrSidebarBg: #353945;
+@clrSidebarBorder: #2a2d37;
+@clrSidebarHover: rgba(186, 195, 207, 0.15);
+@clrSidebarText: #bac3cf;
+@clrSidebarTextFaded: fade(@clrSidebarText, 50%);
+@clrSidebarTextActive: #ffffff;
+@clrSidebarBgActivity: darken(@clrSidebarBg, 3%);
+@clrSidebarTextActivity: @clrSidebarText;
 
-@colorBtnBgDark: #505666;
-@colorBtnBorderDark: #2b2e39;
-@colorBtnBgActiveDark: @colorAccent;
-@colorBtnBorderActiveDark: #2b2e39;
+@clrSidebarBtnBgHover: rgba(95, 105, 127, 0.37);
+@clrSidebarBtnBorderHover: rgba(21, 23, 28, 0.37);
+@clrSidebarBtnBgActive: @clrAccent;
+@clrSidebarBtnBorderActive: @clrAccent;
+@clrSidebarBtnText:rgba(207, 218, 231, 0.8);
+@clrSidebarBtnTextActive: #ffffff;
 
-@colorBtnDefaultBg: #4dadd4;
-@colorBtnDefaultBgHover: #76c0de;
-@colorBtnDefaultBgActive: #2e96c0;
-@colorBtnDefaultText: #ffffff;
+//---------------------------------
+// Window
+//---------------------------------
+@clrWindowBg: #383c4a;
+@clrWindowBorder: #262a33;
+@clrText: #bac3cf;
+@clrTextFaded: fade(@clrText, 50%);
+@clrTextFadedLess: fade(@clrText, 80%);
+@clrTextFadedMore: fade(@clrText, 15%);
+@clrTextActive: #ffffff;
 
-@colorBtnTextActive: #ffffff;
+@clrBodyBg: #404552;
+@clrWarningBar: lighten(@clrBodyBg, 5%);
+@clrTranslateBar: darken(@clrBodyBg, 3%);
 
-@colorPrefsWindowBg: @colorWindowBg;
-@colorPrefsBodyBg: #ffffff;
-@colorPrefsTabHover: fade(@colorPrefsBodyBg, 60%);
-@colorPrefsTabActive: @colorPrefsBodyBg;
+@clrScrollbar: #767b87;
+@clrScrollbarHover: #676b78;
+@clrScrollbarActive: @clrAccent;
+@clrScrollbarOverlay: fade(#a5abb5, 40%);
 
-@colorCheckboxBorder: #a6adbc;
+@clrToolBtnBgHover: rgba(95, 105, 127, 0.37);
+@clrToolBtnBorderHover: rgba(21, 23, 28, 0.37);
+@clrToolBtnBgActive: @clrAccent;
+@clrToolBtnBorderActive: @clrAccent;
+@clrToolBtnText:rgba(207, 218, 231, 0.8);
+@clrToolBtnTextActive: #ffffff;
+@clrToolBtnTextDisabled: rgba(207, 218, 231, 0.35);
 
-// @colorWarningRed: #ed304b;
-// @colorWarningYellow: #ed8830;
-@colorWarningRed: #f04a50;
-@colorWarningYellow: #f27835;
+//---------------------------------
+// Lists / Threadlist
+//---------------------------------
+@clrListBg: #404552;
+@clrListHover: lighten(@clrListBg, 3%);
+@clrListText: @clrText;
+@clrListTextFaded: @clrTextFaded;
+@clrListTextFadedLess: @clrTextFadedLess;
+@clrListTextFadedMore: @clrTextFadedMore;
+@clrListTextActive: #ffffff;
+@clrListTextActiveFaded: fade(@clrListTextActive, 50%);
+@clrListWarningBar: @clrWindowBg;
+
+//---------------------------------
+// Preferences
+//---------------------------------
+@clrPrefsWindowBg: @clrWindowBg;
+@clrPrefsBodyBg: lighten(@clrPrefsWindowBg, 2%);
+@clrPrefsTabHover: lighten(@clrPrefsWindowBg, 5%);
+@clrPrefsTabActive: @clrPrefsBodyBg;
+@clrPrefsText: @clrText;
+@clrPrefsTextFaded: @clrTextFaded;
+@clrPrefsTextFadedLess: @clrTextFadedLess;
+@clrPrefsTextFadedMore: @clrTextFadedMore;
+@clrPrefsTextActive: #ffffff;
+@clrPrefsWarningBar: lighten(@clrPrefsBodyBg, 5%);
+
+//---------------------------------
+// Activity dashboard
+//---------------------------------
+@clrDashboardBg: @clrListBg;
+@clrDashboardText: @clrText;
+@clrDashboardTextFaded: @clrTextFaded;
+@clrDashboardTextFadedLess: @clrTextFadedLess;
+@clrDashboardTextFadedMore: @clrTextFadedMore;
+@clrDashboardWarningBar: lighten(@clrDashboardBg, 5%);
+
+//---------------------------------
+// Controls
+//---------------------------------
+@clrInputBg: #404552;
+@clrInputBorder: #2b2e39;
+@clrInputText: #d3dae3;
+@clrInputTextPlaceholder: fade(#d3dae3, 30%);
+
+@clrButtonBg: #444a58;
+@clrButtonBorder: #2b2e39;
+@clrButtonBgHover: #505666;
+@clrButtonBorderHover: #2b2e39;
+@clrButtonBgActive: @clrAccent;
+@clrButtonBorderActive: #2b2e39;
+@clrButtonBgDisabled: fade(#444a58, 55%);
+@clrButtonBorderDisabled: fade(#2b2e39, 55%);
+@clrButtonText: #d3dae3;
+@clrButtonTextActive: #ffffff;
+@clrButtonTextDisabled: fade(#d3dae3, 45%);
+
+@clrButtonDefaultBg: #4dadd4;
+@clrButtonDefaultBorder: #4dadd4;
+@clrButtonDefaultBgHover: #76c0de;
+@clrButtonDefaultBorderHover: #76c0de;
+@clrButtonDefaultBgActive: #2e96c0;
+@clrButtonDefaultBorderActive: #2e96c0;
+@clrButtonDefaultText: #ffffff;
+
+@clrButtonInfoBg: fade(@clrListTextActive, 0%);
+@clrButtonInfoBorder: fade(@clrListTextActive, 50%);
+@clrButtonInfoBgHover: fade(@clrListTextActive, 20%);
+@clrButtonInfoBorderHover: fade(@clrListTextActive, 80%);
+@clrButtonInfoBgActive: @clrTextActive;
+@clrButtonInfoBorderActive: @clrTextActive;
+@clrButtonInfoText: @clrTextActive;
+@clrButtonInfoTextActive: @clrAccent;
+
+@clrSliderTrackBg: #2d303b;
+@clrSliderButtonBg: #444a58;
+@clrSliderButtonBorder: #262933;
+@clrSliderButtonBgHover: #505666;
+@clrSliderButtonBorderHover: #262933;
+@clrSliderButtonBgActive: @clrAccent;
+@clrSliderButtonBorderActive: @clrAccent;
+
+@clrPopoverBg: #383c4a;
+@clrPopoverBorder: #20222a;
+@clrPopoverBgHover: @clrAccent;
+@clrPopoverText: #d3dae3;
+@clrPopoverTextFaded: fade(@clrPopoverText, 60%);
+@clrPopoverTextActive: #ffffff;
+@clrPopoverTextActiveFaded: fade(@clrPopoverTextActive, 60%);
+
+@clrToastBg: #353945;
+@clrToastBorder: #1f2128;
+@clrToastText: @clrText;
+@clrToastTextActive: @clrTextActive;
+
+//------------------------------------------------------------
+// LESS mixins
+//------------------------------------------------------------
+.arc-control(@image, @size) {
+	width: @size;
+	height: @size;
+	background-image: @image;
+	background-color: transparent;
+	background-size: @size @size;
+	border: none;
+	border-radius: 0;
+}

@@ -4,11 +4,40 @@
 // Draft list area
 //------------------------------------------------------------
 .column-DraftList {
+	background: @clrListBg;
+
 	// Needed to fake bottom border for drafts toolbar
-	border-top: 5px solid @colorWindowBg;
+	border-top: 5px solid @clrWindowBg;
 
 	.draft-list {
-		border-top: 1px solid @colorBorder;
+		border-top: 1px solid @clrWindowBorder;
+	}
+
+	.empty-state .perspective-empty-state .message {
+		color: @clrTextFaded;
+
+
+		.btn {
+			background-color: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+			color: @clrButtonText;
+			font-size: 14px;
+
+			&:hover {
+				background-color: @clrButtonBgHover;
+				border: 1px solid @clrButtonBorderHover;
+			}
+
+			&:active {
+				background-color: @clrButtonBgActive;
+				border: 1px solid @clrButtonBorderActive;
+				color: @clrButtonTextActive;
+			}
+		}
+	}
+
+	.empty-state .perspective-empty-state img {
+		background-color: @clrTextFadedLess;
 	}
 }
 
@@ -16,30 +45,30 @@
 // Draft items
 //------------------------------------------------------------
 .draft-list .list-container .list-item {
-	background-color: @colorListBg;
-	border-bottom: 1px solid @colorBorder;
+	background-color: @clrListBg;
+	border-bottom: 1px solid @clrWindowBorder;
+	color: @clrListText;
+
+	.participants.no-recipients {
+		color: @clrListTextFadedLess;
+	}
 
 	.checkmark .inner {
-		border: 1px solid @colorCheckboxBorder;
+		.arc-control(url(mailspring://Arc-Dark/styles/images/controls/checkbox-unchecked-dark.png), 16px);
 	}
 
 	&:hover {
-		background-color: @colorListItemHover;
-
-		.checkmark .inner {
-			border-color: @colorCheckboxBorder;
-		}
+		background-color: @clrListHover;
 	}
 
 	&.selected {
 		.checkmark .inner {
-			background-color: @colorAccent;
-			border-color: @colorAccent;
+			.arc-control(url(mailspring://Arc-Dark/styles/images/controls/checkbox-checked-dark.png), 16px);
 		}
 	}
 
 	&.keyboard-cursor {
-		border-left-color: @colorAccent;
+		border-left-color: @clrAccent;
 	}
 }
 
@@ -47,12 +76,39 @@
 // Scroll bar
 //------------------------------------------------------------
 .draft-list .scrollbar-track {
-	background: @colorListBg;
-	border-left: none;
-	width: 10px;
+	background: @clrListBg;
+	border-left: 1px solid transparent;
+	border-right: none;
+	width: 7px;
+	padding: 1px;
 
 	.scrollbar-handle {
-		background: fade(darken(@colorListBg, 45%), 40%);
+		background: @clrScrollbarOverlay;
 		border: none;
+		border-radius: 4px;
+	}
+
+	&:hover,
+	&.dragging {
+		border-color: @clrWindowBorder;
+		width: 13px;
+		padding: 3px;
+
+	}
+
+	&:hover:not(.dragging) {
+		.scrollbar-handle {
+			background: @clrScrollbar;
+
+			&:hover {
+				background: @clrScrollbarHover;
+			}
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle {
+			background: @clrScrollbarActive;
+		}
 	}
 }
