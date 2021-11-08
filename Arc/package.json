@@ -1,9 +1,9 @@
 {
-	"name": "Arc-Dark",
-  "displayName": "Arc-Dark",
+	"name": "Arc",
+  "displayName": "Arc",
   "theme": "ui",
   "version": "1.0.0",
-  "description": "Arc-Dark theme for Mailspring",
+  "description": "Arc theme for Mailspring",
   "license": "MIT",
   "engines": {
     "mailspring": "*"
