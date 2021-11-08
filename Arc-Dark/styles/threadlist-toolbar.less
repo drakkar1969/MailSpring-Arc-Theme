@@ -159,8 +159,25 @@
 // Drafts/trash empty button header
 //------------------------------------------------------------
 .thread-list-empty-folder-bar {
-	background-color: @clrListWarningBar;
-	border-bottom-color: @clrWindowBorder;
-	color: @clrText;
+	background-color: @clrAccent;
+	border-bottom-color: @clrAccent;
+	color: @clrTextActive;
 	font-size: 1em;
+
+	.btn {
+		background-color: @clrButtonInfoBg;
+		border: 1px solid @clrButtonInfoBorder;
+		color: @clrButtonInfoText;
+
+		&:hover {
+			background-color: @clrButtonInfoBgHover;
+			border-color: @clrButtonInfoBorderHover;
+		}
+
+		&:active {
+			background-color: @clrButtonInfoBgActive;
+			border-color: @clrButtonInfoBorderActive;
+			color: @clrButtonInfoTextActive;
+		}
+	}
 }
