@@ -340,21 +340,27 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 //------------------------------------------------------------
 // Preferences: Subscription tab
 //------------------------------------------------------------
-.container-identity .identity-content-box {
-	color: @clrPrefsText;
+.container-identity {
+	.identity-content-box {
+		color: @clrPrefsText;
 
-	// Horizontal line
-	.padded:last-child {
-		border-top: 1px solid @clrPrefsTextFadedMore;
+		// Horizontal line
+		.padded:last-child {
+			border-top: 1px solid @clrPrefsTextFadedMore;
+		}
 	}
 
-	// Refresh icon
-	.refresh img {
-		background-color: @clrToolBtnText;
+	// Feature grid
+	.feature-explore-grid .feature {
+		background-color: @clrPrefsWarningBar;
+		border-left: 3px solid @clrAccent;
 
-		&:hover {
-			cursor: pointer;
-			background-color: @clrAccent;
+		h3 {
+			color: @clrPrefsText;
+		}
+
+		p {
+			color: @clrPrefsTextFadedLess;
 		}
 	}
 }
