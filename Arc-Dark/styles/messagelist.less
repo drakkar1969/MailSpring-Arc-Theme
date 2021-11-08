@@ -551,6 +551,62 @@
 }
 
 //------------------------------------------------------------
+// Event header
+//------------------------------------------------------------
+.event-wrapper {
+	font-size: 14px;
+	border: 1px solid @clrTextFadedMore;
+
+	.event-header {
+		border-bottom: 1px solid @clrTextFadedMore;
+
+		.event-title-text {
+			color: @clrTextFaded;
+		}
+		.event-title {
+			color: @clrTextFadedLess;
+		}
+
+		.event-download {
+			background-color: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+			padding: 0 8px;
+
+			img.content-mask {
+				background: @clrButtonText;
+			}
+
+			&:hover {
+				background-color: @clrButtonBgHover;
+				border-color: @clrButtonBorderHover;
+			}
+
+			&:active {
+				background-color: @clrButtonBgActive;
+				border-color: @clrButtonBorderActive;
+
+				img.content-mask {
+					background: @clrButtonTextActive;
+				}
+			}
+		}
+	}
+
+	.event-body {
+		color: @clrText;
+
+		.event-date .event-day {
+			font-size: 14px;
+			color: @clrTextFadedLess;
+		}
+
+		.event-location {
+			color: @clrTextFadedLess;
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Translation header
 //------------------------------------------------------------
 .translate-message-header {
