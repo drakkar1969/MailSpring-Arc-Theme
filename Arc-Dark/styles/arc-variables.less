@@ -47,11 +47,6 @@
 @clrWarningBar: lighten(@clrBodyBg, 5%);
 @clrTranslateBar: darken(@clrBodyBg, 3%);
 
-@clrScrollbar: #767b87;
-@clrScrollbarHover: #676b78;
-@clrScrollbarActive: @clrAccent;
-@clrScrollbarOverlay: fade(#a5abb5, 40%);
-
 @clrToolBtnBgHover: rgba(95, 105, 127, 0.37);
 @clrToolBtnBorderHover: rgba(21, 23, 28, 0.37);
 @clrToolBtnBgActive: @clrAccent;
@@ -160,4 +155,92 @@
 	background-size: @size @size;
 	border: none;
 	border-radius: 0;
+}
+
+.arc-scrollbar() {
+	@trackBg: #fcfcfc;
+	@trackBorder: #dcdfe3;
+	@sliderOverlay: #8a8e96;
+	@sliderNormal: #b8babf;
+	@sliderHover: #c7c9cd;
+	@sliderActive: #5294e2;
+
+	background: transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	width: 12px;
+	padding: 3px 0px 3px 6px;
+
+	.scrollbar-handle {
+		background: @sliderOverlay;
+		border: none;
+		border-radius: 3px;
+		opacity: 0.4;
+	}
+
+	&:hover,
+	&.dragging {
+		background: @trackBg;
+		border-left: 1px solid @trackBorder;
+		padding-left: 3px;
+		padding-right: 2px;
+
+		.scrollbar-handle { opacity: 0.99; }
+	}
+
+	&:hover:not(.dragging) {
+		.scrollbar-handle {
+			background: @sliderNormal;
+
+			&:hover { background: @sliderHover; }
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle { background: @sliderActive; }
+	}
+}
+
+.arc-scrollbar-sidebar() {
+	@trackBg: rgba(42, 45, 55, 0.95);
+	@trackBorder: rgba(42, 45, 55, 0.95);
+	@sliderOverlay: #e7eaee;
+	@sliderNormal: rgba(231, 234, 238, 0.7);
+	@sliderHover: #f6f7f9;
+	@sliderActive: #5294e2;
+
+	background: transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	width: 12px;
+	padding: 3px 0px 3px 6px;
+
+	.scrollbar-handle {
+		background: @sliderOverlay;
+		border: none;
+		border-radius: 3px;
+		opacity: 0.4;
+	}
+
+	&:hover,
+	&.dragging {
+		background: @trackBg;
+		border-left: 1px solid @trackBorder;
+		padding-left: 3px;
+		padding-right: 2px;
+
+		.scrollbar-handle { opacity: 0.99; }
+	}
+
+	&:hover:not(.dragging) {
+		.scrollbar-handle {
+			background: @sliderNormal;
+
+			&:hover { background: @sliderHover; }
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle { background: @sliderActive; }
+	}
 }
