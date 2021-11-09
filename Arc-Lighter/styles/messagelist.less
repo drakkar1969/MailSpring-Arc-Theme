@@ -4,42 +4,135 @@
 // Message list area
 //------------------------------------------------------------
 .column-MessageList {
-	background: @colorWindowBg;
-	border-left: 1px solid @colorBorder;
-	padding-top: 12px;
+	background: @clrWindowBg;
+	border-left: 1px solid @clrWindowBorder;
+}
+
+#message-list {
+	background: @clrWindowBg;
 }
 
 #message-list .messages-wrap .scroll-region-content-inner {
-	padding: 0 20px;
+	padding: 6px 20px;
+}
+
+//------------------------------------------------------------
+// Message subject area
+//------------------------------------------------------------
+#message-list {
+	.message-subject-wrap {
+		padding-left: 2px;
+	}
+
+	.message-subject {
+		color: @clrText;
+	}
+
+	.message-icons-wrap {
+		cursor: default;
+
+		div {
+			background: none;
+			border: 1px solid transparent;
+		 	border-radius: 3px;
+			height: 26px;
+			padding: 0px 13px;
+
+			img.content-mask {
+				margin-top: -6px;
+				background-color: @clrToolBtnText;
+			}
+
+			&:hover {
+				background-color: @clrToolBtnBgHover;
+				border-color: @clrToolBtnBorderHover;
+			}
+
+			&:active {
+				background-color: @clrToolBtnBgActive;
+				border-color: @clrToolBtnBorderActive;
+
+				img.content-mask {
+					background-color: @clrToolBtnTextActive;
+				}
+			}
+		}
+	}
 }
 
 //------------------------------------------------------------
 // Message body
 //------------------------------------------------------------
-#message-list .message-item-wrap {
-	.message-item-white-wrap {
-		box-shadow: none !important;
-		background: @colorBodyBg;
-		border: 1px solid @colorBorder;
-		border-radius: 3px;
+#message-list .message-item-wrap .message-item-white-wrap {
+	box-shadow: none !important;
+	background: @clrBodyBg;
+	border: 1px solid @clrWindowBorder;
+	border-radius: 3px;
+}
 
-		.message-item-area {
-			padding: 0 25px 14px 25px;
+//------------------------------------------------------------
+// Message header
+//------------------------------------------------------------
+.message-participants {
+	.from-contact {
+		font-size: 14px;
+		color: @clrText;
+	}
+
+	&.to-participants .collapsed-participants {
+		margin-top: 3px;
+	}
+
+	.from-label,
+	.to-label,
+	.reply-to-label,
+	.cc-label,
+	.bcc-label {
+		color: @clrTextFaded;
+		font-size: 14px;
+	}
+
+	.to-contact,
+	.reply-to-contact,
+	.cc-contact,
+	.bcc-contact,
+	.to-everyone {
+		color: @clrTextFadedLess;
+		font-size: 14px;
+	}
+
+	.expanded-participants {
+		.from-contact .participant-primary,
+		.from-contact .participant-secondary {
+			color: @clrText;
 		}
 
-		//---------------------------------
-		// Message header text
-		//---------------------------------
-		.from-contact {
-			font-size: 14px;
+		.participant-primary,
+		.participant-secondary {
+			color: @clrTextFadedLess;
 		}
+	}
+}
 
-		.to-participants {
+#message-list {
+	.message-header {
+		margin-bottom: 12px;
+
+		.header-row {
 			font-size: 14px;
 
-			&.collapsed {
-				margin-top: 3px;
+			.header-label {
+				color: @clrTextFaded;
 			}
+
+			.header-name {
+				color: @clrTextFadedLess;
+			}
+		}
+
+		.message-time,
+		.message-indicator {
+			color: @clrTextFaded;
 		}
 
 		//---------------------------------
@@ -48,116 +141,360 @@
 		.message-header-right {
 			.open-tracking-message-status.opened {
 				img.content-mask {
-					background-color: @colorAccent;
+					background-color: @clrAccent;
 				}
 			}
 		}
 	}
 
-	//---------------------------------
-	// Collapsed message
-	//---------------------------------
-	&.collapsed {
-		.message-item-white-wrap {
-			background-color: @colorBodyBgDarker;
-		}
-	}
-}
-
-//------------------------------------------------------------
-// Message subject area
-//------------------------------------------------------------
-#message-list .message-subject-wrap {
-	padding-left: 2px;
-
-	//---------------------------------
-	// Message subject
-	//---------------------------------
-	.message-subject {
-		font-size: 18px;
-	}
-
-	//---------------------------------
-	// Subject area buttons
-	//---------------------------------
-	.message-icons-wrap {
-		cursor: default;
-	}
-
-	.message-icons-wrap div {
-		background: none;
-		border: 1px solid transparent;
-	 	border-radius: 3px;
-		height: 26px;
-		padding: 0px 13px;
-
-		img.content-mask {
-			margin-top: -6px;
-		}
+	.header-toggle-control img {
+		background: @clrTextFaded;
 
 		&:hover {
-			border-color: @colorBtnBorderLight;
-			background-color: @colorBtnBgLight;
-		}
-
-		&:active {
-			border-color: @colorBtnBorderActiveLight;
-			background-color: @colorBtnBgActiveLight;
-
-			img.content-mask {
-				background-color: @colorBtnTextActive;
-			}
+			background: @clrText;
 		}
 	}
 }
 
 //------------------------------------------------------------
-// Reply/forward buttons
+// Message header buttons (reply/forward)
 //------------------------------------------------------------
 #message-list .message-header .message-actions-wrap {
 	.button-dropdown.bordered {
-		.primary-item {
+		.primary-item,
+		.secondary-picker {
 			box-shadow: none;
-			background: @colorBodyBg;
-			border: 1px solid transparent;
+			background: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+
+			img.content-mask {
+				background-color: @clrButtonText;
+			}
+		}
+
+		.primary-item {
 			border-radius: 3px 0 0 3px;
 		}
 
 		.secondary-picker {
-			box-shadow: none;
-			background: @colorBodyBg;
-			border: 1px solid transparent;
 			border-left-width: 0;
 			border-radius: 0 3px 3px 0;
 		}
 
 		&:hover {
-			.primary-item {
-				background: @colorBtnBgLight;
-				border-color: @colorBtnBorderLight;
-			}
-
+			.primary-item,
 			.secondary-picker {
-				background: @colorBtnBgLight;
-				border-color: @colorBtnBorderLight;
+				background: @clrButtonBgHover;
+				border-color: @clrButtonBorderHover;
 			}
 		}
 
-		.primary-item:active {
-			background: @colorAccent;
-			border-color: @colorAccent;
-
-			img.content-mask {
-				background-color: @colorBtnTextActive;
-			}
-		}
-
+		.primary-item:active,
 		.secondary-picker:active {
-			background: @colorAccent;
-			border-color: @colorAccent;
+			background: @clrButtonBgActive;
+			border-color: @clrButtonBorderActive;
 
 			img.content-mask {
-				background-color: @colorBtnTextActive;
+				background-color: @clrButtonTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message footer
+//------------------------------------------------------------
+#message-list  .footer-reply-area-wrap {
+	box-shadow: none;
+	background: @clrBodyBg;
+	border: 1px solid @clrWindowBorder;
+	border-radius: 0 0 3px 3px;
+
+	//---------------------------------
+	// Reply icon/text
+	//---------------------------------
+	.footer-reply-area {
+		width: max-content;
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder;
+		border-radius: 3px;
+		margin-bottom: 9px;
+		margin-top: 9px;
+		color: @clrButtonText;
+		font-size: 14px;
+		height: 2.1em;
+		line-height: 1.9em;
+		padding: 0 0.8em;
+
+		img.content-mask {
+			background-color: @clrButtonText;
+		}
+
+		&:hover {
+			background-color: @clrButtonBgHover;
+			border-color: @clrButtonBorderHover;
+		}
+
+		&:active {
+			background-color: @clrButtonBgActive;
+			border-color: @clrButtonBorderActive;
+			color: @clrButtonTextActive;
+
+			img.content-mask {
+				background-color: @clrButtonTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Collapsed message
+//------------------------------------------------------------
+#message-list .message-item-wrap.collapsed {
+	.message-item-white-wrap {
+		background-color: @clrBodyBg;
+	}
+
+	.message-item-area {
+		.collapsed-from {
+			color: @clrTextFadedLess;
+		}
+
+		.collapsed-timestamp {
+			color: @clrTextFaded;
+		}
+
+		.collapsed-snippet {
+			color: @clrTextFaded;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Minified messages
+//------------------------------------------------------------
+#message-list .minified-bundle {
+	.msg-line {
+ 		box-shadow: none;
+		background-color: @clrBodyBg;
+		border: 1px solid @clrWindowBorder;
+		border-radius: 3px 3px 0 0;
+	}
+
+	.num-messages {
+		background-color: @clrBodyBg;
+		border: 1px solid @clrWindowBorder;
+		color: @clrButtonText;
+
+		&:hover {
+			background-color: @clrButtonBgHover;
+			border-color: @clrButtonBorderHover;
+		}
+
+		&:active {
+			background-color: @clrButtonBgActive;
+			border-color: @clrButtonBorderActive;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Selected messages stack
+//------------------------------------------------------------
+.selected-items-stack .selected-items-stack-content {
+	.stack .card svg {
+		stroke: @clrWindowBorder;
+		fill: @clrBodyBg;
+	}
+
+	.count-info .count,
+	.count-info .count-message {
+		color: @clrListTextFadedLess;
+	}
+}
+
+//------------------------------------------------------------
+// Unsubscribe link
+//------------------------------------------------------------
+.unsubscribe-action {
+	color: @clrLink;
+
+	&:hover {
+		cursor: pointer;
+		color: @clrLink;
+	}
+}
+
+//------------------------------------------------------------
+// Quoted text button
+//------------------------------------------------------------
+.quoted-text-control {
+	background: @clrButtonBg;
+	border: 1px solid @clrButtonBorder;
+	color: @clrButtonText;
+	height: 1.7em;
+	font-size: 1em;
+	padding: 0.3em 0.7em;
+	margin: 16px 0 3px;
+
+	&:hover {
+		background: @clrButtonBgHover;
+		border: 1px solid @clrButtonBorderHover;
+		color: @clrButtonText;
+		cursor: default;
+	}
+
+	&:active {
+		background: @clrButtonBgActive;
+		border: 1px solid @clrButtonBorderActive;
+		color: @clrButtonTextActive;
+	}
+}
+
+//------------------------------------------------------------
+// Message attachments
+//------------------------------------------------------------
+.nylas-attachment-item,
+.nylas-attachment-item.file-attachment-item:focus {
+	//---------------------------------
+	// File attachment box
+	//---------------------------------
+	.file-thumbnail-preview {
+		border: 1px solid @clrWindowBorder !important;
+		border-radius: 3px !important;
+	}
+
+	.inner {
+		background: transparent;
+		color: @clrText;
+	}
+
+	.file-info-wrap {
+		border: none !important;
+
+		.file-size {
+			color: @clrTextFaded;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.file-action-icon {
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder !important;
+		border-radius: 3px !important;
+		color: @clrButtonText;
+		font-size: 14px;
+		height: 2.1em;
+		line-height: 1.9em;
+		padding: 0 0.8em;
+		margin-left: 8px;
+
+		img.content-mask {
+			background-color: @clrButtonText;
+		}
+
+		&:hover {
+			background-color: @clrButtonBgHover;
+			border: 1px solid @clrButtonBorderHover;
+		}
+
+		&:active {
+			background-color: @clrButtonBgActive;
+			border: 1px solid @clrButtonBorderActive;
+			color: @clrButtonTextActive;
+
+			img.content-mask {
+				background-color: @clrButtonTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Image attachment
+//------------------------------------------------------------
+.nylas-attachment-item.image-attachment-item {
+	&:hover {
+		border: none;
+	}
+
+	//---------------------------------
+	// Download button (covers whole image)
+	//---------------------------------
+	.file-action-icon {
+		right: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		cursor: pointer;
+
+		img {
+			display: none;
+		}
+	}
+
+	//---------------------------------
+	// Image name overlay
+	//---------------------------------
+	.file-preview .file-name-container {
+		background: fade(@clrBodyBg, 70%);
+
+		.file-name {
+			color: @clrText;
+			font-weight: 700;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Attachment download controls
+//------------------------------------------------------------
+.download-all {
+	.attachment-number {
+		font-size: 14px;
+		color: @clrTextFadedLess;
+
+		img.content-mask {
+			background-color: @clrText;
+		}
+	}
+
+	.separator {
+		display: none;
+	}
+
+	.download-all-action {
+		background: @clrButtonBg;
+		border: 1px solid @clrButtonBorder;
+		border-radius: 3px;
+		color: @clrButtonText;
+		font-size: 14px;
+		height: 2.1em;
+		line-height: 1.9em;
+		padding: 0 0.8em;
+		margin-left: 12px;
+
+		img.content-mask {
+			background-color: @clrButtonText;
+		}
+
+		&:hover {
+			background-color: @clrButtonBgHover;
+			border-color: @clrButtonBorderHover;
+			color: @clrButtonText;
+		}
+
+		&:active {
+			background-color: @clrButtonBgActive;
+			border-color: @clrButtonBorderActive;
+			color: @clrButtonTextActive;
+
+			img.content-mask {
+				background-color: @clrButtonTextActive;
 			}
 		}
 	}
@@ -168,174 +505,13 @@
 //------------------------------------------------------------
 .mail-label.removable {
 	box-shadow: none !important;
-	background: @colorAccent !important;
-	color: @colorBtnTextActive !important;
+	background: @clrAccent !important;
+	color: @clrTextActive !important;
 	margin-top: 3px;
+	font-weight: 500;
 
 	img.content-mask {
-		background-color: @colorBtnTextActive !important;
-
-		&:hover {
-			cursor: pointer;
-		}
-	}
-}
-
-//------------------------------------------------------------
-// Message footer
-//------------------------------------------------------------
-#message-list  .footer-reply-area-wrap {
-	box-shadow: none;
-	background: @colorBodyBg;
-	border: 1px solid @colorBorder;
-	border-radius: 0 0 3px 3px;
-
-	//---------------------------------
-	// Reply icon/text
-	//---------------------------------
-	.footer-reply-area {
-		width: max-content;
-		margin: 9px 12px;
-		font-size: 14px;
-		color: @colorAccent;
-
-		img.content-mask {
-			background-color: @colorAccent;
-		}
-
-		&:hover {
-			cursor: pointer;
-		}
-	}
-}
-
-//------------------------------------------------------------
-// Minified messages
-//------------------------------------------------------------
-#message-list .minified-bundle {
-	.msg-line {
-		box-shadow: none;
-		border: 1px solid @colorBorder;
-		border-radius: 3px 3px 0 0;
-		background-color: @colorBodyBgDarker;
-	}
-
-	.num-messages {
-		border: 1px solid @colorBorder;
-		background-color: @colorBodyBg;
-		color: @colorAccent;
-
-		&:hover {
-			cursor: pointer;
-		}
-	}
-}
-
-//------------------------------------------------------------
-// Message attachments
-//------------------------------------------------------------
-.nylas-attachment-item {
-	//---------------------------------
-	// File attachment box
-	//---------------------------------
-	&.file-attachment-item {
-		.file-thumbnail-preview {
-			border: 1px solid @colorBorder;
-			border-radius: 3px 3px 0 0;
-		}
-
-		.file-info-wrap {
-			background-color: darken(@colorWindowBg, 3%);
-			border: 1px solid @colorBorder;
-			border-radius: 3px 0 0 3px;
-			box-shadow: none;
-		}
-
-		.file-action-icon {
-			background-color: darken(@colorWindowBg, 3%);
-			border: 1px solid @colorBorder;
-			border-left-width: 0px;
-			border-radius: 0 3px 3px 0;
-
-			img.content-mask {
-				background-color: @colorText;
-			}
-
-			&:not(:last-child) {
-				border-radius: 0;
-			}
-
-			&:hover {
-				background-color: darken(@colorWindowBg, 6%);
-			}
-
-			&:active {
-				background-color: @colorAccent;
-
-				img.content-mask {
-					background-color: @colorBtnTextActive;
-				}
-			}
-		}
-
-		&:focus {
-			.file-thumbnail-preview {
-				border-color: @colorAccent;
-			}
-
-			.file-info-wrap {
-				border-color: @colorAccent;
-				border-right-color: @colorBorder;
-			}
-
-			.file-action-icon {
-				border-color: @colorAccent;
-
-				&:not(:last-child) {
-					border-right-color: @colorBorder;
-				}
-			}
-		}
-	}
-	//---------------------------------
-	// Image attachment download button
-	//---------------------------------
-	&.image-attachment-item {
-		.file-action-icon {
-			right: 0px;
-			top: 0px;
-			width: 100%;
-			height: 100%;
-			background: transparent;
-			cursor: pointer;
-
-			img {
-				display: none;
-			}
-		}
-	}
-}
-
-//------------------------------------------------------------
-// Other attachment controls
-//------------------------------------------------------------
-#message-list .download-all {
-	.attachment-number {
-		font-size: 14px;
-	}
-
-	.separator {
-		display: none;
-	}
-
-	.download-all-action {
-		padding-left: 14px;
-		font-size: 14px;
-		color: @colorAccent;
-
-		img.content-mask {
-			background-color: @colorAccent;
-		}
+		background-color: @clrTextActive !important;
 
 		&:hover {
 			cursor: pointer;
@@ -348,13 +524,143 @@
 //------------------------------------------------------------
 #message-list .show-hidden-messages {
 	border: none;
-	border-left: 3px solid @colorAccent;
+	border-left: 3px solid @clrAccent;
 	border-radius: 0px;
-	background-color: @colorWarningBar;
+	background-color: @clrWarningBar;
+	color: @clrTextFadedLess;
+	margin-bottom: 16px;
 
 	a {
-		color: @colorAccent;
+		color: @clrAccent;
 		cursor: pointer;
+	}
+}
+
+.autoload-images-header {
+	border: none;
+	border-left: 3px solid @clrWarningYellow;
+	border-radius: 0px;
+	background-color: @clrWarningBar;
+	color: @clrTextFadedLess;
+	margin-bottom: 16px;
+
+	.option {
+		color: @clrWarningYellow;
+		cursor: pointer;
+
+		&:hover {
+			color: @clrWarningYellow;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Event header
+//------------------------------------------------------------
+.event-wrapper {
+	font-size: 14px;
+	border: 1px solid @clrTextFadedMore;
+
+	.event-header {
+		border-bottom: 1px solid @clrTextFadedMore;
+
+		.event-title-text {
+			color: @clrTextFaded;
+		}
+		.event-title {
+			color: @clrTextFadedLess;
+		}
+
+		.event-download {
+			background-color: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+			padding: 0 8px;
+
+			img.content-mask {
+				background: @clrButtonText;
+			}
+
+			&:hover {
+				background-color: @clrButtonBgHover;
+				border-color: @clrButtonBorderHover;
+			}
+
+			&:active {
+				background-color: @clrButtonBgActive;
+				border-color: @clrButtonBorderActive;
+
+				img.content-mask {
+					background: @clrButtonTextActive;
+				}
+			}
+		}
+	}
+
+	.event-body {
+		color: @clrText;
+
+		.event-date .event-day {
+			font-size: 14px;
+			color: @clrTextFadedLess;
+		}
+
+		.event-location {
+			color: @clrTextFadedLess;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Translation header
+//------------------------------------------------------------
+.translate-message-header {
+	border: none;
+	border-left: 3px solid @clrAccent;
+	border-radius: 0px;
+	background-color: @clrTranslateBar;
+	color: @clrTextFadedLess;
+
+	.message {
+		border: none;
+
+		.message-centered .note {
+			opacity: 1;
+			color: @clrTextFaded;
+		}
+	}
+
+	.actions {
+		.action {
+			background: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+			border-radius: 3px;
+			color: @clrButtonText;
+			margin: 3px;
+
+			&:last-child {
+				border-bottom: 1px solid @clrButtonBorder;
+				margin-top: 0;
+			}
+
+			&.button-dropdown .only-item img.content-mask {
+				background-color: @clrButtonText;
+			}
+
+			&:hover {
+				background: @clrButtonBgHover;
+				border: 1px solid @clrButtonBorderHover;
+			}
+
+			&:active {
+				background: @clrButtonBgActive;
+				border: 1px solid @clrButtonBorderActive;
+				color: @clrButtonTextActive;
+
+				&.button-dropdown .only-item img.content-mask {
+					background-color: @clrButtonTextActive;
+				}
+			}
+		}
 	}
 }
 
@@ -363,16 +669,5 @@
 //------------------------------------------------------------
 #message-list .scrollbar-track,
 .composer-full-window .scrollbar-track {
-	background: @colorWindowBg;
-	border-left: none;
-	width: 10px;
-
-	.scrollbar-handle {
-		background: fade(darken(@colorBodyBg, 45%), 40%);
-		border: none;
-	}
-}
-
-.composer-full-window .scrollbar-track {
-	background: @colorBodyBg;
+	.arc-scrollbar();
 }

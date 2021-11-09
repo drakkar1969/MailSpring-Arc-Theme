@@ -1,20 +1,17 @@
 @import "arc-variables";
 
 //------------------------------------------------------------
-// Sidebar
+// Sidebar background
 //------------------------------------------------------------
-.column-RootSidebar {
-	background-color: @colorSidebarBg;
-	border-right: 1px solid @colorSidebarBorder;
-	padding-top: 12px;
+.account-sidebar {
+	background-color: @clrSidebarBg;
+	border-right: 1px solid @clrSidebarBorder;
+}
 
+.column-RootSidebar {
 	.flexbox-handle-horizontal div {
 		box-shadow: none;
 	}
-}
-
-.account-sidebar {
-	background-color: @colorSidebarBg;
 }
 
 //------------------------------------------------------------
@@ -25,33 +22,26 @@
 		font-size: 13px;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		color: @colorSidebarTextFaded;
-		margin-bottom: 7px;
-		padding-top: 0px;
+		color: @clrSidebarTextFaded;
+		margin-bottom: 6px;
+		padding-top: 12px;
 
 		.add-item-button {
-			margin-top: -2px;
-
 			img.content-mask {
-				background-color: @colorSidebarTextFaded;
-				margin-top: 4px;
+				background-color: @clrSidebarTextFaded;
+				margin-top: 3px;
 			}
 
 			&:hover {
 				img.content-mask {
-					background-color: @colorSidebarText;
-					margin-top: 4px;
+					background-color: @clrSidebarText;
 				}
 			}
 		}
 
 		.collapse-button:hover {
-			color: @colorSidebarText;
+			color: @clrSidebarText;
 		}
-	}
-
-	&:not(:first-of-type) .heading {
-		margin-top: 16px;
 	}
 }
 
@@ -59,25 +49,20 @@
 // Account switcher (dropdown arrow)
 //------------------------------------------------------------
 .account-switcher {
-	height: 16px;
-	width: 16px;
-	top: 0px;
-	padding: 6px 3px;
-
 	img.content-dark {
-		zoom: 1 !important;
 		background-image: none;
-		background-color: @colorSidebarTextFaded;
+		background-color: @clrSidebarText;
 		-webkit-mask-repeat: no-repeat;
-		-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path fill="#FFF" d="M0 0h1l4 4 4-4h1v1L5 6 0 1z"/></svg>');
-		transform: none;
+		-webkit-mask-image: url(../static/images/sidebar/account-switcher-dropdown@2x.png);
+		-webkit-mask-position: 0px 0px;
+		margin-top: 8px;
 	}
 
 	&:hover {
 		cursor: pointer;
 
 		img.content-dark {
-			background-color: @colorSidebarText;
+			background-color: @clrSidebarTextActive;
 		}
 	}
 }
@@ -87,33 +72,33 @@
 //------------------------------------------------------------
 .nylas-outline-view {
 	//---------------------------------
-	// Items
+	// Item
 	//---------------------------------
 	.item {
 		font-size: 14px;
-		font-weight: 400;
-		color: @colorSidebarText;
+		font-weight: 500;
+		color: @clrSidebarText;
 
 		.icon {
 			margin-left: 8px;
 		}
 
 		img.content-mask {
-			background-color: @colorSidebarText;
+			background-color: @clrSidebarText;
 			margin-top: -1px;
 			margin-bottom: 1px;
 		}
 
 		&:hover {
-			background-color: @colorSidebarItemHover;
+			background-color: @clrSidebarHover;
 		}
 
 		&.selected {
-			background-color: @colorAccent;
-			color: @colorSidebarTextActive;
+			background-color: @clrAccent;
+			color: @clrSidebarTextActive;
 
 			img.content-mask {
-				background-color: @colorSidebarTextActive;
+				background-color: @clrSidebarTextActive;
 			}
 		}
 	}
@@ -125,11 +110,11 @@
 		background: transparent;
 
 		.item {
-			background-color: @colorAccent;
-			color: @colorSidebarTextActive;
+			background-color: @clrAccent;
+			color: @clrSidebarTextActive;
 
 			img.content-mask {
-				background-color: @colorSidebarTextActive;
+				background-color: @clrSidebarTextActive;
 			}
 		}
 	}
@@ -139,26 +124,16 @@
 // Item count badges
 //------------------------------------------------------------
 .nylas-outline-view .item {
-	.item-count-box {
+	.item-count-box, .item-count-box.alt-count {
 		box-shadow: none;
-		background-color: @colorAccent;
-		color: @colorSidebarTextActive;
-
-		&.alt-count {
-			background-color: @colorAccent;
-			color: @colorSidebarTextActive;
-		}
+		background-color: @clrAccent;
+		color: @clrSidebarTextActive;
 	}
 
 	&.selected {
-		.item-count-box {
-			background-color: @colorSidebarTextActive;
-			color: @colorAccent;
-
-			&.alt-count {
-				background-color: @colorSidebarTextActive;
-				color: @colorAccent;
-			}
+		.item-count-box, .item-count-box.alt-count {
+			background-color: @clrSidebarTextActive;
+			color: @clrAccent;
 		}
 	}
 }
@@ -167,35 +142,35 @@
 // Folder expand/collapse arrows
 //------------------------------------------------------------
 .disclosure-triangle.visible div {
-	border-left-color: @colorSidebarTextFaded;
+	border-left-color: @clrSidebarTextFaded;
 }
 
 .disclosure-triangle.visible:hover div {
-	border-left-color: @colorSidebarText;
+	border-left-color: @clrSidebarText;
 }
 
 //------------------------------------------------------------
 // Sidebar syncing box
 //------------------------------------------------------------
 .sidebar-activity {
-	background-color: darken(@colorSidebarBg, 5%);;
+	background-color: @clrSidebarBgActivity;
 	box-shadow: none;
 	font-weight: 500;
-  color: @colorSidebarTextLighter;
+  color: @clrSidebarTextActivity;
 
 	//---------------------------------
 	// Task count label
 	//---------------------------------
 	.item .count {
 		font-weight: 500;
-	  color: @colorSidebarTextLighter;
+		color: @clrSidebarTextActivity;
 	}
 
 	//---------------------------------
 	// Hide link
 	//---------------------------------
 	.inner a {
-		color: @colorAccent;
+		color: @clrAccent;
 		cursor: pointer;
 	}
 
@@ -204,7 +179,7 @@
 	//---------------------------------
 	.item h2 {
 		font-weight: 600;
-		color: @colorSidebarTextFaded;
+		color: @clrSidebarTextFaded;
 		margin: 6px 0px 12px;
 	}
 
@@ -212,8 +187,8 @@
 	// Syncing indicators (circles)
 	//---------------------------------
 	.item .sync-activity .account .folder-progress::before {
-		background-color: @colorAccent;
-		border-color: @colorAccent;
+		background-color: @clrAccent;
+		border-color: @clrAccent;
 	}
 
 	.item .sync-activity .account .folder-progress.busy::before {
@@ -225,7 +200,7 @@
 			border-color: transparent;
 		}
 		100% {
-			border-color: @colorAccent;
+			border-color: @clrAccent;
 		}
 	}
 
@@ -233,7 +208,7 @@
 	// Progress labels
 	//---------------------------------
 	.item .sync-activity .account .folder-progress .progress-label {
-		color: @colorSidebarTextFaded;
+		color: @clrSidebarTextFaded;
 	}
 }
 
@@ -241,12 +216,12 @@
 // Sidebar notifications (error/offline/update)
 //------------------------------------------------------------
 .notifications {
-	background-color: darken(@colorSidebarBg, 5%);
+	background-color: darken(@clrSidebarBg, 5%);
 	box-shadow: none;
 }
 
 .notification {
-	background: @colorAccent;
+	background: @clrAccent;
 	border-radius: 3px;
 	margin-top: 16px;
 
@@ -255,35 +230,35 @@
 
 		&:hover {
 			box-shadow: none !important;
-			background: lighten(@colorAccent, 10%);
+			background: lighten(@clrAccent, 10%);
 		}
 
 		&:active {
-			background: darken(@colorAccent, 10%);
+			background: darken(@clrAccent, 10%);
 		}
 	}
 
 	&.error {
-		background: @colorWarningRed;
+		background: @clrWarningRed;
 
 		.action:hover {
-			background: lighten(@colorWarningRed, 10%);
+			background: lighten(@clrWarningRed, 10%);
 		}
 
 		.action:active {
-			background: darken(@colorWarningRed, 10%);
+			background: darken(@clrWarningRed, 10%);
 		}
 	}
 
 	&.offline {
-		background: @colorWarningYellow;
+		background: @clrWarningYellow;
 
 		.action:hover {
-			background: lighten(@colorWarningYellow, 10%);
+			background: lighten(@clrWarningYellow, 10%);
 		}
 
 		.action:active {
-			background: darken(@colorWarningYellow, 10%);
+			background: darken(@clrWarningYellow, 10%);
 		}
 	}
 }
@@ -292,12 +267,5 @@
 // Scrollbar
 //------------------------------------------------------------
 .account-sidebar .scrollbar-track {
-	background: @colorSidebarBg;
-	border-left: none;
-	width: 10px;
-
-	.scrollbar-handle {
-		background: fade(darken(@colorSidebarBg, 45%), 40%);
-		border: none;
-	}
+	.arc-scrollbar-sidebar();
 }

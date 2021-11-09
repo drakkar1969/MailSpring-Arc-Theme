@@ -1,42 +1,131 @@
 @import "arc-variables";
 
 //------------------------------------------------------------
-// Thread list items
+// Thread list
 //------------------------------------------------------------
-.thread-list .list-item {
-	background-color: @colorListBg !important;
-	border-bottom: 1px solid @colorBorder !important;
+.column-ThreadList {
+	background: @clrListBg;
 
-	&:hover {
-		background-color: @colorListItemHover !important;
+	.flexbox-handle-horizontal div {
+		box-shadow: none;
 	}
 
-	&.focused,
-	&.selected {
-		background-color: @colorAccent !important;
-	}
+	.empty-state .perspective-empty-state .message {
+		color: @clrTextFaded;
 
-	&.unread {
-		.participants span,
-		.subject {
-			font-weight: bold;
-		}
-	}
+		.btn {
+			background-color: @clrButtonBg;
+			border: 1px solid @clrButtonBorder;
+			color: @clrButtonText;
+			font-size: 14px;
 
-	&.keyboard-cursor {
-		border-left-color: darken(@colorAccent, 15%);
-	}
+			&:hover {
+				background-color: @clrButtonBgHover;
+				border: 1px solid @clrButtonBorderHover;
+			}
 
-	body.is-blurred & {
-		&.focused,
-		&.selected {
-			.participants span,
-			.timestamp,
-			.subject,
-			.snippet-and-labels {
-				color: @colorListTextActive;
+			&:active {
+				background-color: @clrButtonBgActive;
+				border: 1px solid @clrButtonBorderActive;
+				color: @clrButtonTextActive;
 			}
 		}
+	}
+
+	.empty-state .perspective-empty-state img {
+		background-color: @clrTextFadedLess;
+	}
+}
+
+.list-container .list-rows {
+	background: @clrListBg;
+}
+
+//------------------------------------------------------------
+// Thread list items
+//------------------------------------------------------------
+.thread-list .unread:not(.focused):not(.selected) .snippet {
+	color: @clrListTextFadedLess;
+}
+
+.thread-list {
+	.list-item {
+		background-color: @clrListBg !important;
+		border-bottom: 1px solid @clrWindowBorder !important;
+		color: @clrListText;
+
+		&:hover {
+			background-color: @clrListHover !important;
+		}
+
+		&.focused,
+		&.selected {
+			background-color: @clrAccent !important;
+		}
+
+		&.unread {
+			.participants span,
+			.subject {
+				font-weight: bold;
+			}
+		}
+
+		&.keyboard-cursor {
+			border-left-color: @clrAccent;
+		}
+
+		body.is-blurred & {
+			&.focused,
+			&.selected {
+				.participants span,
+				.timestamp,
+				.subject,
+				.snippet-and-labels {
+					color: @clrListTextActive;
+				}
+			}
+		}
+	}
+
+	&.handler-split .list-item.selected.unread {
+		.participants span,
+		.subject {
+			font-weight: bold !important;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Thread list (single pane view)
+//------------------------------------------------------------
+.list-tabular .list-tabular-item {
+	.checkmark {
+		padding: 10px 11px 12px;
+
+		.inner {
+			.arc-control(url(mailspring://Arc/styles/images/controls/checkbox-unchecked.png), 16px);
+		}
+	}
+
+	&.selected {
+		color: @clrListTextActive;
+
+		.checkmark .inner {
+			.arc-control(url(mailspring://Arc/styles/images/controls/checkbox-checked-selected.png), 16px);
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Syncing message
+//------------------------------------------------------------
+.syncing-list-state {
+	color: @clrListTextFaded;
+
+	a {
+		color: @clrAccent;
+		font-size: 0.9em;
+		cursor: pointer;
 	}
 }
 
@@ -51,12 +140,5 @@
 // Scrollbar
 //------------------------------------------------------------
 .thread-list .scrollbar-track {
-	background: @colorListBg;
-	border-left: none;
-	width: 10px;
-
-	.scrollbar-handle {
-		background: fade(darken(@colorListBg, 45%), 40%);
-		border: none;
-	}
+	.arc-scrollbar();
 }

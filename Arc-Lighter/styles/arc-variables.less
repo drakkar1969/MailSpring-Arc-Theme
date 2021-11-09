@@ -1,55 +1,252 @@
 //------------------------------------------------------------
 // Color variables
 //------------------------------------------------------------
-@colorAccent: #5294e2;
 
-@colorWindowBg: #f6f7f8;
-@colorBodyBg: #ffffff;
-@colorBodyBgDarker: darken(@colorBodyBg, 2%);
-@colorBorder: #d4d5db;
-@colorText: #231f20;
-@colorTextFaded: fade(@colorText, 50%);
-@colorWarningBar: darken(@colorWindowBg, 5%);
+//---------------------------------
+// Accent
+//---------------------------------
+@clrAccent: #5294e2;
 
-@colorSidebarBg: #f5f6f7;
-@colorSidebarBorder: @colorBorder;
-@colorSidebarItemHover: rgba(92, 97, 108, 0.15);
-@colorSidebarText: @colorText;
-@colorSidebarTextFaded: @colorTextFaded;
-@colorSidebarTextLighter: lighten(@colorSidebarText, 5%);
-@colorSidebarTextActive: #ffffff;
+@clrWarningRed: #f04a50;
+@clrWarningYellow: #f27835;
 
-@colorListBg: #ffffff;
-@colorListItemHover: tint(@colorSidebarBg, 90%);
-@colorListText: @colorText;
-@colorListTextActive: #ffffff;
-@colorListTextActiveFaded: fade(@colorListTextActive, 50%);
+@clrLink: #2679db;
+@clrLinkVisited: #1e61b0;
 
-@colorBtnBgLight: #ffffff;
-@colorBtnBorderLight: #cfd6e6;
-@colorBtnBgActiveLight: @colorAccent;
-@colorBtnBorderActiveLight: @colorAccent;
+//---------------------------------
+// Sidebar
+//---------------------------------
+@clrSidebarBg: #353945;
+@clrSidebarBorder: @clrSidebarBg;
+@clrSidebarHover: rgba(186, 195, 207, 0.15);
+@clrSidebarText: #bac3cf;
+@clrSidebarTextFaded: fade(@clrSidebarText, 50%);
+@clrSidebarTextActive: #ffffff;
+@clrSidebarBgActivity: darken(@clrSidebarBg, 3%);
+@clrSidebarTextActivity: @clrSidebarText;
 
-@colorBtnBgDark: #505666;
-@colorBtnBorderDark: #2b2e39;
-@colorBtnBgActiveDark: @colorAccent;
-@colorBtnBorderActiveDark: #2b2e39;
+@clrSidebarBtnBgHover: rgba(95, 105, 127, 0.37);
+@clrSidebarBtnBorderHover: rgba(21, 23, 28, 0.37);
+@clrSidebarBtnBgActive: @clrAccent;
+@clrSidebarBtnBorderActive: @clrAccent;
+@clrSidebarBtnText:rgba(207, 218, 231, 0.8);
+@clrSidebarBtnTextActive: #ffffff;
 
-@colorBtnDefaultBg: #4dadd4;
-@colorBtnDefaultBgHover: #76c0de;
-@colorBtnDefaultBgActive: #2e96c0;
-@colorBtnDefaultText: #ffffff;
+//---------------------------------
+// Window
+//---------------------------------
+@clrWindowBg: #f5f6f7;
+@clrWindowBorder: #d4d5db;
+@clrText: #231f20;
+@clrTextFaded: fade(@clrText, 50%);
+@clrTextFadedLess: fade(@clrText, 80%);
+@clrTextFadedMore: fade(@clrText, 15%);
+@clrTextActive: #ffffff;
 
-@colorBtnTextActive: #ffffff;
+@clrBodyBg: #ffffff;
+@clrWarningBar: darken(@clrBodyBg, 5%);
+@clrTranslateBar: darken(@clrBodyBg, 3%);
 
-@colorPrefsWindowBg: @colorWindowBg;
-@colorPrefsBodyBg: #ffffff;
-@colorPrefsTabHover: fade(@colorPrefsBodyBg, 60%);
-@colorPrefsTabActive: @colorPrefsBodyBg;
+@clrToolBtnBgHover: rgba(251, 251, 252, 0.9);
+@clrToolBtnBorderHover: #d9dbe0;
+@clrToolBtnBgActive: @clrAccent;
+@clrToolBtnBorderActive: @clrAccent;
+@clrToolBtnText:rgba(82, 93, 118, 0.8);
+@clrToolBtnTextActive: #ffffff;
+@clrToolBtnTextDisabled: rgba(82, 93, 118, 0.35);
 
-@colorCheckboxBorder: #a6adbc;
+//---------------------------------
+// Lists / Threadlist
+//---------------------------------
+@clrListBg: #ffffff;
+@clrListHover: rgba(0, 0, 0, 0.05);
+@clrListText: @clrText;
+@clrListTextFaded: @clrTextFaded;
+@clrListTextFadedLess: @clrTextFadedLess;
+@clrListTextFadedMore: @clrTextFadedMore;
+@clrListTextActive: #ffffff;
+@clrListTextActiveFaded: fade(@clrListTextActive, 50%);
 
-// @colorWarningRed: #ed304b;
-// @colorWarningYellow: #ed8830;
-@colorWarningRed: #f04a50;
-@colorWarningYellow: #f27835;
+//---------------------------------
+// Preferences
+//---------------------------------
+@clrPrefsWindowBg: darken(@clrWindowBg, 2%);
+@clrPrefsBodyBg: @clrWindowBg;
+@clrPrefsTabHover: lighten(@clrPrefsWindowBg, 5%);
+@clrPrefsTabActive: @clrPrefsBodyBg;
+@clrPrefsText: @clrText;
+@clrPrefsTextFaded: @clrTextFaded;
+@clrPrefsTextFadedLess: @clrTextFadedLess;
+@clrPrefsTextFadedMore: @clrTextFadedMore;
+@clrPrefsTextActive: #ffffff;
+@clrPrefsWarningBar: darken(@clrPrefsBodyBg, 5%);
+
+//---------------------------------
+// Activity dashboard
+//---------------------------------
+@clrDashboardBg: @clrListBg;
+
+//---------------------------------
+// Controls
+//---------------------------------
+@clrInputBg: #ffffff;
+@clrInputBorder: #cfd6e6;
+@clrInputText: #231f20;
+@clrInputTextPlaceholder: fade(#231f20, 30%);
+
+@clrButtonBg: #fbfbfc;
+@clrButtonBorder: #cfd6e6;
+@clrButtonBgHover: #ffffff;
+@clrButtonBorderHover: #cfd6e6;
+@clrButtonBgActive: @clrAccent;
+@clrButtonBorderActive: @clrAccent;
+@clrButtonBgDisabled: fade(#fbfbfc, 55%);
+@clrButtonBorderDisabled: fade(#cfd6e6, 55%);
+@clrButtonText: #231f20;
+@clrButtonTextActive: #ffffff;
+@clrButtonTextDisabled: fade(#231f20, 45%);
+
+@clrButtonDefaultBg: #4dadd4;
+@clrButtonDefaultBorder: #4dadd4;
+@clrButtonDefaultBgHover: #76c0de;
+@clrButtonDefaultBorderHover: #76c0de;
+@clrButtonDefaultBgActive: #2e96c0;
+@clrButtonDefaultBorderActive: #2e96c0;
+@clrButtonDefaultText: #ffffff;
+
+@clrButtonInfoBg: fade(@clrListTextActive, 0%);
+@clrButtonInfoBorder: fade(@clrListTextActive, 50%);
+@clrButtonInfoBgHover: fade(@clrListTextActive, 20%);
+@clrButtonInfoBorderHover: fade(@clrListTextActive, 80%);
+@clrButtonInfoBgActive: @clrTextActive;
+@clrButtonInfoBorderActive: @clrTextActive;
+@clrButtonInfoText: @clrTextActive;
+@clrButtonInfoTextActive: @clrAccent;
+
+@clrSliderTrackBg: #cfd6e6;
+@clrSliderButtonBg: #fbfbfc;
+@clrSliderButtonBorder: rgba(123, 142, 186, 0.5);
+@clrSliderButtonBgHover: #ffffff;
+@clrSliderButtonBorderHover: rgba(123, 142, 186, 0.5);
+@clrSliderButtonBgActive: @clrAccent;
+@clrSliderButtonBorderActive: @clrAccent;
+
+@clrPopoverBg: #ffffff;
+@clrPopoverBorder: #dcdfe3;
+@clrPopoverBgHover: @clrAccent;
+@clrPopoverText: #231f20;
+@clrPopoverTextFaded: fade(@clrPopoverText, 60%);
+@clrPopoverTextActive: #ffffff;
+@clrPopoverTextActiveFaded: fade(@clrPopoverTextActive, 60%);
+
+@clrToastBg: #353945;
+@clrToastBorder: #1f2128;
+@clrToastText: #bac3cf;
+@clrToastTextActive: #ffffff;
+@clrToastButtonBg: #444a58;
+@clrToastButtonBorder: #2b2e39;
+@clrToastButtonBgHover: #505666;
+@clrToastButtonBorderHover: #2b2e39;
+@clrToastButtonBgActive: @clrAccent;
+@clrToastButtonBorderActive: #2b2e39;
+
+//------------------------------------------------------------
+// LESS mixins
+//------------------------------------------------------------
+.arc-control(@image, @size) {
+	width: @size;
+	height: @size;
+	background-image: @image;
+	background-color: transparent;
+	background-size: @size @size;
+	border: none;
+	border-radius: 0;
+}
+
+.arc-scrollbar() {
+	@trackBg: #fcfcfc;
+	@trackBorder: #dcdfe3;
+	@sliderOverlay: #8a8e96;
+	@sliderNormal: #b8babf;
+	@sliderHover: #c7c9cd;
+	@sliderActive: #5294e2;
+
+	background: transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	width: 12px;
+	padding: 3px 0px 3px 6px;
+
+	.scrollbar-handle {
+		background: @sliderOverlay;
+		border: none;
+		border-radius: 3px;
+		opacity: 0.4;
+	}
+
+	&:hover,
+	&.dragging {
+		background: @trackBg;
+		border-left: 1px solid @trackBorder;
+		padding-left: 3px;
+		padding-right: 2px;
+
+		.scrollbar-handle { opacity: 0.99; }
+	}
+
+	&:hover:not(.dragging) {
+		.scrollbar-handle {
+			background: @sliderNormal;
+
+			&:hover { background: @sliderHover; }
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle { background: @sliderActive; }
+	}
+}
+
+.arc-scrollbar-sidebar() {
+	@trackBg: rgba(42, 45, 55, 0.95);
+	@trackBorder: rgba(42, 45, 55, 0.95);
+	@sliderOverlay: #e7eaee;
+	@sliderNormal: rgba(231, 234, 238, 0.7);
+	@sliderHover: #f6f7f9;
+	@sliderActive: #5294e2;
+
+	background: transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	width: 12px;
+	padding: 3px 0px 3px 6px;
+
+	.scrollbar-handle {
+		background: @sliderOverlay;
+		border: none;
+		border-radius: 3px;
+		opacity: 0.4;
+	}
+
+	&:hover,
+	&.dragging {
+		background: @trackBg;
+		border-left: 1px solid @trackBorder;
+		padding-left: 3px;
+		padding-right: 2px;
+
+		.scrollbar-handle { opacity: 0.99; }
+	}
+
+	&:hover:not(.dragging) {
+		.scrollbar-handle {
+			background: @sliderNormal;
+
+			&:hover { background: @sliderHover; }
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle { background: @sliderActive; }
+	}
+}

@@ -1,33 +1,61 @@
 @import "arc-variables";
 
+//------------------------------------------------------------
+// Message list toolbar
+//------------------------------------------------------------
+.toolbar-MessageList {
+	.message-toolbar-items {
+		margin-right: 6px;
+	}
+
+	.btn-toolbar.mode-toggle {
+		margin-left: 4.5px;
+	}
+}
+
 .toolbar-MessageList,
 .toolbar-MessageListSidebar {
 	height: 100%;
-	background: @colorWindowBg;
-	border-left: 1px solid @colorBorder;
+	background: @clrWindowBg;
+	border-left: 1px solid @clrWindowBorder;
 
 	//---------------------------------
 	// Toolbar buttons
 	//---------------------------------
-	.btn-toolbar {
+	.btn-toolbar,
+	.btn-icon {
 		background: none;
 		box-shadow: none;
 		border: 1px solid transparent !important;
 		border-radius: 3px !important;
 		height: 26px;
 
+		img.content-mask {
+			background-color: @clrToolBtnText;
+		}
+
 		&:hover {
-			border-color: @colorBtnBorderLight !important;
-			background-color: @colorBtnBgLight;
+			border-color: @clrToolBtnBorderHover !important;
+			background-color: @clrToolBtnBgHover;
 		}
 
 		&:active,
 		&.mode-toggle.mode-false {
-			border-color: @colorBtnBorderActiveLight !important;
-			background-color: @colorBtnBgActiveLight;
+			border-color: @clrToolBtnBorderActive !important;
+			background-color: @clrToolBtnBgActive;
 
 			img.content-mask {
-				background-color: @colorBtnTextActive;
+				background-color: @clrToolBtnTextActive;
+			}
+		}
+
+		&.disabled {
+			opacity: 1;
+			border-color: transparent !important;
+			background-color: transparent;
+
+			img.content-mask {
+				background-color: @clrToolBtnTextDisabled;
 			}
 		}
 
@@ -42,13 +70,25 @@
 			}
 
 			&:hover {
-				border-color: @colorBtnBorderLight;
-				background-color: @colorBtnBgLight;
+				border-color: @clrToolBtnBorderHover;
+				background-color: @clrToolBtnBgHover;
 			}
 		}
 
 		body.is-blurred &.mode-toggle.mode-false {
-			background-color: @colorBtnBgActiveLight;
+			background-color: @clrToolBtnBgActive;
+		}
+	}
+
+	.btn-icon {
+		margin-top: 5px;
+		padding: 0 13px;
+
+		img.content-mask {
+			-webkit-mask-position: -7px -15px;
+			-webkit-mask-size: 48px;
+			height: 32px;
+			width: 32px;
 		}
 	}
 }

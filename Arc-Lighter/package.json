@@ -1,9 +1,9 @@
 {
-	"name": "Arc-Lighter",
-  "displayName": "Arc-Lighter",
+	"name": "Arc",
+  "displayName": "Arc",
   "theme": "ui",
   "version": "1.0.0",
-  "description": "Arc-Lighter theme for Mailspring",
+  "description": "Arc theme for Mailspring",
   "license": "MIT",
   "engines": {
     "mailspring": "*"
