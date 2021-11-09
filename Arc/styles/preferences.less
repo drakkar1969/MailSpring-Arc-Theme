@@ -261,41 +261,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 
 		.scrollbar-track {
-			background: @clrListBg;
-			border-left: 1px solid transparent;
-			border-right: none;
-			width: 7px;
-			padding: 1px;
-
-			.scrollbar-handle {
-				background: @clrScrollbarOverlay;
-				border: none;
-				border-radius: 4px;
-			}
-
-			&:hover,
-			&.dragging {
-				border-color: @clrWindowBorder;
-				width: 13px;
-				padding: 3px;
-
-			}
-
-			&:hover:not(.dragging) {
-				.scrollbar-handle {
-					background: @clrScrollbar;
-
-					&:hover {
-						background: @clrScrollbarHover;
-					}
-				}
-			}
-
-			&.dragging {
-				.scrollbar-handle {
-					background: @clrScrollbarActive;
-				}
-			}
+			.arc-scrollbar(@clrListBg, @clrWindowBorder);
 		}
 	}
 
@@ -758,39 +724,5 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Scrollbar
 //------------------------------------------------------------
 .column-Preferences .scrollbar-track {
-	background: @clrPrefsBodyBg;
-	border-left: 1px solid transparent;
-	border-right: none;
-	width: 7px;
-	padding: 1px;
-
-	.scrollbar-handle {
-		background: @clrScrollbarOverlay;
-		border: none;
-		border-radius: 4px;
-	}
-
-	&:hover,
-	&.dragging {
-		border-color: @clrWindowBorder;
-		width: 13px;
-		padding: 3px;
-
-	}
-
-	&:hover:not(.dragging) {
-		.scrollbar-handle {
-			background: @clrScrollbar;
-
-			&:hover {
-				background: @clrScrollbarHover;
-			}
-		}
-	}
-
-	&.dragging {
-		.scrollbar-handle {
-			background: @clrScrollbarActive;
-		}
-	}
+	.arc-scrollbar(@clrPrefsBodyBg, @clrWindowBorder);
 }

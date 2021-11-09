@@ -167,3 +167,41 @@
 	border: none;
 	border-radius: 0;
 }
+
+.arc-scrollbar(@scrollBg, @scrollBorder) {
+	background: @scrollBg;
+	border-left: 1px solid transparent;
+	border-right: none;
+	width: 7px;
+	padding: 1px;
+
+	.scrollbar-handle {
+		background: @clrScrollbarOverlay;
+		border: none;
+		border-radius: 4px;
+	}
+
+	&:hover,
+	&.dragging {
+		border-color: @scrollBorder;
+		width: 13px;
+		padding: 3px;
+
+	}
+
+	&:hover:not(.dragging) {
+		.scrollbar-handle {
+			background: @clrScrollbar;
+
+			&:hover {
+				background: @clrScrollbarHover;
+			}
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle {
+			background: @clrScrollbarActive;
+		}
+	}
+}
