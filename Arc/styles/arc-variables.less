@@ -171,22 +171,22 @@
 .arc-scrollbar(@scrollBg, @scrollBorder) {
 	background: @scrollBg;
 	border-left: 1px solid transparent;
-	border-right: none;
-	width: 7px;
-	padding: 1px;
+	border-right: 1px solid transparent;
+	width: 5px;
+	padding: 0px;
 
 	.scrollbar-handle {
 		background: @clrScrollbarOverlay;
 		border: none;
-		border-radius: 4px;
+		border-radius: 3px;
 	}
 
 	&:hover,
 	&.dragging {
-		border-color: @scrollBorder;
-		width: 13px;
-		padding: 3px;
-
+		border-left: 1px solid @scrollBorder;
+		width: 12px;
+		padding-left: 3px;
+		padding-right: 2px;
 	}
 
 	&:hover:not(.dragging) {
