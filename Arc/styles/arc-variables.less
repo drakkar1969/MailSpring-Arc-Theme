@@ -47,11 +47,6 @@
 @clrWarningBar: darken(@clrBodyBg, 5%);
 @clrTranslateBar: darken(@clrBodyBg, 3%);
 
-@clrScrollbar: #767b87;
-@clrScrollbarHover: #676b78;
-@clrScrollbarActive: @clrAccent;
-@clrScrollbarOverlay: fade(#a5abb5, 40%);
-
 @clrToolBtnBgHover: rgba(251, 251, 252, 0.9);
 @clrToolBtnBorderHover: #d9dbe0;
 @clrToolBtnBgActive: @clrAccent;
@@ -168,40 +163,53 @@
 	border-radius: 0;
 }
 
-.arc-scrollbar(@scrollBg, @scrollBorder) {
-	background: @scrollBg;
+.arc-scrollbar() {
+	@trackBg: #fcfcfc;
+	@trackBorder: #dcdfe3;
+	@sliderOverlay: #8a8e96;
+	@sliderNormal: #b8babf;
+	@sliderHover: #c7c9cd;
+	@sliderActive: #5294e2;
+
+	background: transparent;
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
 	width: 5px;
 	padding: 0px;
 
 	.scrollbar-handle {
-		background: @clrScrollbarOverlay;
+		background: @sliderOverlay;
 		border: none;
 		border-radius: 3px;
+		opacity: 0.4;
 	}
 
 	&:hover,
 	&.dragging {
-		border-left: 1px solid @scrollBorder;
+		background: @trackBg;
+		border-left: 1px solid @trackBorder;
 		width: 12px;
 		padding-left: 3px;
 		padding-right: 2px;
+
+		.scrollbar-handle {
+			opacity: 0.99;
+		}
 	}
 
 	&:hover:not(.dragging) {
 		.scrollbar-handle {
-			background: @clrScrollbar;
+			background: @sliderNormal;
 
 			&:hover {
-				background: @clrScrollbarHover;
+				background: @sliderHover;
 			}
 		}
 	}
 
 	&.dragging {
 		.scrollbar-handle {
-			background: @clrScrollbarActive;
+			background: @sliderActive;
 		}
 	}
 }
