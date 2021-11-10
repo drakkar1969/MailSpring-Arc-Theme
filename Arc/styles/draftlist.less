@@ -54,7 +54,7 @@
 	}
 
 	.checkmark .inner {
-		.arc-control(url(mailspring://Arc/styles/images/controls/checkbox-unchecked.png), 16px);
+		.arc-control(@imgCheckUnchecked, 16px);
 	}
 
 	&:hover {
@@ -63,7 +63,7 @@
 
 	&.selected {
 		.checkmark .inner {
-			.arc-control(url(mailspring://Arc/styles/images/controls/checkbox-checked.png), 16px);
+			.arc-control(@imgCheckChecked, 16px);
 		}
 	}
 
