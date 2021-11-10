@@ -12,18 +12,18 @@
 		height: 16px !important;
 		zoom: 0.9 !important;
 		margin: 8px;
-		content: url(mailspring://Arc/styles/images/window-buttons/titlebutton-close.png);
+		content: @imgBtnClose;
 
 		&:hover {
-			content: url(mailspring://Arc/styles/images/window-buttons/titlebutton-close-hover.png);
+			content: @imgBtnCloseHover;
 		}
 
 		&:active {
-			content: url(mailspring://Arc/styles/images/window-buttons/titlebutton-close-active.png);
+			content: @imgBtnCloseActive;
 		}
 
 		.platform-linux.is-blurred & {
-			content: url(mailspring://Arc/styles/images/window-buttons/titlebutton-close-backdrop.png);
+			content: @imgBtnCloseBackdrop;
 		}
 	}
 }

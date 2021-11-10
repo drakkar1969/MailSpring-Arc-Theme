@@ -12,18 +12,18 @@
 		height: 16px !important;
 		zoom: 0.9 !important;
 		margin: 8px;
-		content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-dark.png);
+		content: @imgBtnClose;
 
 		&:hover {
-			content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-hover-dark.png);
+			content: @imgBtnCloseHover;
 		}
 
 		&:active {
-			content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-active-dark.png);
+			content: @imgBtnCloseActive;
 		}
 
 		.platform-linux.is-blurred & {
-			content: url(mailspring://Arc-Dark/styles/images/window-buttons/titlebutton-close-backdrop-dark.png);
+			content: @imgBtnCloseBackdrop;
 		}
 	}
 }
